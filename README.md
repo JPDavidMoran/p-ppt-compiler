@@ -66,6 +66,30 @@ efecto especial.
 
 Dos slides; la segunda morphea acercándose al objeto.
 
+## Cada escena es una diapositiva
+
+Un mecanismo **no anima dentro de una diapositiva**: emite diapositivas
+nuevas. `CameraZoom` produce una diapositiva acercada, y el espectador
+avanza hasta ella con un clic, igual que con cualquier otra.
+
+Eso significa que un zoom debe llevar a alguna parte. Esta secuencia
+deja al espectador encallado en un primer plano del título:
+
+```json
+{ "scene": "portada" },
+{ "mechanism": "CameraZoom", "target": "titulo", "scale": 1.8 },
+{ "scene": "otroTema" }
+```
+
+Un zoom cuenta algo cuando enfoca aquello de lo que vas a hablar, o
+cuando vuelve al plano general antes de cambiar de tema:
+
+```json
+{ "scene": "modulos" },
+{ "mechanism": "FocusTransition", "sequence": ["a", "b", "c"], "scale": 2.2 },
+{ "mechanism": "CameraZoom", "target": "tituloModulos", "scale": 1.0 }
+```
+
 ## Mecanismos
 
 Macros puras que expanden a escenas. No conocen PowerPoint.
