@@ -182,13 +182,12 @@ tests comprueban que sigue describiendo el compilador real.
 
 ## Estado
 
-Compilador funcional con los cuatro mecanismos. El diseño completo está
-en [docs/superpowers/specs](docs/superpowers/specs/).
+Compilador funcional con los cuatro mecanismos, verificado contra un
+golden file generado por PowerPoint real. El diseño completo está en
+[docs/superpowers/specs](docs/superpowers/specs/).
 
-Pendiente: verificación contra un golden file creado en PowerPoint real
-para confirmar el criterio exacto de emparejamiento de Morph. El
-compilador emite hoy `id` y `name` estables, que son los dos criterios
-documentados.
+La skill de `.claude/skills/` escribe el DSL dentro de Claude Code.
 
-Fuera del alcance actual: generación de DSL por IA, render a imagen y
-loop de QA visual.
+Pendiente: temas y estilos reutilizables, duración y opciones de Morph
+configurables por escena, más mecanismos, y un loop de QA visual que
+renderice las diapositivas y las evalúe con un modelo de visión.

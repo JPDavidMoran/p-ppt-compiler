@@ -66,7 +66,7 @@ se omite: los mecanismos mueven la cámara por ti.
 | `type` | `text`, `shape`, `image` | |
 | `at` | `x`, `y`, `w`, `h` | `w` y `h` mayores que cero |
 | `content` | texto | Admite `\n` |
-| `source` | ruta | Solo para `image`; el archivo debe existir |
+| `source` | ruta | **Obligatorio** para `image`; el archivo debe existir |
 | `style` | ver abajo | |
 
 ### style
@@ -82,6 +82,21 @@ se omite: los mecanismos mueven la cámara por ti.
 | `shape` | `"rect"` | `rect`, `ellipse`, `roundRect` |
 
 `fontSize` escala con el zoom: 30 pt en una cámara 2× se ve como 60 pt.
+
+### Imágenes
+
+```json
+{ "id": "foto", "type": "image", "source": "examples/assets/parque.png",
+  "at": { "x": 52, "y": 0, "w": 48, "h": 56.25 } }
+```
+
+La ruta es relativa al directorio desde el que se compila. El compilador
+empaqueta el archivo dentro del `.pptx`, así que el resultado es
+autónomo. Una imagen morphea como cualquier otro objeto: reutiliza su id
+entre escenas.
+
+El `at` no respeta la proporción original: si no coincide, la imagen se
+deforma. Calcula `w` y `h` con la proporción real del archivo.
 
 ## Secuencia
 

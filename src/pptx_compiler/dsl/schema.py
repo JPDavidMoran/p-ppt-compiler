@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class Strict(BaseModel):
@@ -48,6 +48,16 @@ class ObjectSpec(Strict):
     content: str = ""
     source: str | None = None
     style: StyleSpec = Field(default_factory=StyleSpec)
+
+    @model_validator(mode="after")
+    def _image_needs_source(self) -> "ObjectSpec":
+        """Una imagen sin origen es un error de escritura, no de render."""
+        if self.type == "image" and not self.source:
+            raise ValueError(
+                f"el objeto {self.id!r} es de tipo image y necesita un campo "
+                '"source" con la ruta del archivo'
+            )
+        return self
 
 
 class SceneSpec(Strict):

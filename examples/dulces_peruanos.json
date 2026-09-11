@@ -1,0 +1,308 @@
+{
+  "presentation": {
+    "title": "Dulces peruanos",
+    "aspectRatio": "16:9"
+  },
+  "world": {
+    "w": 100,
+    "h": 56.25
+  },
+  "scenes": [
+    {
+      "id": "portada",
+      "objects": [
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 14,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Dulces peruanos",
+          "at": {
+            "x": 12,
+            "y": 23,
+            "w": 64,
+            "h": 9
+          },
+          "style": {
+            "fontSize": 40,
+            "bold": true,
+            "color": "4A2511"
+          }
+        },
+        {
+          "id": "subtitulo",
+          "type": "text",
+          "content": "Un recorrido de la costa a la selva",
+          "at": {
+            "x": 12,
+            "y": 33,
+            "w": 60,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 17,
+            "color": "8C5A2B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mapa",
+      "objects": [
+        {
+          "id": "tituloMapa",
+          "type": "text",
+          "content": "Tres regiones, tres reposterías",
+          "at": {
+            "x": 12,
+            "y": 9,
+            "w": 76,
+            "h": 8
+          },
+          "style": {
+            "fontSize": 30,
+            "bold": true,
+            "color": "4A2511",
+            "align": "center"
+          }
+        },
+        {
+          "id": "regionCosta",
+          "type": "shape",
+          "content": "Costa\nSuspiro a la limeña\nPicarones\nTurrón de Doña Pepa",
+          "at": {
+            "x": 12,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSierra",
+          "type": "shape",
+          "content": "Sierra\nMazamorra morada\nQueso helado\nTejas arequipeñas",
+          "at": {
+            "x": 39,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "BF6B04",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSelva",
+          "type": "shape",
+          "content": "Selva\nDulce de aguaje\nChapo\nHelado de camu camu",
+          "at": {
+            "x": 66,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "D98324",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "pieMapa",
+          "type": "text",
+          "content": "El ingrediente manda: camote y chancaca en la costa, maíz morado en la sierra, frutos amazónicos en la selva.",
+          "at": {
+            "x": 16,
+            "y": 47,
+            "w": 68,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 12,
+            "color": "8C5A2B",
+            "align": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "insignia",
+      "objects": [
+        {
+          "id": "tituloInsignia",
+          "type": "text",
+          "content": "El turrón de Doña Pepa",
+          "at": {
+            "x": 20,
+            "y": 7,
+            "w": 60,
+            "h": 8
+          },
+          "style": {
+            "fontSize": 30,
+            "bold": true,
+            "color": "4A2511",
+            "align": "center"
+          }
+        },
+        {
+          "id": "cifraSiglo",
+          "type": "shape",
+          "content": "Siglo XVIII\nNace en Cañete",
+          "at": {
+            "x": 14,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMes",
+          "type": "shape",
+          "content": "Octubre\nMes del Señor de los Milagros",
+          "at": {
+            "x": 38,
+            "y": 22,
+            "w": 24,
+            "h": 24
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMiel",
+          "type": "shape",
+          "content": "Miel de chancaca\nCon higo, membrillo y clavo",
+          "at": {
+            "x": 62,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "objects": [
+        {
+          "id": "acentoCierre",
+          "type": "shape",
+          "at": {
+            "x": 30,
+            "y": 22,
+            "w": 40,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "tituloCierre",
+          "type": "text",
+          "content": "Dulce de convento, alma peruana",
+          "at": {
+            "x": 22,
+            "y": 25,
+            "w": 56,
+            "h": 9
+          },
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "4A2511",
+            "align": "center"
+          }
+        },
+        {
+          "id": "notaCierre",
+          "type": "text",
+          "content": "La receta llegó de España; el camote, el maíz morado y la chancaca la hicieron de aquí.",
+          "at": {
+            "x": 24,
+            "y": 35,
+            "w": 52,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "8C5A2B",
+            "align": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "portada"
+    },
+    {
+      "scene": "mapa"
+    },
+    {
+      "mechanism": "FocusTransition",
+      "sequence": [
+        "regionCosta",
+        "regionSierra",
+        "regionSelva"
+      ],
+      "scale": 1.9
+    },
+    {
+      "scene": "mapa"
+    },
+    {
+      "scene": "insignia"
+    },
+    {
+      "scene": "cierre"
+    }
+  ]
+}

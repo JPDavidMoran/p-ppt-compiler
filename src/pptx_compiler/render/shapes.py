@@ -13,11 +13,13 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN
 from pptx.util import Emu, Pt
 
+from pptx_compiler.errors import IdentityError
 from pptx_compiler.ir.camera import Camera
 from pptx_compiler.ir.identity import IdentityRegistry
 from pptx_compiler.ir.scene import Scene, SceneObject
 from pptx_compiler.render.projection import project, project_font_size
 
+P_NS = "http://schemas.openxmlformats.org/presentationml/2006/main"
 AUTO_SHAPES = {
     "rect": MSO_SHAPE.RECTANGLE,
     "ellipse": MSO_SHAPE.OVAL,
@@ -92,13 +94,16 @@ def _fill_text(shape, obj: SceneObject, camera: Camera, world_w: float) -> None:
 
 
 def _apply_identity(shape, dsl_id: str, identity: IdentityRegistry) -> None:
-    """El paso crítico para el Morph: mismo id y mismo nombre en cada slide."""
-    element = shape._element.nvSpPr.cNvPr if hasattr(shape._element, "nvSpPr") else None
+    """El paso crítico para el Morph: mismo id y mismo nombre en cada slide.
+
+    El `cNvPr` cuelga de `nvSpPr` en una forma y de `nvPicPr` en una
+    imagen, así que se busca por nombre en lugar de asumir el envoltorio.
+    Vive en el namespace de PresentationML, no en el de DrawingML.
+    """
+    element = shape._element.find(f".//{{{P_NS}}}cNvPr")
     if element is None:
-        element = shape._element.find(
-            ".//{http://schemas.openxmlformats.org/drawingml/2006/main}cNvPr"
+        raise IdentityError(
+            f"El objeto {dsl_id!r} no expone cNvPr, así que no puede morphear."
         )
-    if element is None:
-        return
     element.set("id", str(identity.ooxml_id_for(dsl_id)))
     element.set("name", identity.shape_name_for(dsl_id))

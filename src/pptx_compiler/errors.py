@@ -59,3 +59,7 @@ class UnknownSceneError(PresentationCompilerError):
 
 class EmptySequenceError(PresentationCompilerError):
     """La secuencia no produjo ninguna escena."""
+
+
+class IdentityError(PresentationCompilerError):
+    """Un objeto no expone el nodo que PowerPoint usa para emparejar Morph."""

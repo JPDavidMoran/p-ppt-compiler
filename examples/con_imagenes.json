@@ -1,0 +1,81 @@
+{
+  "presentation": { "title": "Presentación con imágenes" },
+
+  "scenes": [
+    {
+      "id": "portada",
+      "objects": [
+        {
+          "id": "foto",
+          "type": "image",
+          "source": "examples/assets/parque.png",
+          "at": { "x": 52, "y": 0, "w": 48, "h": 56.25 }
+        },
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": { "x": 8, "y": 20, "w": 12, "h": 0.8 },
+          "style": { "fill": "52B788" }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Parques de la ciudad",
+          "at": { "x": 8, "y": 23, "w": 40, "h": 9 },
+          "style": { "fontSize": 36, "bold": true, "color": "1B4332" }
+        },
+        {
+          "id": "subtitulo",
+          "type": "text",
+          "content": "Inventario y mantenimiento",
+          "at": { "x": 8, "y": 33, "w": 38, "h": 5 },
+          "style": { "fontSize": 16, "color": "40916C" }
+        }
+      ]
+    },
+
+    {
+      "id": "comparativa",
+      "objects": [
+        {
+          "id": "tituloComparativa",
+          "type": "text",
+          "content": "Del plano al terreno",
+          "at": { "x": 14, "y": 8, "w": 72, "h": 8 },
+          "style": {
+            "fontSize": 30,
+            "bold": true,
+            "color": "1B4332",
+            "align": "center"
+          }
+        },
+        {
+          "id": "plano",
+          "type": "image",
+          "source": "examples/assets/plano.png",
+          "at": { "x": 12, "y": 22, "w": 34, "h": 26 }
+        },
+        {
+          "id": "terreno",
+          "type": "image",
+          "source": "examples/assets/parque.png",
+          "at": { "x": 54, "y": 22, "w": 34, "h": 26 }
+        }
+      ]
+    }
+  ],
+
+  "sequence": [
+    { "scene": "portada" },
+    { "mechanism": "CameraZoom", "target": "foto", "scale": 1.6 },
+    { "scene": "portada" },
+
+    { "scene": "comparativa" },
+    {
+      "mechanism": "FocusTransition",
+      "sequence": ["plano", "terreno"],
+      "scale": 1.7
+    },
+    { "scene": "comparativa" }
+  ]
+}
