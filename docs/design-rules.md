@@ -1,0 +1,159 @@
+# Reglas de composición
+
+Un DSL puede compilar sin errores y aun así narrar mal. El compilador
+valida la estructura; este documento recoge lo que solo se ve al
+reproducir la presentación.
+
+Cada regla nació de un defecto observado en una presentación real. Las
+marcadas **[lint]** las detecta `pptxc lint`; las demás requieren ojo
+humano o un modelo de visión.
+
+Este documento es también el contexto que necesita un planner
+automático: sin él, un LLM que escriba DSL repetirá estos errores.
+
+---
+
+## R1. Cada escena es una diapositiva **[lint]**
+
+Un mecanismo no anima dentro de una diapositiva: emite diapositivas
+nuevas, y el espectador avanza hasta ellas con un clic.
+
+**Síntoma:** la presentación se queda en un primer plano que no lleva a
+ninguna parte, y hay que pulsar otra vez para continuar.
+
+**Mal** — el zoom acerca al título y el siguiente clic salta de tema:
+
+```json
+{ "scene": "portada" },
+{ "mechanism": "CameraZoom", "target": "titulo", "scale": 1.8 },
+{ "scene": "otroTema" }
+```
+
+**Bien** — el zoom enfoca aquello de lo que se va a hablar.
+
+---
+
+## R2. Para volver al plano general, repite la escena **[lint]**
+
+`CameraZoom` **siempre encuadra su objetivo**. No sirve para alejarse:
+`scale: 1.0` sobre un título deja la cámara sobre el título.
+
+**Síntoma:** al cerrar un recorrido aparece un elemento aislado (un
+título a pantalla completa) en lugar de la vista de conjunto.
+
+**Mal:**
+
+```json
+{ "mechanism": "FocusTransition", "sequence": ["a", "b", "c"] },
+{ "mechanism": "CameraZoom", "target": "tituloSeccion", "scale": 1.0 }
+```
+
+**Bien** — repetir la escena hace que el differ morphee de vuelta:
+
+```json
+{ "mechanism": "FocusTransition", "sequence": ["a", "b", "c"] },
+{ "scene": "modulos" }
+```
+
+---
+
+## R3. Para un antes/después, reutiliza el id **[lint]**
+
+Dos objetos distintos solo pueden desvanecerse uno y aparecer el otro.
+Un mismo id en dos escenas morphea: el bloque crece, se desplaza y
+cambia de texto de forma continua.
+
+**Síntoma:** parpadeo. Un bloque desaparece, queda un hueco, y el otro
+aparece.
+
+**Mal** — dos objetos y un estado intermedio donde se ven ambos:
+
+```json
+{ "id": "antes",   "at": { "x": 10, "y": 24, "w": 36, "h": 16 } },
+{ "id": "despues", "at": { "x": 54, "y": 24, "w": 36, "h": 16 } }
+```
+
+**Bien** — un objeto que cambia de estado:
+
+```json
+{ "id": "estado", "content": "Antes\nRegistros en papel",
+  "at": { "x": 30, "y": 24, "w": 40, "h": 18 } }
+
+{ "id": "estado", "content": "Después\nTrazabilidad en tiempo real",
+  "at": { "x": 22, "y": 20, "w": 56, "h": 24 } }
+```
+
+---
+
+## R4. Objetos distintos con la misma geometría se sustituyen **[lint]**
+
+Es el reverso de R3. Dos objetos **diferentes** que ocupan la misma
+posición en escenas consecutivas parecen "cambiar de texto" en el sitio.
+
+**Síntoma:** el título de un tema se transforma en el del siguiente
+mientras el resto de la diapositiva está vacío.
+
+Ocurre con los títulos de sección, que suelen compartir geometría por
+coherencia visual. Dos salidas:
+
+- Si los temas son independientes, que la escena no comparta más
+  geometría, para que la transición sea un fade limpio.
+- Si la continuidad es deliberada, reutiliza el id (R3) y el efecto pasa
+  a ser intencionado.
+
+---
+
+## R5. Una escena no debe arrastrar objetos del tema anterior **[lint]**
+
+Los mecanismos operan sobre la escena actual y conservan sus objetos.
+Encadenar un mecanismo justo después de otro tema arrastra lo que
+quedara visible.
+
+**Síntoma:** un bloque del tema anterior aparece flotando en el nuevo.
+
+**Bien** — declarar una escena propia antes del mecanismo:
+
+```json
+{ "scene": "mapa" },
+{ "mechanism": "FocusTransition", "sequence": ["zonaA", "zonaB"] }
+```
+
+---
+
+## R6. Los títulos necesitan alineación explícita
+
+`align` es `left` por defecto. Un título pensado para ir centrado se ve
+descentrado si no se declara.
+
+**Síntoma:** el texto aparece pegado a la izquierda de su caja.
+
+```json
+"style": { "fontSize": 30, "bold": true, "align": "center" }
+```
+
+---
+
+## R7. El tamaño de fuente escala con la cámara
+
+Un texto en una escena acercada se proyecta más grande: el compilador
+multiplica el tamaño por el zoom para que el texto acompañe al resto de
+la composición.
+
+**Consecuencia:** el `fontSize` del DSL es el tamaño a cámara completa,
+no el que se verá si la escena está acercada. Un título de 40 pt en una
+cámara 2× se verá como 80 pt.
+
+---
+
+## Lo que el linter no puede ver
+
+Estas reglas requieren mirar el resultado:
+
+- Texto que desborda su caja.
+- Contraste insuficiente entre relleno y color de texto.
+- Jerarquía visual pobre: todo del mismo tamaño.
+- Demasiados elementos simultáneos.
+- Ritmo: tres zooms seguidos cansan.
+
+Es el argumento para un loop de QA visual: renderizar las diapositivas
+a imagen y que un modelo de visión las evalúe.

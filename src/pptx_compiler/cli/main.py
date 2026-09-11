@@ -8,6 +8,8 @@ import typer
 
 from pptx_compiler.cli.inspect import describe
 from pptx_compiler.compiler.expander import expand
+from pptx_compiler.compiler.lint import Severity
+from pptx_compiler.compiler.lint import lint as run_lint
 from pptx_compiler.dsl.loader import load_document
 from pptx_compiler.errors import PresentationCompilerError
 from pptx_compiler.compiler.pipeline import compile_file
@@ -42,6 +44,28 @@ def validate(
     typer.secho(f"Válido: {len(scenes)} escenas", fg=typer.colors.GREEN)
     for scene in scenes:
         typer.echo(f"  {scene.id}: {', '.join(sorted(scene.object_ids)) or '(vacía)'}")
+
+
+@app.command()
+def lint(
+    source: Path = typer.Argument(..., exists=True, help="Documento DSL en JSON")
+) -> None:
+    """Revisa la composición: avisa de lo que compila pero narra mal."""
+    try:
+        findings = run_lint(expand(load_document(source)))
+    except PresentationCompilerError as exc:
+        typer.secho(str(exc), fg=typer.colors.RED, err=True)
+        raise typer.Exit(1) from exc
+
+    if not findings:
+        typer.secho("Sin hallazgos de composición", fg=typer.colors.GREEN)
+        return
+
+    for f in findings:
+        color = typer.colors.YELLOW if f.severity is Severity.WARNING else typer.colors.CYAN
+        typer.secho(f"{f.code} {f.severity.value} [{f.scene_id}] {f.message}", fg=color)
+        typer.echo(f"   -> {f.hint}")
+    raise typer.Exit(1)
 
 
 @app.command()

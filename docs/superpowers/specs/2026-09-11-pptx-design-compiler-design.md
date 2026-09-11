@@ -271,18 +271,20 @@ genérico **sin emitir error**. Ese fallo silencioso es el riesgo
 principal del proyecto, y por eso existe un test dedicado que afirma que
 el identificador se repite entre slides.
 
-### Incertidumbre declarada
+### Incertidumbre resuelta
 
-PowerPoint moderno puede emparejar Morph por un identificador de
-extensión (`p14:creationId` o equivalente en `<p:extLst>`) además del
-`<p:cNvPr id>`, y también por nombre de shape como alternativa. Cuál
-manda en qué circunstancia no está establecido en la documentación
-pública de forma concluyente.
+**Resuelto el 2026-09-11 contra el golden file.** Basta con `<p:cNvPr>`
+llevando `id` y `name` estables entre slides; no hizo falta emitir
+`creationId`.
 
-**Resolución:** la disección del golden file determina qué escribe
-PowerPoint realmente, y la implementación sigue esa evidencia. El diseño
-no apuesta por una respuesta de antemano. Si el golden file muestra que
-hace falta `creationId`, `identity.py` lo emite además del `cNvPr id`.
+El hallazgo importante fue otro: **Morph vive en el namespace `p159`**
+(`.../powerpoint/2015/09/main`), no en `p14` (2010). Un `p14:morph` hace
+que PowerPoint entre al `mc:Choice`, no reconozca el elemento y lo
+descarte **en silencio**: la transición degrada a un corte abrupto sin
+error alguno. El atributo `p14:dur` sí permanece en el namespace de 2010.
+
+El enum COM de la transición es `EntryEffect = 3954`, hallado por
+barrido de los 159 valores válidos porque no está documentado.
 
 ## 9. Capa OOXML
 
@@ -290,8 +292,8 @@ hace falta `creationId`, `identity.py` lo emite además del `cNvPr id`.
 manipulando el árbol lxml del slide:
 
 - Construye el bloque `<mc:AlternateContent>` que contiene `<p:transition>`.
-- Declara los namespaces necesarios (`mc`, `p14`, y los que revele el
-  golden file).
+- Declara `mc`, `p159` en el `Choice` (con `Requires="p159"`) y `p14`
+  en la transición para el atributo de duración.
 - Lo inserta en la posición correcta dentro de `<p:sld>`.
 
 El orden de los hijos importa en OOXML: un elemento en el sitio
@@ -406,7 +408,17 @@ cuatro mecanismos.
 Si el modelo de identidad resulta mal planteado, se descubre en el paso 4,
 antes de que existan mecanismos que corregir.
 
-## 15. Criterios de aceptación
+## 15. Reglas de composición
+
+Un DSL puede compilar sin errores y narrar mal. Las reglas descubiertas
+reproduciendo presentaciones reales viven en `docs/design-rules.md`, y
+`pptxc lint` detecta las automatizables.
+
+Esto no estaba en el diseño original y resultó ser necesario: todos los
+defectos encontrados tras el primer PPTX funcional fueron de composición,
+no de compilación.
+
+## 16. Criterios de aceptación
 
 - Un DSL de ejemplo compila a `.pptx` que PowerPoint abre sin reparar.
 - Ese archivo morphea visiblemente al pasar de slide.

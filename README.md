@@ -17,9 +17,15 @@ pip install -e .
 
 ```bash
 pptxc validate examples/areas_verdes.json        # valida y lista escenas
+pptxc lint examples/areas_verdes.json            # revisa la composición
 pptxc compile examples/areas_verdes.json -o deck.pptx
 pptxc inspect deck.pptx                          # vuelca transiciones e ids
 ```
+
+`validate` comprueba que el DSL es correcto; **`lint` comprueba que
+narra bien**: avisa si la presentación termina en un primer plano, si un
+antes/después va a parpadear o si dos títulos se sustituyen en el sitio.
+Las reglas están en [docs/design-rules.md](docs/design-rules.md).
 
 ## El modelo: escenas y cámara
 
