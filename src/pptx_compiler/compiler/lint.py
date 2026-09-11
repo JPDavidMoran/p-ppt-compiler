@@ -4,20 +4,22 @@ El compilador valida la estructura; el linter revisa la composición: si
 la presentación termina en un primer plano, si un antes/después va a
 parpadear, si un objeto se arrastra de un tema a otro.
 
-Las reglas viven en rules.py, una función por regla. Registrarlas aquí
-es lo único que hace falta para añadir una.
+Las reglas viven en rules_flow.py (continuidad entre escenas) y
+rules_visual.py (presentación de cada escena). Registrarlas aquí es lo
+único que hace falta para añadir una.
 """
 
 from __future__ import annotations
 
-from pptx_compiler.compiler.rules import (
-    Finding,
-    Severity,
-    check_alineacion,
+from pptx_compiler.compiler.findings import Finding, Severity
+from pptx_compiler.compiler.rules_flow import (
     check_arrastre,
     check_parpadeo,
-    check_sustitucion_de_titulos,
     check_zoom_cierra,
+)
+from pptx_compiler.compiler.rules_visual import (
+    check_alineacion,
+    check_sustitucion_de_titulos,
 )
 from pptx_compiler.ir.scene import Scene
 
