@@ -81,14 +81,38 @@ deja al espectador encallado en un primer plano del título:
 { "scene": "otroTema" }
 ```
 
-Un zoom cuenta algo cuando enfoca aquello de lo que vas a hablar, o
-cuando vuelve al plano general antes de cambiar de tema:
+### Para volver al plano general, repite la escena
+
+`CameraZoom` **siempre encuadra su objetivo**, así que no sirve para
+alejarse: `scale: 1.0` sobre el título deja la cámara sobre el título,
+no en la vista completa. Para cerrar un recorrido se repite la escena
+original, y el differ morphea de vuelta al ver el cambio de cámara:
 
 ```json
 { "scene": "modulos" },
-{ "mechanism": "FocusTransition", "sequence": ["a", "b", "c"], "scale": 2.2 },
-{ "mechanism": "CameraZoom", "target": "tituloModulos", "scale": 1.0 }
+{ "mechanism": "FocusTransition", "sequence": ["a", "b", "c"], "scale": 1.9 },
+{ "scene": "modulos" }
 ```
+
+### Para un antes/después, reutiliza el id
+
+Dos objetos distintos solo pueden desvanecerse uno y aparecer el otro.
+**Un mismo id en dos escenas morphea**: el bloque crece, se desplaza y
+cambia de texto de forma continua.
+
+```json
+{ "id": "estado", "content": "Antes\nRegistros en papel",
+  "at": { "x": 30, "y": 24, "w": 40, "h": 18 } }
+
+{ "id": "estado", "content": "Después\nTrazabilidad en tiempo real",
+  "at": { "x": 22, "y": 20, "w": 56, "h": 24 } }
+```
+
+Cuidado con el efecto contrario: dos objetos **distintos** que ocupan la
+misma posición en escenas consecutivas (dos títulos de temas diferentes,
+por ejemplo) se sustituyen en el sitio y parecen "cambiar de texto". Si
+no quieres eso, separa los temas con una escena que no comparta
+geometría.
 
 ## Mecanismos
 

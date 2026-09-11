@@ -72,3 +72,35 @@ class TestEscenasVacias:
         a = scene("a", WIDE, [])
         b = scene("b", WIDE, [obj("caja")])
         assert diff(a, b).kind is TransitionKind.FADE
+
+
+class TestRegresoAlPlanoGeneral:
+    """Repetir una escena tras un zoom debe morphear de vuelta.
+
+    Es la forma correcta de cerrar un recorrido: CameraZoom siempre
+    encuadra su objetivo, así que no sirve para alejarse. Se repite la
+    escena original y el differ ve el cambio de cámara.
+    """
+
+    def test_repetir_la_escena_tras_un_zoom_produce_morph(self) -> None:
+        acercada = scene("zoom", CLOSE, [obj("caja")])
+        general = scene("base", WIDE, [obj("caja")])
+        assert diff(acercada, general).kind is TransitionKind.MORPH
+
+
+class TestObjetoQueCambiaDeEstado:
+    """Un antes/después con un solo objeto morphea; con dos, parpadea.
+
+    Reutilizar el id hace que PowerPoint interpole entre ambos estados en
+    lugar de desvanecer uno y aparecer el otro.
+    """
+
+    def test_un_objeto_que_cambia_de_tamano_morphea(self) -> None:
+        antes = scene("a", WIDE, [SceneObject(id="estado", type="shape", at=Rect(30, 24, 40, 18))])
+        despues = scene("b", WIDE, [SceneObject(id="estado", type="shape", at=Rect(22, 20, 56, 24))])
+        assert diff(antes, despues).kind is TransitionKind.MORPH
+
+    def test_dos_objetos_distintos_solo_se_desvanecen(self) -> None:
+        antes = scene("a", WIDE, [obj("viejo")])
+        despues = scene("b", WIDE, [obj("nuevo")])
+        assert diff(antes, despues).kind is TransitionKind.FADE

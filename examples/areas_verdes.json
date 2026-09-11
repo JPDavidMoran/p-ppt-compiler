@@ -10,24 +10,24 @@
       "id": "portada",
       "objects": [
         {
+          "id": "acento",
+          "type": "shape",
+          "at": { "x": 12, "y": 20, "w": 14, "h": 0.8 },
+          "style": { "fill": "52B788", "shape": "rect" }
+        },
+        {
           "id": "titulo",
           "type": "text",
           "content": "Gestión de áreas verdes",
-          "at": { "x": 8, "y": 18, "w": 60, "h": 12 },
-          "style": { "fontSize": 44, "bold": true, "color": "1B4332" }
+          "at": { "x": 12, "y": 23, "w": 64, "h": 9 },
+          "style": { "fontSize": 40, "bold": true, "color": "1B4332" }
         },
         {
           "id": "subtitulo",
           "type": "text",
           "content": "Plataforma integral de mantenimiento urbano",
-          "at": { "x": 8, "y": 31, "w": 55, "h": 6 },
-          "style": { "fontSize": 18, "color": "40916C" }
-        },
-        {
-          "id": "acento",
-          "type": "shape",
-          "at": { "x": 8, "y": 15, "w": 18, "h": 1 },
-          "style": { "fill": "52B788", "shape": "rect" }
+          "at": { "x": 12, "y": 33, "w": 60, "h": 5 },
+          "style": { "fontSize": 17, "color": "40916C" }
         }
       ]
     },
@@ -39,18 +39,23 @@
           "id": "tituloModulos",
           "type": "text",
           "content": "Tres módulos",
-          "at": { "x": 8, "y": 6, "w": 50, "h": 8 },
-          "style": { "fontSize": 32, "bold": true, "color": "1B4332" }
+          "at": { "x": 12, "y": 9, "w": 76, "h": 8 },
+          "style": {
+            "fontSize": 30,
+            "bold": true,
+            "color": "1B4332",
+            "align": "center"
+          }
         },
         {
           "id": "modInventario",
           "type": "shape",
           "content": "Inventario",
-          "at": { "x": 8, "y": 20, "w": 24, "h": 18 },
+          "at": { "x": 12, "y": 24, "w": 22, "h": 17 },
           "style": {
             "fill": "2D6A4F",
             "color": "FFFFFF",
-            "fontSize": 16,
+            "fontSize": 15,
             "align": "center",
             "shape": "roundRect"
           }
@@ -59,11 +64,11 @@
           "id": "modMantenimiento",
           "type": "shape",
           "content": "Mantenimiento",
-          "at": { "x": 38, "y": 20, "w": 24, "h": 18 },
+          "at": { "x": 39, "y": 24, "w": 22, "h": 17 },
           "style": {
             "fill": "40916C",
             "color": "FFFFFF",
-            "fontSize": 16,
+            "fontSize": 15,
             "align": "center",
             "shape": "roundRect"
           }
@@ -72,9 +77,40 @@
           "id": "modReportes",
           "type": "shape",
           "content": "Reportes",
-          "at": { "x": 68, "y": 20, "w": 24, "h": 18 },
+          "at": { "x": 66, "y": 24, "w": 22, "h": 17 },
           "style": {
             "fill": "52B788",
+            "color": "FFFFFF",
+            "fontSize": 15,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "impactoAntes",
+      "objects": [
+        {
+          "id": "tituloImpacto",
+          "type": "text",
+          "content": "Impacto del sistema",
+          "at": { "x": 12, "y": 9, "w": 76, "h": 8 },
+          "style": {
+            "fontSize": 30,
+            "bold": true,
+            "color": "1B4332",
+            "align": "center"
+          }
+        },
+        {
+          "id": "estado",
+          "type": "shape",
+          "content": "Antes\nRegistros en papel",
+          "at": { "x": 30, "y": 24, "w": 40, "h": 18 },
+          "style": {
+            "fill": "B7B7A4",
             "color": "FFFFFF",
             "fontSize": 16,
             "align": "center",
@@ -85,37 +121,29 @@
     },
 
     {
-      "id": "impacto",
+      "id": "impactoDespues",
       "objects": [
         {
           "id": "tituloImpacto",
           "type": "text",
           "content": "Impacto del sistema",
-          "at": { "x": 8, "y": 8, "w": 60, "h": 8 },
-          "style": { "fontSize": 32, "bold": true, "color": "1B4332" }
-        },
-        {
-          "id": "antes",
-          "type": "shape",
-          "content": "Antes: registros en papel",
-          "at": { "x": 10, "y": 24, "w": 36, "h": 16 },
+          "at": { "x": 12, "y": 9, "w": 76, "h": 8 },
           "style": {
-            "fill": "B7B7A4",
-            "color": "FFFFFF",
-            "fontSize": 15,
-            "align": "center",
-            "shape": "roundRect"
+            "fontSize": 30,
+            "bold": true,
+            "color": "1B4332",
+            "align": "center"
           }
         },
         {
-          "id": "despues",
+          "id": "estado",
           "type": "shape",
-          "content": "Después: trazabilidad en tiempo real",
-          "at": { "x": 54, "y": 24, "w": 36, "h": 16 },
+          "content": "Después\nTrazabilidad en tiempo real",
+          "at": { "x": 22, "y": 20, "w": 56, "h": 24 },
           "style": {
             "fill": "2D6A4F",
             "color": "FFFFFF",
-            "fontSize": 15,
+            "fontSize": 18,
             "align": "center",
             "shape": "roundRect"
           }
@@ -130,8 +158,39 @@
           "id": "tituloMapa",
           "type": "text",
           "content": "Cobertura por zonas",
-          "at": { "x": 8, "y": 8, "w": 60, "h": 8 },
-          "style": { "fontSize": 32, "bold": true, "color": "1B4332" }
+          "at": { "x": 12, "y": 9, "w": 76, "h": 8 },
+          "style": {
+            "fontSize": 30,
+            "bold": true,
+            "color": "1B4332",
+            "align": "center"
+          }
+        },
+        {
+          "id": "mapaNorte",
+          "type": "shape",
+          "content": "Zona Norte",
+          "at": { "x": 18, "y": 26, "w": 26, "h": 18 },
+          "style": {
+            "fill": "74C69D",
+            "color": "1B4332",
+            "fontSize": 15,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "mapaSur",
+          "type": "shape",
+          "content": "Zona Sur",
+          "at": { "x": 56, "y": 26, "w": 26, "h": 18 },
+          "style": {
+            "fill": "95D5B2",
+            "color": "1B4332",
+            "fontSize": 15,
+            "align": "center",
+            "shape": "roundRect"
+          }
         }
       ]
     }
@@ -144,53 +203,19 @@
     {
       "mechanism": "FocusTransition",
       "sequence": ["modInventario", "modMantenimiento", "modReportes"],
-      "scale": 2.2
+      "scale": 1.9
     },
-    { "mechanism": "CameraZoom", "target": "tituloModulos", "scale": 1.0 },
+    { "scene": "modulos" },
 
-    { "scene": "impacto" },
-    {
-      "mechanism": "BeforeAfter",
-      "before": ["antes"],
-      "after": ["despues"],
-      "keep": ["tituloImpacto"]
-    },
+    { "scene": "impactoAntes" },
+    { "scene": "impactoDespues" },
 
     { "scene": "mapa" },
     {
-      "mechanism": "InfiniteCanvas",
-      "objects": [
-        {
-          "id": "mapaNorte",
-          "type": "shape",
-          "content": "Zona Norte",
-          "at": { "x": 120, "y": 10, "w": 30, "h": 20 },
-          "style": {
-            "fill": "74C69D",
-            "color": "1B4332",
-            "fontSize": 16,
-            "align": "center",
-            "shape": "roundRect"
-          }
-        },
-        {
-          "id": "mapaSur",
-          "type": "shape",
-          "content": "Zona Sur",
-          "at": { "x": 175, "y": 34, "w": 30, "h": 20 },
-          "style": {
-            "fill": "95D5B2",
-            "color": "1B4332",
-            "fontSize": 16,
-            "align": "center",
-            "shape": "roundRect"
-          }
-        }
-      ],
-      "tour": [
-        { "at": "mapaNorte", "scale": 1.6 },
-        { "at": "mapaSur", "scale": 1.6 }
-      ]
-    }
+      "mechanism": "FocusTransition",
+      "sequence": ["mapaNorte", "mapaSur"],
+      "scale": 1.8
+    },
+    { "scene": "mapa" }
   ]
 }
