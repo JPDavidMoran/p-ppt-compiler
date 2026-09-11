@@ -23,6 +23,7 @@ class ObjectStyle:
     fill: str | None = None
     line: str | None = None
     bold: bool = False
+    opacity: float = 1.0
     align: Literal["left", "center", "right"] = "left"
     shape: Literal["rect", "ellipse", "roundRect"] = "rect"
 

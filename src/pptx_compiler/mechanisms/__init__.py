@@ -13,15 +13,28 @@ from pptx_compiler.ir.geometry import Rect
 from pptx_compiler.ir.scene import Scene
 from pptx_compiler.mechanisms import (
     before_after,
+    build,
     camera_zoom,
     focus_transition,
     infinite_canvas,
+    regroup,
+    reveal,
+    spotlight,
 )
 from pptx_compiler.mechanisms.base import ExpansionContext
 
 MECHANISMS: dict[str, ModuleType] = {
     module.name: module
-    for module in (camera_zoom, before_after, focus_transition, infinite_canvas)
+    for module in (
+        camera_zoom,
+        before_after,
+        focus_transition,
+        infinite_canvas,
+        build,
+        regroup,
+        spotlight,
+        reveal,
+    )
 }
 
 

@@ -1,0 +1,120 @@
+{
+  "presentation": { "title": "Build, Regroup, Spotlight y Reveal" },
+
+  "scenes": [
+    {
+      "id": "beneficios",
+      "objects": [
+        {
+          "id": "tituloBeneficios",
+          "type": "text",
+          "content": "Tres beneficios",
+          "at": { "x": 12, "y": 9, "w": 76, "h": 8 },
+          "style": { "fontSize": 30, "bold": true, "color": "1B4332", "align": "center" }
+        },
+        {
+          "id": "ben1",
+          "type": "shape",
+          "content": "Menos papel",
+          "at": { "x": 14, "y": 24, "w": 22, "h": 16 },
+          "style": { "fill": "2D6A4F", "color": "FFFFFF", "fontSize": 14, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "ben2",
+          "type": "shape",
+          "content": "Datos en tiempo real",
+          "at": { "x": 39, "y": 24, "w": 22, "h": 16 },
+          "style": { "fill": "40916C", "color": "FFFFFF", "fontSize": 14, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "ben3",
+          "type": "shape",
+          "content": "Trazabilidad",
+          "at": { "x": 64, "y": 24, "w": 22, "h": 16 },
+          "style": { "fill": "52B788", "color": "FFFFFF", "fontSize": 14, "align": "center", "shape": "roundRect" }
+        }
+      ]
+    },
+
+    {
+      "id": "equipo",
+      "objects": [
+        {
+          "id": "tituloEquipo",
+          "type": "text",
+          "content": "El equipo",
+          "at": { "x": 16, "y": 11, "w": 68, "h": 8 },
+          "style": { "fontSize": 30, "bold": true, "color": "1B4332", "align": "center" }
+        },
+        {
+          "id": "p1",
+          "type": "shape",
+          "content": "Campo",
+          "at": { "x": 8, "y": 26, "w": 18, "h": 14 },
+          "style": { "fill": "2D6A4F", "color": "FFFFFF", "fontSize": 13, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "p2",
+          "type": "shape",
+          "content": "Análisis",
+          "at": { "x": 29, "y": 26, "w": 18, "h": 14 },
+          "style": { "fill": "40916C", "color": "FFFFFF", "fontSize": 13, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "p3",
+          "type": "shape",
+          "content": "Soporte",
+          "at": { "x": 50, "y": 26, "w": 18, "h": 14 },
+          "style": { "fill": "52B788", "color": "FFFFFF", "fontSize": 13, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "p4",
+          "type": "shape",
+          "content": "Dirección",
+          "at": { "x": 71, "y": 26, "w": 18, "h": 14 },
+          "style": { "fill": "74C69D", "color": "1B4332", "fontSize": 13, "align": "center", "shape": "roundRect" }
+        }
+      ]
+    },
+
+    {
+      "id": "resultado",
+      "objects": [
+        {
+          "id": "tituloResultado",
+          "type": "text",
+          "content": "El resultado",
+          "at": { "x": 20, "y": 7, "w": 60, "h": 8 },
+          "style": { "fontSize": 30, "bold": true, "color": "1B4332", "align": "center" }
+        },
+        {
+          "id": "cifra",
+          "type": "shape",
+          "content": "42% menos\ntiempo de respuesta",
+          "at": { "x": 30, "y": 22, "w": 40, "h": 24 },
+          "style": { "fill": "2D6A4F", "color": "FFFFFF", "fontSize": 20, "bold": true, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "tapa",
+          "type": "shape",
+          "content": "?",
+          "at": { "x": 30, "y": 22, "w": 40, "h": 24 },
+          "style": { "fill": "B7B7A4", "color": "FFFFFF", "fontSize": 40, "bold": true, "align": "center", "shape": "roundRect" }
+        }
+      ]
+    }
+  ],
+
+  "sequence": [
+    { "scene": "beneficios" },
+    { "mechanism": "Build", "sequence": ["ben1", "ben2", "ben3"] },
+    { "mechanism": "Spotlight", "target": "ben2", "dim": 0.2, "keep": ["tituloBeneficios"] },
+    { "scene": "beneficios" },
+
+    { "scene": "equipo" },
+    { "mechanism": "Regroup", "targets": ["p1", "p2", "p3", "p4"], "layout": "grid", "gap": 4 },
+
+    { "scene": "resultado" },
+    { "mechanism": "Reveal", "cover": "tapa", "target": "cifra", "direction": "up" }
+  ]
+}

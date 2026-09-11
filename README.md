@@ -38,8 +38,9 @@ DSL  ->  Scene IR  ->  differ  ->  Slide Plan  ->  OOXML  ->  .pptx
 
 El compilador compara escenas consecutivas y **deriva** la transición:
 
-- Un objeto persistente cuya geometría proyectada cambió -> **Morph**
-- Solo entradas y salidas -> **Fade**
+- Un objeto persistente que cambió de posición, estilo o texto -> **Morph**
+- Objetos que entran o salen con otros que permanecen -> **Morph**
+- Cambio de tema completo, sin objetos en común -> **Fade**
 - Nada cambió -> sin transición
 
 Un objeto que no se mueve en el mundo sí cambia en la slide si la cámara
@@ -130,6 +131,10 @@ Macros puras que expanden a escenas. No conocen PowerPoint.
 | `BeforeAfter` | Sustituye unos objetos por otros | Mundo móvil, cámara fija |
 | `FocusTransition` | Encadena focos sobre varios objetos | Composición, N escenas |
 | `InfiniteCanvas` | Recorre un lienzo mayor que la pantalla | Panning lateral |
+| `Build` | Revela los objetos uno a uno | Construcción progresiva |
+| `Regroup` | Cambia la disposición de los mismos objetos | Reorganización |
+| `Spotlight` | Destaca atenuando el resto | Énfasis sin mover la cámara |
+| `Reveal` | Aparta una tapa y descubre lo de debajo | Descubrimiento |
 
 Añadir un mecanismo es añadir una carpeta en `mechanisms/`. El
 compilador no se modifica.
@@ -189,5 +194,5 @@ golden file generado por PowerPoint real. El diseño completo está en
 La skill de `.claude/skills/` escribe el DSL dentro de Claude Code.
 
 Pendiente: temas y estilos reutilizables, duración y opciones de Morph
-configurables por escena, más mecanismos, y un loop de QA visual que
-renderice las diapositivas y las evalúe con un modelo de visión.
+configurables por escena, y un loop de QA visual que renderice las
+diapositivas y las evalúe con un modelo de visión.

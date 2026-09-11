@@ -5,6 +5,8 @@ inmóvil bajo una cámara que se mueve sí cambia en la slide, y debe
 morphear.
 """
 
+from dataclasses import replace
+
 from pptx_compiler.compiler.differ import TransitionKind, diff
 from pptx_compiler.ir.camera import Camera
 from pptx_compiler.ir.geometry import Rect
@@ -46,11 +48,12 @@ class TestFade:
         b = scene("b", WIDE, [obj("nuevo")])
         assert diff(a, b).kind is TransitionKind.FADE
 
-    def test_persistente_inmovil_con_camara_fija_no_basta_para_morph(self) -> None:
+    def test_un_persistente_inmovil_con_entradas_y_salidas_morphea(self) -> None:
+        """El objeto que permanece debe quedarse quieto, no parpadear."""
         a = scene("a", WIDE, [obj("titulo"), obj("viejo", x=30)])
         b = scene("b", WIDE, [obj("titulo"), obj("nuevo", x=30)])
         resultado = diff(a, b)
-        assert resultado.kind is TransitionKind.FADE
+        assert resultado.kind is TransitionKind.MORPH
         assert resultado.entering == {"nuevo"}
         assert resultado.leaving == {"viejo"}
 
@@ -104,3 +107,64 @@ class TestObjetoQueCambiaDeEstado:
         antes = scene("a", WIDE, [obj("viejo")])
         despues = scene("b", WIDE, [obj("nuevo")])
         assert diff(antes, despues).kind is TransitionKind.FADE
+
+
+class TestCambioDeEstilo:
+    """Morph interpola color y opacidad, no solo posición.
+
+    Sin esto, Spotlight no producía transición alguna: atenúa el resto de
+    objetos sin mover nada, y el differ no veía ningún cambio.
+    """
+
+    def _con_opacidad(self, oid: str, opacity: float) -> SceneObject:
+        from pptx_compiler.ir.scene import ObjectStyle
+
+        return SceneObject(
+            id=oid,
+            type="shape",
+            at=Rect(10, 10, 20, 15),
+            style=ObjectStyle(fill="2D6A4F", opacity=opacity),
+        )
+
+    def test_un_cambio_de_opacidad_produce_morph(self) -> None:
+        a = scene("a", WIDE, [self._con_opacidad("caja", 1.0)])
+        b = scene("b", WIDE, [self._con_opacidad("caja", 0.25)])
+        assert diff(a, b).kind is TransitionKind.MORPH
+
+    def test_un_cambio_de_relleno_produce_morph(self) -> None:
+        from pptx_compiler.ir.scene import ObjectStyle
+
+        base = SceneObject(id="caja", type="shape", at=Rect(10, 10, 20, 15))
+        a = scene("a", WIDE, [replace(base, style=ObjectStyle(fill="2D6A4F"))])
+        b = scene("b", WIDE, [replace(base, style=ObjectStyle(fill="B7B7A4"))])
+        assert diff(a, b).kind is TransitionKind.MORPH
+
+    def test_un_cambio_de_contenido_produce_morph(self) -> None:
+        a = scene("a", WIDE, [SceneObject(id="t", type="text", at=Rect(10, 10, 40, 8), content="Antes")])
+        b = scene("b", WIDE, [SceneObject(id="t", type="text", at=Rect(10, 10, 40, 8), content="Después")])
+        assert diff(a, b).kind is TransitionKind.MORPH
+
+    def test_sin_cambios_de_estilo_ni_geometria_no_hay_transicion(self) -> None:
+        a = scene("a", WIDE, [self._con_opacidad("caja", 0.5)])
+        b = scene("b", WIDE, [self._con_opacidad("caja", 0.5)])
+        assert diff(a, b).kind is TransitionKind.NONE
+
+
+class TestConstruccionProgresiva:
+    """Si hay objetos que permanecen, entrar uno nuevo debe morphear.
+
+    Un fade atenúa toda la diapositiva, así que los elementos ya visibles
+    parpadean cada vez que aparece el siguiente. Con Morph se quedan
+    quietos y solo entra el nuevo.
+    """
+
+    def test_anadir_un_objeto_manteniendo_otros_produce_morph(self) -> None:
+        a = scene("a", WIDE, [obj("uno", x=10)])
+        b = scene("b", WIDE, [obj("uno", x=10), obj("dos", x=40)])
+        assert diff(a, b).kind is TransitionKind.MORPH
+
+    def test_sin_objetos_persistentes_sigue_siendo_fade(self) -> None:
+        """Un cambio de tema completo no debe morphear."""
+        a = scene("a", WIDE, [obj("viejo")])
+        b = scene("b", WIDE, [obj("nuevo")])
+        assert diff(a, b).kind is TransitionKind.FADE

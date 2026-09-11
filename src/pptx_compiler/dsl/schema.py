@@ -35,6 +35,7 @@ class StyleSpec(Strict):
     fill: str | None = None
     line: str | None = None
     bold: bool = False
+    opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     align: Literal["left", "center", "right"] = "left"
     shape: Literal["rect", "ellipse", "roundRect"] = "rect"
 

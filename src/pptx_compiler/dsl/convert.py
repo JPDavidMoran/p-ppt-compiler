@@ -18,6 +18,7 @@ def to_style(spec: StyleSpec) -> ObjectStyle:
         fill=spec.fill,
         line=spec.line,
         bold=spec.bold,
+        opacity=spec.opacity,
         align=spec.align,
         shape=spec.shape,
     )

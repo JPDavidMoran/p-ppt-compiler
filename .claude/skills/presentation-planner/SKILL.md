@@ -57,6 +57,10 @@ incumplen:
 - **Títulos de secciones distintas, geometría distinta.** Si comparten
   posición, parecerá que el texto cambia en el sitio.
 
+Dosifica la información: `Build` revela los puntos de uno en uno en
+lugar de mostrarlos de golpe, y `Spotlight` destaca sin perder de vista
+el conjunto.
+
 Consulta `reference/patterns.md` para secuencias ya probadas.
 
 Escribe el archivo en `examples/` o donde el usuario indique.
@@ -82,8 +86,9 @@ ritmo— solo aparece mirando.
 
 ## Lo que no debes hacer
 
-- Inventar mecanismos: solo existen `CameraZoom`, `BeforeAfter`,
-  `FocusTransition` e `InfiniteCanvas`.
+- Inventar mecanismos. Solo existen ocho: `CameraZoom`, `BeforeAfter`,
+  `FocusTransition`, `InfiniteCanvas`, `Build`, `Regroup`, `Spotlight`
+  y `Reveal`.
 - Escribir OOXML, XML o llamar a python-pptx directamente.
 - Saltarte el lint porque "el DSL se ve bien".
 - Amontonar zooms: tres seguidos cansan. Un recorrido se cierra volviendo

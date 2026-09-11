@@ -36,7 +36,9 @@ def diff(before: Scene, after: Scene) -> SceneDiff:
 
     moved = {oid for oid in persistent if _changed(before, after, oid)}
 
-    if moved:
+    if moved or (persistent and (entering or leaving)):
+        # Con objetos que permanecen, Morph los deja quietos mientras el
+        # resto entra o sale; un fade haría parpadear toda la diapositiva.
         kind = TransitionKind.MORPH
     elif entering or leaving:
         kind = TransitionKind.FADE
@@ -53,12 +55,20 @@ def diff(before: Scene, after: Scene) -> SceneDiff:
 
 
 def _changed(before: Scene, after: Scene, object_id: str) -> bool:
-    """Compara la geometría proyectada, no la de mundo.
+    """Decide si un objeto persistente cambió lo bastante para morphear.
 
-    Un objeto inmóvil bajo una cámara que se mueve sí cambia en la slide.
+    La geometría se compara **proyectada**, no en coordenadas de mundo:
+    un objeto inmóvil bajo una cámara que se mueve sí cambia en la slide.
+
+    Morph interpola además color, opacidad y texto, así que un cambio de
+    estilo cuenta aunque el objeto no se mueva. Sin esto, atenuar un
+    objeto no producía transición alguna.
     """
     old = before.get(object_id)
     new = after.get(object_id)
     if old is None or new is None:
         return False
-    return project(old.at, before.camera) != project(new.at, after.camera)
+
+    moved = project(old.at, before.camera) != project(new.at, after.camera)
+    restyled = old.style != new.style or old.content != new.content
+    return moved or restyled

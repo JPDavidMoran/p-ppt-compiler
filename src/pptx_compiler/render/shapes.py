@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from lxml import etree
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN
@@ -20,6 +21,8 @@ from pptx_compiler.ir.scene import Scene, SceneObject
 from pptx_compiler.render.projection import project, project_font_size
 
 P_NS = "http://schemas.openxmlformats.org/presentationml/2006/main"
+A_NS = "http://schemas.openxmlformats.org/drawingml/2006/main"
+ALPHA_FULL = 100000  # OOXML expresa el alpha en milésimas de porcentaje
 AUTO_SHAPES = {
     "rect": MSO_SHAPE.RECTANGLE,
     "ellipse": MSO_SHAPE.OVAL,
@@ -67,6 +70,7 @@ def _draw_shape(slide, obj: SceneObject, position, camera: Camera, world_w: floa
     if obj.style.fill:
         shape.fill.solid()
         shape.fill.fore_color.rgb = RGBColor.from_string(obj.style.fill)
+        _apply_opacity(shape, obj.style.opacity)
     else:
         shape.fill.background()
 
@@ -91,6 +95,22 @@ def _fill_text(shape, obj: SceneObject, camera: Camera, world_w: float) -> None:
     run.font.size = Pt(project_font_size(obj.style.font_size, camera, world_w))
     run.font.bold = obj.style.bold
     run.font.color.rgb = RGBColor.from_string(obj.style.color)
+
+
+def alpha_value(opacity: float) -> int:
+    """Convierte una opacidad 0..1 al alpha en milésimas de porcentaje."""
+    return round(opacity * ALPHA_FULL)
+
+
+def _apply_opacity(shape, opacity: float) -> None:
+    """La opacidad no es propiedad del shape: es un alpha dentro del relleno."""
+    if opacity >= 1.0:
+        return
+    color = shape.fill.fore_color._xFill.find(f"{{{A_NS}}}srgbClr")
+    if color is None:
+        return
+    alpha = etree.SubElement(color, f"{{{A_NS}}}alpha")
+    alpha.set("val", str(alpha_value(opacity)))
 
 
 def _apply_identity(shape, dsl_id: str, identity: IdentityRegistry) -> None:

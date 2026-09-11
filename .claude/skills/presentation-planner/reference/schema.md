@@ -78,6 +78,7 @@ se omite: los mecanismos mueven la cámara por ti.
 | `fill` | ninguno | hex; sin relleno si se omite |
 | `line` | ninguno | hex; sin borde si se omite |
 | `bold` | `false` | |
+| `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
 | `align` | `"left"` | `left`, `center`, `right` |
 | `shape` | `"rect"` | `rect`, `ellipse`, `roundRect` |
 
@@ -112,7 +113,7 @@ general tras un recorrido.
 
 ## Mecanismos
 
-Solo existen estos cuatro.
+Solo existen estos ocho.
 
 ### CameraZoom
 
@@ -163,6 +164,73 @@ Cada `tour[].at` referencia el id de un objeto. `scale` por defecto `1.5`.
 
 Declara una escena propia antes de usarlo, o arrastrará los objetos del
 tema anterior.
+
+### Build
+
+```json
+{ "mechanism": "Build", "sequence": ["punto1", "punto2", "punto3"] }
+```
+
+Revela los objetos **uno a uno**. Emite una escena por elemento. Los
+objetos que no aparecen en `sequence` permanecen visibles todo el tiempo:
+son el contexto sobre el que se construye.
+
+El recurso más común de una presentación. Úsalo para listas, pasos de un
+proceso o argumentos que se acumulan.
+
+### Regroup
+
+```json
+{ "mechanism": "Regroup", "targets": ["a", "b", "c"], "layout": "grid", "gap": 3 }
+```
+
+| Parámetro | Obligatorio | Por defecto |
+|---|---|---|
+| `targets` | **sí** | objetos a reorganizar |
+| `layout` | no | `"row"`; también `"column"` y `"grid"` |
+| `area` | no | el encuadre con márgenes |
+| `gap` | no | `3.0` |
+
+Emite **una** escena: los mismos objetos en otra disposición. Como
+conservan su id, cada uno viaja a su nueva posición y se lee como un
+movimiento. Los objetos fuera de `targets` no se tocan.
+
+### Spotlight
+
+```json
+{ "mechanism": "Spotlight", "target": "modB", "dim": 0.25, "keep": ["titulo"] }
+```
+
+| Parámetro | Obligatorio | Por defecto |
+|---|---|---|
+| `target` | **sí** | objeto a destacar |
+| `dim` | no | `0.25`; opacidad del resto |
+| `keep` | no | objetos que no se atenúan |
+
+Destaca sin mover la cámara: el conjunto sigue a la vista y solo cambia
+el peso visual. Pon el título en `keep` para que no se atenúe con el
+contenido.
+
+Alternativa a `CameraZoom` cuando el contexto importa tanto como el
+detalle.
+
+### Reveal
+
+```json
+{ "mechanism": "Reveal", "cover": "tapa", "target": "secreto", "direction": "up" }
+```
+
+| Parámetro | Obligatorio | Por defecto |
+|---|---|---|
+| `cover` | **sí** | objeto que tapa |
+| `target` | **sí** | objeto que queda al descubierto |
+| `direction` | no | `"up"`; también `down`, `left`, `right` |
+
+Emite **dos** escenas. La tapa se desplaza fuera del encuadre
+conservando su id, así que Morph la aparta en lugar de desvanecerla.
+
+Coloca `cover` sobre `target` con la misma geometría, y declara `cover`
+**después** en la lista de objetos para que quede encima.
 
 ## Comandos
 

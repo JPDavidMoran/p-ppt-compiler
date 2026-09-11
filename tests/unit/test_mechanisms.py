@@ -33,13 +33,11 @@ def base_scene() -> Scene:
 
 
 class TestRegistro:
-    def test_los_cuatro_mecanismos_estan_registrados(self) -> None:
-        assert set(MECHANISMS) == {
-            "CameraZoom",
-            "BeforeAfter",
-            "FocusTransition",
-            "InfiniteCanvas",
-        }
+    def test_los_mecanismos_de_camara_estan_registrados(self) -> None:
+        """El registro completo se comprueba en test_mechanisms_v2."""
+        assert {"CameraZoom", "BeforeAfter", "FocusTransition", "InfiniteCanvas"} <= set(
+            MECHANISMS
+        )
 
     def test_un_mecanismo_desconocido_falla_con_las_alternativas(self) -> None:
         with pytest.raises(UnknownMechanismError) as exc:

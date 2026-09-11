@@ -123,7 +123,7 @@ class TestTransicion:
 
 
 class TestFade:
-    def test_objetos_que_solo_entran_y_salen_producen_fade(self, tmp_path) -> None:
+    def test_un_titulo_que_permanece_hace_que_el_cambio_morphee(self, tmp_path) -> None:
         documento = {
             "scenes": [
                 {
@@ -147,8 +147,7 @@ class TestFade:
         }
         salida = compile_dict(documento, tmp_path / "fade.pptx")
         tercera = slide_xml(salida, 3)
-        assert tercera.find(P + "transition") is not None
-        assert not list(tercera.iter(P159 + "morph"))
+        assert list(tercera.iter(P159 + "morph")), "el título persistente debe morphear"
 
 
 class TestSlideUnica:
