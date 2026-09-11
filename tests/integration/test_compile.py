@@ -15,6 +15,7 @@ from pptx_compiler.compiler.pipeline import compile_dict
 P = "{http://schemas.openxmlformats.org/presentationml/2006/main}"
 MC = "{http://schemas.openxmlformats.org/markup-compatibility/2006}"
 P14 = "{http://schemas.microsoft.com/office/powerpoint/2010/main}"
+P159 = "{http://schemas.microsoft.com/office/powerpoint/2015/09/main}"
 
 
 def doc_zoom() -> dict:
@@ -97,7 +98,7 @@ class TestIdentidad:
 class TestTransicion:
     def test_la_segunda_slide_lleva_morph(self, compiled) -> None:
         root = slide_xml(compiled, 2)
-        morphs = list(root.iter(P14 + "morph"))
+        morphs = list(root.iter(P159 + "morph"))
         assert len(morphs) == 1
         assert morphs[0].get("option") == "byObject"
 
@@ -147,7 +148,7 @@ class TestFade:
         salida = compile_dict(documento, tmp_path / "fade.pptx")
         tercera = slide_xml(salida, 3)
         assert tercera.find(P + "transition") is not None
-        assert not list(tercera.iter(P14 + "morph"))
+        assert not list(tercera.iter(P159 + "morph"))
 
 
 class TestSlideUnica:
@@ -167,3 +168,24 @@ class TestSlideUnica:
         with zipfile.ZipFile(salida) as archive:
             slides = [n for n in archive.namelist() if n.startswith("ppt/slides/slide")]
         assert len(slides) == 1
+
+
+class TestInspect:
+    """La herramienta de diagnóstico debe reconocer lo que el compilador emite.
+
+    Quedó desincronizada al migrar Morph de p14 a p159 y reportó "ninguna"
+    sobre un XML correcto: una herramienta de diagnóstico que miente es
+    peor que no tenerla.
+    """
+
+    def test_reporta_el_morph_de_la_segunda_slide(self, compiled) -> None:
+        from pptx_compiler.cli.inspect import describe
+
+        assert any("morph" in line for line in describe(compiled))
+
+    def test_reporta_los_nombres_de_los_objetos(self, compiled) -> None:
+        from pptx_compiler.cli.inspect import describe
+
+        volcado = "\n".join(describe(compiled))
+        assert "name=titulo" in volcado
+        assert "name=dash" in volcado

@@ -1,9 +1,17 @@
 """Inserta transiciones en el XML del slide.
 
 python-pptx no expone transiciones, así que se manipula el árbol lxml
-directamente. Morph vive en la extensión p14 de PowerPoint, envuelta en
-mc:AlternateContent para que los lectores que no la entienden caigan al
-Fallback en vez de rechazar el archivo.
+directamente. El bloque va envuelto en mc:AlternateContent para que los
+lectores que no entienden la extensión caigan al Fallback en vez de
+rechazar el archivo.
+
+Morph vive en el namespace p159 (PowerPoint 2015/09), NO en p14 (2010).
+Usar p14 hace que PowerPoint entre al Choice, no reconozca el elemento y
+lo ignore en silencio: la transición degrada a un corte abrupto sin
+emitir ningún error. El atributo de duración sí sigue en p14.
+
+Estructura verificada contra fixtures/golden/morph_reference.pptx, que
+genera PowerPoint real (scripts/make_golden.py).
 
 El orden de los hijos de p:sld es obligatorio: cSld, clrMapOvr y
 después la transición. Un elemento fuera de sitio hace que PowerPoint
@@ -19,9 +27,10 @@ from pptx_compiler.compiler.differ import TransitionKind
 P_NS = "http://schemas.openxmlformats.org/presentationml/2006/main"
 MC_NS = "http://schemas.openxmlformats.org/markup-compatibility/2006"
 P14_NS = "http://schemas.microsoft.com/office/powerpoint/2010/main"
+P159_NS = "http://schemas.microsoft.com/office/powerpoint/2015/09/main"
 
 MORPH_MATCH = {"byObject": "byObject", "byWord": "byWord", "byChar": "byChar"}
-DEFAULT_DURATION_MS = 1000
+DEFAULT_DURATION_MS = 2000  # el mismo ritmo que aplica PowerPoint por defecto
 
 
 def apply_transition(
@@ -56,17 +65,19 @@ def _fade(duration_ms: int):
 def _morph(match: str, duration_ms: int):
     """Morph envuelto en AlternateContent, como lo escribe PowerPoint.
 
-    El bloque Choice lleva la transición real; el Fallback ofrece un fade
-    a los lectores que no soportan la extensión p14.
+    El bloque Choice lleva la transición real y declara Requires="p159";
+    el Fallback ofrece un fade a los lectores que no soportan Morph.
     """
     alternate = etree.Element(f"{{{MC_NS}}}AlternateContent", nsmap={"mc": MC_NS})
 
-    choice = etree.SubElement(alternate, f"{{{MC_NS}}}Choice", nsmap={"p14": P14_NS})
-    choice.set("Requires", "p14")
-    transition = etree.SubElement(choice, f"{{{P_NS}}}transition")
+    choice = etree.SubElement(alternate, f"{{{MC_NS}}}Choice", nsmap={"p159": P159_NS})
+    choice.set("Requires", "p159")
+    transition = etree.SubElement(
+        choice, f"{{{P_NS}}}transition", nsmap={"p14": P14_NS}
+    )
     transition.set("spd", "slow")
     transition.set(f"{{{P14_NS}}}dur", str(duration_ms))
-    morph = etree.SubElement(transition, f"{{{P14_NS}}}morph")
+    morph = etree.SubElement(transition, f"{{{P159_NS}}}morph")
     morph.set("option", MORPH_MATCH.get(match, "byObject"))
 
     fallback = etree.SubElement(alternate, f"{{{MC_NS}}}Fallback")

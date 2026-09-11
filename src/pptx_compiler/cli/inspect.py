@@ -13,7 +13,7 @@ from lxml import etree
 
 P = "{http://schemas.openxmlformats.org/presentationml/2006/main}"
 MC = "{http://schemas.openxmlformats.org/markup-compatibility/2006}"
-P14 = "{http://schemas.microsoft.com/office/powerpoint/2010/main}"
+P159 = "{http://schemas.microsoft.com/office/powerpoint/2015/09/main}"
 
 
 def describe(path: Path) -> list[str]:
@@ -38,8 +38,8 @@ def _slide_number(name: str) -> int:
 
 
 def _transition(root) -> str:
-    if list(root.iter(P14 + "morph")):
-        option = next(root.iter(P14 + "morph")).get("option", "?")
+    if list(root.iter(P159 + "morph")):
+        option = next(root.iter(P159 + "morph")).get("option", "?")
         return f"morph (option={option})"
     node = root.find(P + "transition")
     if node is not None:
