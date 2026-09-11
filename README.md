@@ -164,6 +164,22 @@ sin generar un solo archivo.
 python -m pytest
 ```
 
+## Escribir presentaciones con Claude Code
+
+El repositorio incluye una skill en
+[.claude/skills/presentation-planner](.claude/skills/presentation-planner/)
+que escribe el DSL por ti: propone conceptos, compone las escenas y
+verifica el resultado con `lint` antes de compilar.
+
+Pídeselo a Claude Code en este repositorio:
+
+> Hazme una presentación de 8 diapositivas sobre nuestro sistema de riego
+> para una reunión con el municipio.
+
+La skill no puede inventar mecanismos ni saltarse el lint; las reglas que
+sigue son las de [docs/design-rules.md](docs/design-rules.md), y unos
+tests comprueban que sigue describiendo el compilador real.
+
 ## Estado
 
 Compilador funcional con los cuatro mecanismos. El diseño completo está
