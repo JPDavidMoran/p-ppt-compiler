@@ -1,0 +1,515 @@
+{
+  "presentation": {
+    "title": "Composición — Capas cruzadas",
+    "transitionMs": 1000
+  },
+  "scenes": [
+    {
+      "id": "capa0",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "placaAtras",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": 8.0,
+            "sectorEnd": 40.0
+          }
+        },
+        {
+          "id": "intruso",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": 60.0,
+            "sectorEnd": 90.0
+          }
+        },
+        {
+          "id": "placaDelante",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": 40.0,
+            "sectorEnd": 70.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Tres capas",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 32,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "Naranja al fondo, violeta delante",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capa1",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "placaAtras",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": 8.0,
+            "sectorEnd": 40.0
+          }
+        },
+        {
+          "id": "intruso",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": 50.0,
+            "sectorEnd": 80.0
+          }
+        },
+        {
+          "id": "placaDelante",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": 40.0,
+            "sectorEnd": 70.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Algo llega",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 32,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "El azul entra oculto tras el violeta",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capa2",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "placaAtras",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": 8.0,
+            "sectorEnd": 40.0
+          }
+        },
+        {
+          "id": "intruso",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": 30.0,
+            "sectorEnd": 60.0
+          }
+        },
+        {
+          "id": "placaDelante",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": 40.0,
+            "sectorEnd": 70.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Asoma",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 32,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "Sale por el borde del violeta...",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capa3",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "placaAtras",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": 8.0,
+            "sectorEnd": 40.0
+          }
+        },
+        {
+          "id": "intruso",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": 10.0,
+            "sectorEnd": 40.0
+          }
+        },
+        {
+          "id": "placaDelante",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": 40.0,
+            "sectorEnd": 70.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Cruza",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 32,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "...pasando por encima del naranja",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capa4",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "placaAtras",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": 8.0,
+            "sectorEnd": 40.0
+          }
+        },
+        {
+          "id": "intruso",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": -15.0,
+            "sectorEnd": 15.0
+          }
+        },
+        {
+          "id": "placaDelante",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": 40.0,
+            "sectorEnd": 70.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Y se va",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 32,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "El orden de dibujo decide qué tapa a qué",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "capa0"
+    },
+    {
+      "scene": "capa1"
+    },
+    {
+      "scene": "capa2"
+    },
+    {
+      "scene": "capa3"
+    },
+    {
+      "scene": "capa4"
+    }
+  ]
+}

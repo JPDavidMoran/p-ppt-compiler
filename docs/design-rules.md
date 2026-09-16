@@ -259,6 +259,13 @@ sectores se mueven y en su ancho:
 El ancho es lo que decide: más que el marco y una ola lo tapa entero;
 menos, y varias conviven en pantalla.
 
+**El orden de declaración es el orden de dibujo**, y con sectores que se
+solapan eso deja de ser un detalle: un objeto declarado en medio de otros
+dos pasa por encima del primero y por debajo del segundo. Un sector que
+viaja entre dos placas quietas se oculta tras una y reaparece sobre la
+otra, y da profundidad sin más recurso que el orden de la lista
+(`color_layers.json`).
+
 ---
 
 ## Lo que el linter no puede ver
