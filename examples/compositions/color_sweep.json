@@ -1,0 +1,565 @@
+{
+  "presentation": {
+    "title": "Composición — Barrido de color",
+    "transitionMs": 900
+  },
+  "scenes": [
+    {
+      "id": "momento0",
+      "objects": [
+        {
+          "id": "fondo0",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "fondo1",
+          "type": "shape",
+          "at": {
+            "x": 100,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "fondo2",
+          "type": "shape",
+          "at": {
+            "x": 200,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "acento0",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "E8EEF4",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo0",
+          "type": "text",
+          "content": "Amanecer",
+          "at": {
+            "x": 12,
+            "y": 23,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub0",
+          "type": "text",
+          "content": "El fondo barre; el texto cae desde arriba",
+          "at": {
+            "x": 12,
+            "y": 34,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "acento1",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": -47.5,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "FFF4EC",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo1",
+          "type": "text",
+          "content": "Mediodía",
+          "at": {
+            "x": 12,
+            "y": -44.5,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "sub1",
+          "type": "text",
+          "content": "Cada capa se mueve por su cuenta",
+          "at": {
+            "x": 12,
+            "y": -33.5,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "acento2",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": -47.5,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "F3EAF3",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo2",
+          "type": "text",
+          "content": "Atardecer",
+          "at": {
+            "x": 12,
+            "y": -44.5,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "F3EAF3"
+          }
+        },
+        {
+          "id": "sub2",
+          "type": "text",
+          "content": "El saliente se va por la izquierda",
+          "at": {
+            "x": 12,
+            "y": -33.5,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "F3EAF3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "momento1",
+      "objects": [
+        {
+          "id": "fondo0",
+          "type": "shape",
+          "at": {
+            "x": -100,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "fondo1",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "fondo2",
+          "type": "shape",
+          "at": {
+            "x": 100,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "acento0",
+          "type": "shape",
+          "at": {
+            "x": -88,
+            "y": 20,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "E8EEF4",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo0",
+          "type": "text",
+          "content": "Amanecer",
+          "at": {
+            "x": -88,
+            "y": 23,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub0",
+          "type": "text",
+          "content": "El fondo barre; el texto cae desde arriba",
+          "at": {
+            "x": -88,
+            "y": 34,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "acento1",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "FFF4EC",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo1",
+          "type": "text",
+          "content": "Mediodía",
+          "at": {
+            "x": 12,
+            "y": 23,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "sub1",
+          "type": "text",
+          "content": "Cada capa se mueve por su cuenta",
+          "at": {
+            "x": 12,
+            "y": 34,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "acento2",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": -47.5,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "F3EAF3",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo2",
+          "type": "text",
+          "content": "Atardecer",
+          "at": {
+            "x": 12,
+            "y": -44.5,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "F3EAF3"
+          }
+        },
+        {
+          "id": "sub2",
+          "type": "text",
+          "content": "El saliente se va por la izquierda",
+          "at": {
+            "x": 12,
+            "y": -33.5,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "F3EAF3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "momento2",
+      "objects": [
+        {
+          "id": "fondo0",
+          "type": "shape",
+          "at": {
+            "x": -200,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "fondo1",
+          "type": "shape",
+          "at": {
+            "x": -100,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "fondo2",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "acento0",
+          "type": "shape",
+          "at": {
+            "x": -88,
+            "y": 20,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "E8EEF4",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo0",
+          "type": "text",
+          "content": "Amanecer",
+          "at": {
+            "x": -88,
+            "y": 23,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub0",
+          "type": "text",
+          "content": "El fondo barre; el texto cae desde arriba",
+          "at": {
+            "x": -88,
+            "y": 34,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "acento1",
+          "type": "shape",
+          "at": {
+            "x": -88,
+            "y": 20,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "FFF4EC",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo1",
+          "type": "text",
+          "content": "Mediodía",
+          "at": {
+            "x": -88,
+            "y": 23,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "sub1",
+          "type": "text",
+          "content": "Cada capa se mueve por su cuenta",
+          "at": {
+            "x": -88,
+            "y": 34,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "acento2",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "F3EAF3",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo2",
+          "type": "text",
+          "content": "Atardecer",
+          "at": {
+            "x": 12,
+            "y": 23,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "F3EAF3"
+          }
+        },
+        {
+          "id": "sub2",
+          "type": "text",
+          "content": "El saliente se va por la izquierda",
+          "at": {
+            "x": 12,
+            "y": 34,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "F3EAF3"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "momento0"
+    },
+    {
+      "scene": "momento1"
+    },
+    {
+      "scene": "momento2"
+    }
+  ]
+}

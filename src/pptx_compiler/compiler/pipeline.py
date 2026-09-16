@@ -17,6 +17,7 @@ def compile_document(document: Document, output: Path) -> Path:
         world_w=document.world.w,
         output=output,
         title=document.presentation.title,
+        transition_ms=document.presentation.transition_ms,
     )
 
 

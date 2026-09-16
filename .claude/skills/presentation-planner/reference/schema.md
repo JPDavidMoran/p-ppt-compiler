@@ -21,9 +21,15 @@ concuerda, manda el código.
 |---|---|---|
 | `presentation.title` | no | `"Untitled"` |
 | `presentation.aspectRatio` | no | `"16:9"` (único valor) |
+| `presentation.transitionMs` | no | `2000`; mayor que cero |
 | `world.w` / `world.h` | no | `100` / `56.25` |
 | `scenes` | no | `[]` |
 | `sequence` | **sí** | mínimo una entrada |
+
+`transitionMs` es la duración de cada transición en milisegundos. Los
+2000 por defecto son el ritmo que aplica PowerPoint, y resultan lentos
+para un barrido: entre 700 y 1000 el movimiento se siente ágil sin
+atropellarse. Afecta a toda la presentación por igual.
 
 ## Coordenadas
 

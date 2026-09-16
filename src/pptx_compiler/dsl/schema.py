@@ -93,6 +93,7 @@ class WorldSpec(Strict):
 class PresentationSpec(Strict):
     title: str = "Untitled"
     aspect_ratio: Literal["16:9"] = Field(default="16:9", alias="aspectRatio")
+    transition_ms: int = Field(default=2000, gt=0, alias="transitionMs")
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
 

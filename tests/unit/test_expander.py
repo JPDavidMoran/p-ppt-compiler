@@ -63,3 +63,41 @@ class TestEmitFalse:
     def test_una_secuencia_de_solo_silenciosas_falla(self) -> None:
         with pytest.raises(EmptySequenceError):
             expand(doc([{"scene": "base", "emit": False}]))
+
+
+class TestDuracion:
+    """La presentación declara el ritmo de sus transiciones."""
+
+    def test_por_defecto_son_2000_ms(self) -> None:
+        from pptx_compiler.dsl.schema import Document
+
+        assert Document.model_validate(
+            {"sequence": [{"scene": "base"}], "scenes": [{"id": "base"}]}
+        ).presentation.transition_ms == 2000
+
+    def test_se_puede_declarar_otro_ritmo(self) -> None:
+        from pptx_compiler.dsl.schema import Document
+
+        doc = Document.model_validate(
+            {
+                "presentation": {"transitionMs": 700},
+                "scenes": [{"id": "base"}],
+                "sequence": [{"scene": "base"}],
+            }
+        )
+        assert doc.presentation.transition_ms == 700
+
+    def test_una_duracion_no_positiva_falla(self) -> None:
+        import pytest as _pytest
+        from pydantic import ValidationError
+
+        from pptx_compiler.dsl.schema import Document
+
+        with _pytest.raises(ValidationError):
+            Document.model_validate(
+                {
+                    "presentation": {"transitionMs": 0},
+                    "scenes": [{"id": "base"}],
+                    "sequence": [{"scene": "base"}],
+                }
+            )

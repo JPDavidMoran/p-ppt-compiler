@@ -17,12 +17,18 @@ from pptx_compiler.ir.identity import IdentityRegistry
 from pptx_compiler.ir.scene import Scene
 from pptx_compiler.render.projection import SLIDE_H_EMU, SLIDE_W_EMU
 from pptx_compiler.render.shapes import draw_scene
-from pptx_compiler.render.transitions import apply_transition
+from pptx_compiler.render.transitions import DEFAULT_DURATION_MS, apply_transition
 
 BLANK_LAYOUT = 6
 
 
-def build(scenes: list[Scene], world_w: float, output: Path, title: str = "") -> Path:
+def build(
+    scenes: list[Scene],
+    world_w: float,
+    output: Path,
+    title: str = "",
+    transition_ms: int = DEFAULT_DURATION_MS,
+) -> Path:
     presentation = Presentation()
     presentation.slide_width = Emu(SLIDE_W_EMU)
     presentation.slide_height = Emu(SLIDE_H_EMU)
@@ -37,15 +43,17 @@ def build(scenes: list[Scene], world_w: float, output: Path, title: str = "") ->
         draw_scene(slide, scene, identity, world_w)
         slides.append(slide)
 
-    _apply_transitions(slides, scenes)
+    _apply_transitions(slides, scenes, transition_ms)
 
     output.parent.mkdir(parents=True, exist_ok=True)
     presentation.save(str(output))
     return output
 
 
-def _apply_transitions(slides: list, scenes: list[Scene]) -> None:
+def _apply_transitions(
+    slides: list, scenes: list[Scene], transition_ms: int
+) -> None:
     """La transición se aplica a la slide de destino, no a la de origen."""
     for index in range(1, len(scenes)):
         result = diff(scenes[index - 1], scenes[index])
-        apply_transition(slides[index], result.kind)
+        apply_transition(slides[index], result.kind, duration_ms=transition_ms)
