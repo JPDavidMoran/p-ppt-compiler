@@ -118,6 +118,11 @@ empaqueta el archivo dentro del `.pptx`, así que el resultado es
 autónomo. Una imagen morphea como cualquier otro objeto: reutiliza su id
 entre escenas.
 
+**Calcula la caja a partir del hueco libre** (R12): margen de 6 unidades,
+la zona que dejan los textos, y la imagen encajada ahí conservando su
+proporción. Una imagen pequeña en una diapositiva medio vacía se lee como
+un icono perdido.
+
 El `at` no respeta la proporción original: si no coincide, la imagen se
 deforma. Calcula `w` y `h` con la proporción real del archivo.
 

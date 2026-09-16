@@ -324,6 +324,42 @@ vaya pronto, para que la atención quede en lo que llega:
 
 ---
 
+## R12. Una imagen ocupa el espacio que le queda libre
+
+Una imagen pequeña en una diapositiva medio vacía se ve como un icono
+perdido, no como el protagonista. Su tamaño no se elige al azar: se
+calcula a partir del hueco que dejan el texto y los módulos, y se agota
+ese hueco hasta el margen.
+
+**Síntoma:** la mitad derecha de la diapositiva está casi vacía y el logo
+mide lo mismo que una línea de texto.
+
+El procedimiento:
+
+1. **Margen estándar de 6 unidades** por los cuatro lados (el mundo mide
+   100 × 56.25). Nada de contenido los invade; los fondos sí pueden.
+2. **Delimita la zona libre**: donde acaba el bloque de texto más ancho,
+   más unas 4 unidades de aire, hasta el margen opuesto.
+3. **Encaja la imagen en esa zona** conservando su proporción: se ajusta
+   al lado que primero toque el límite, y se centra en el sobrante.
+
+```
+zona libre: x 64..94 (30 de ancho)   y 6..50 (44 de alto)
+
+ratio 0.58 -> 25.7 x 44.2   (limita el alto)
+ratio 1.00 -> 30.0 x 30.0   (limita el ancho)
+```
+
+La proporción original manda siempre: `at` no la conserva por su cuenta,
+así que una caja mal calculada deforma la imagen. Calcula un lado a
+partir del otro.
+
+Y la jerarquía se mantiene: si la imagen es el sujeto, debe pesar más que
+el texto que la acompaña. Un logo al 79% del alto junto a un título al
+20% se lee como una composición; los dos al 25%, como una lista.
+
+---
+
 ## Lo que el linter no puede ver
 
 Estas reglas requieren mirar el resultado:
