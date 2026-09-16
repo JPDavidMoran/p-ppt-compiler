@@ -22,23 +22,7 @@
           }
         },
         {
-          "id": "placaAtras",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": 8.0,
-            "sectorEnd": 40.0
-          }
-        },
-        {
-          "id": "intruso",
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -49,12 +33,28 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 60.0,
-            "sectorEnd": 90.0
+            "sectorStart": -74.0,
+            "sectorEnd": -40.0
           }
         },
         {
-          "id": "placaDelante",
+          "id": "radio1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": -40.0,
+            "sectorEnd": -6.0
+          }
+        },
+        {
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -65,14 +65,62 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 40.0,
-            "sectorEnd": 70.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
+          }
+        },
+        {
+          "id": "radio3",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Tres capas",
+          "content": "El tren retrocede",
           "at": {
             "x": 12,
             "y": 20,
@@ -88,7 +136,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Naranja al fondo, violeta delante",
+          "content": "Los seis sectores vuelven sobre sus pasos",
           "at": {
             "x": 12,
             "y": 31,
@@ -120,23 +168,7 @@
           }
         },
         {
-          "id": "placaAtras",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": 8.0,
-            "sectorEnd": 40.0
-          }
-        },
-        {
-          "id": "intruso",
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -147,12 +179,28 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 50.0,
-            "sectorEnd": 80.0
+            "sectorStart": -40.0,
+            "sectorEnd": -6.0
           }
         },
         {
-          "id": "placaDelante",
+          "id": "radio1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
+          }
+        },
+        {
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -163,14 +211,62 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 40.0,
-            "sectorEnd": 70.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
+          }
+        },
+        {
+          "id": "radio3",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Algo llega",
+          "content": "El azul reaparece",
           "at": {
             "x": 12,
             "y": 20,
@@ -186,7 +282,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "El azul entra oculto tras el violeta",
+          "content": "por debajo del violeta que ya pasó",
           "at": {
             "x": 12,
             "y": 31,
@@ -218,23 +314,7 @@
           }
         },
         {
-          "id": "placaAtras",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": 8.0,
-            "sectorEnd": 40.0
-          }
-        },
-        {
-          "id": "intruso",
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -245,12 +325,28 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 30.0,
-            "sectorEnd": 60.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
-          "id": "placaDelante",
+          "id": "radio1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
+          }
+        },
+        {
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -261,14 +357,62 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 40.0,
-            "sectorEnd": 70.0
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "radio3",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 164.0,
+            "sectorEnd": 198.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Asoma",
+          "content": "Pero por encima",
           "at": {
             "x": 12,
             "y": 20,
@@ -284,7 +428,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Sale por el borde del violeta...",
+          "content": "del naranja, que se dibujó después",
           "at": {
             "x": 12,
             "y": 31,
@@ -316,23 +460,7 @@
           }
         },
         {
-          "id": "placaAtras",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": 8.0,
-            "sectorEnd": 40.0
-          }
-        },
-        {
-          "id": "intruso",
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -343,12 +471,28 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 10.0,
-            "sectorEnd": 40.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
           }
         },
         {
-          "id": "placaDelante",
+          "id": "radio1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -359,14 +503,62 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 40.0,
-            "sectorEnd": 70.0
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "radio3",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 164.0,
+            "sectorEnd": 198.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 198.0,
+            "sectorEnd": 232.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Cruza",
+          "content": "Orden de dibujo",
           "at": {
             "x": 12,
             "y": 20,
@@ -382,105 +574,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "...pasando por encima del naranja",
-          "at": {
-            "x": 12,
-            "y": 31,
-            "w": 44,
-            "h": 6
-          },
-          "style": {
-            "fontSize": 14,
-            "color": "FFFFFF"
-          }
-        }
-      ]
-    },
-    {
-      "id": "capa4",
-      "objects": [
-        {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "placaAtras",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": 8.0,
-            "sectorEnd": 40.0
-          }
-        },
-        {
-          "id": "intruso",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": -15.0,
-            "sectorEnd": 15.0
-          }
-        },
-        {
-          "id": "placaDelante",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "6B3A6B",
-            "shape": "pie",
-            "sectorStart": 40.0,
-            "sectorEnd": 70.0
-          }
-        },
-        {
-          "id": "titulo",
-          "type": "text",
-          "content": "Y se va",
-          "at": {
-            "x": 12,
-            "y": 20,
-            "w": 46,
-            "h": 10
-          },
-          "style": {
-            "fontSize": 32,
-            "bold": true,
-            "color": "FFFFFF"
-          }
-        },
-        {
-          "id": "sub",
-          "type": "text",
-          "content": "El orden de dibujo decide qué tapa a qué",
+          "content": "El primero declarado queda al fondo",
           "at": {
             "x": 12,
             "y": 31,
@@ -507,9 +601,6 @@
     },
     {
       "scene": "capa3"
-    },
-    {
-      "scene": "capa4"
     }
   ]
 }
