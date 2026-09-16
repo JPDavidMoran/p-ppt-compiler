@@ -358,6 +358,33 @@ Y la jerarquía se mantiene: si la imagen es el sujeto, debe pesar más que
 el texto que la acompaña. Un logo al 79% del alto junto a un título al
 20% se lee como una composición; los dos al 25%, como una lista.
 
+### Varias imágenes: iguala el área, no el alto
+
+Dos imágenes de proporciones distintas encajadas cada una por su cuenta
+acaban con pesos visuales muy diferentes: una vertical llena el alto
+mientras una cuadrada se queda a medias, y la marca de la segunda parece
+más pequeña. Lo que el ojo compara es la **superficie**, no el lado.
+
+Da a todas la misma área: la mayor que ninguna supere, ni por la zona
+libre ni por el límite de ampliación. Luego cada una reparte esa área
+según su proporción.
+
+```
+área común 1136 u²
+  ratio 0.58 -> 25.7 x 44.2
+  ratio 1.00 -> 33.7 x 33.7
+```
+
+### No amplíes más del 135%
+
+Una imagen estirada por encima de su resolución se ve borrosa. El tope es
+**135%** de su tamaño natural —el que tendría a 96 DPI—, y se aplica
+antes de repartir el área: si una imagen no puede alcanzar el área común
+sin pasarse, esa área baja para todas.
+
+Conviene comprobar los DPI resultantes: por debajo de 100 la imagen ya se
+nota blanda en pantalla grande.
+
 ---
 
 ## Lo que el linter no puede ver
