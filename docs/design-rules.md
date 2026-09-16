@@ -275,6 +275,39 @@ sitio: con 900 ms el destello se escapa, y conviene subir a 1400.
 
 ---
 
+## R11. El texto puede fundirse; las formas y las imágenes, no
+
+Un objeto con peso visual que surge de la nada rompe la continuidad. El
+texto es lo bastante ligero como para que un fundido no moleste, pero un
+módulo, una tarjeta o un logo deben **entrar y salir con movimiento**.
+
+**Síntoma:** una imagen aparece en el sitio al pasar de diapositiva, o un
+bloque de color se desvanece donde estaba. La escena se siente montada,
+no narrada.
+
+Por defecto:
+
+| Tipo | Entrada y salida |
+|---|---|
+| `text` | fundido, o movimiento si acompaña a una forma |
+| `shape` | **movimiento** |
+| `image` | **movimiento** |
+
+En la práctica es R8 aplicada por tipo: toda forma o imagen que no
+persista entre dos escenas se declara en la otra fuera del encuadre, y
+Morph la desplaza en lugar de fundirla.
+
+```json
+{ "id": "logo", "at": { "x": 112, "y": 15, "w": 15, "h": 26 } }
+
+{ "id": "logo", "at": { "x": 68,  "y": 15, "w": 15, "h": 26 } }
+```
+
+Un objeto que **persiste** entre escenas ya morphea por su cuenta: la
+regla habla de los que entran o salen.
+
+---
+
 ## Lo que el linter no puede ver
 
 Estas reglas requieren mirar el resultado:

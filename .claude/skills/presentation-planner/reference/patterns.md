@@ -95,6 +95,25 @@ lo que el mecanismo iba a revelar.
 { "mechanism": "Build", "sequence": ["p1", "p2", "p3"] }
 ```
 
+## P4c. Formas e imágenes entran con movimiento
+
+Una forma o una imagen que aparece de la nada rompe la continuidad (R11).
+Decláralas en **todas** las escenas: dentro donde les toca, aparcadas
+fuera del encuadre donde no.
+
+```json
+{ "id": "logo", "at": { "x": 112, "y": 15, "w": 15, "h": 26 } }
+
+{ "id": "logo", "at": { "x": 68,  "y": 15, "w": 15, "h": 26 } }
+```
+
+No basta con aparcarla en la escena contigua: si hay tres escenas y solo
+se declara en dos, la tercera vuelve a hacerla aparecer. Conviene
+aparcarla a la derecha en las escenas anteriores a su aparición y a la
+izquierda en las posteriores, para que el recorrido sea coherente.
+
+Los textos son la excepción: pueden fundirse sin más.
+
 ## P5. Mapa o lienzo amplio
 
 Objetos lejos del encuadre inicial, recorridos por la cámara.

@@ -55,6 +55,128 @@
             "fontSize": 17,
             "color": "8C5A2B"
           }
+        },
+        {
+          "id": "regionCosta",
+          "type": "shape",
+          "content": "Costa\nSuspiro a la limeña\nPicarones\nTurrón de Doña Pepa",
+          "at": {
+            "x": 112.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSierra",
+          "type": "shape",
+          "content": "Sierra\nMazamorra morada\nQueso helado\nTejas arequipeñas",
+          "at": {
+            "x": 112.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "BF6B04",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSelva",
+          "type": "shape",
+          "content": "Selva\nDulce de aguaje\nChapo\nHelado de camu camu",
+          "at": {
+            "x": 112.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "D98324",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraSiglo",
+          "type": "shape",
+          "content": "Siglo XVIII\nNace en Cañete",
+          "at": {
+            "x": 112.0,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMes",
+          "type": "shape",
+          "content": "Octubre\nMes del Señor de los Milagros",
+          "at": {
+            "x": 112.0,
+            "y": 22,
+            "w": 24,
+            "h": 24
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMiel",
+          "type": "shape",
+          "content": "Miel de chancaca\nCon higo, membrillo y clavo",
+          "at": {
+            "x": 112.0,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "acentoCierre",
+          "type": "shape",
+          "at": {
+            "x": 112.0,
+            "y": 22,
+            "w": 40,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
         }
       ]
     },
@@ -147,6 +269,88 @@
             "color": "8C5A2B",
             "align": "center"
           }
+        },
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": {
+            "x": -45.0,
+            "y": 20,
+            "w": 14,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "cifraSiglo",
+          "type": "shape",
+          "content": "Siglo XVIII\nNace en Cañete",
+          "at": {
+            "x": 112.0,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMes",
+          "type": "shape",
+          "content": "Octubre\nMes del Señor de los Milagros",
+          "at": {
+            "x": 112.0,
+            "y": 22,
+            "w": 24,
+            "h": 24
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMiel",
+          "type": "shape",
+          "content": "Miel de chancaca\nCon higo, membrillo y clavo",
+          "at": {
+            "x": 112.0,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "acentoCierre",
+          "type": "shape",
+          "at": {
+            "x": 112.0,
+            "y": 22,
+            "w": 40,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
         }
       ]
     },
@@ -158,16 +362,16 @@
           "type": "text",
           "content": "El turrón de Doña Pepa",
           "at": {
-            "x": 20,
-            "y": 7,
-            "w": 60,
-            "h": 8
+            "x": 12,
+            "y": 21,
+            "w": 50,
+            "h": 9
           },
           "style": {
             "fontSize": 30,
             "bold": true,
             "color": "4A2511",
-            "align": "center"
+            "align": "left"
           }
         },
         {
@@ -223,6 +427,88 @@
             "align": "center",
             "shape": "roundRect"
           }
+        },
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": {
+            "x": -45.0,
+            "y": 20,
+            "w": 14,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "regionCosta",
+          "type": "shape",
+          "content": "Costa\nSuspiro a la limeña\nPicarones\nTurrón de Doña Pepa",
+          "at": {
+            "x": -45.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSierra",
+          "type": "shape",
+          "content": "Sierra\nMazamorra morada\nQueso helado\nTejas arequipeñas",
+          "at": {
+            "x": -45.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "BF6B04",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSelva",
+          "type": "shape",
+          "content": "Selva\nDulce de aguaje\nChapo\nHelado de camu camu",
+          "at": {
+            "x": -45.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "D98324",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "acentoCierre",
+          "type": "shape",
+          "at": {
+            "x": 112.0,
+            "y": 22,
+            "w": 40,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
         }
       ]
     },
@@ -274,6 +560,128 @@
             "fontSize": 14,
             "color": "8C5A2B",
             "align": "center"
+          }
+        },
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": {
+            "x": -45.0,
+            "y": 20,
+            "w": 14,
+            "h": 0.8
+          },
+          "style": {
+            "fill": "D98324",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "regionCosta",
+          "type": "shape",
+          "content": "Costa\nSuspiro a la limeña\nPicarones\nTurrón de Doña Pepa",
+          "at": {
+            "x": -45.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSierra",
+          "type": "shape",
+          "content": "Sierra\nMazamorra morada\nQueso helado\nTejas arequipeñas",
+          "at": {
+            "x": -45.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "BF6B04",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "regionSelva",
+          "type": "shape",
+          "content": "Selva\nDulce de aguaje\nChapo\nHelado de camu camu",
+          "at": {
+            "x": -45.0,
+            "y": 24,
+            "w": 22,
+            "h": 20
+          },
+          "style": {
+            "fill": "D98324",
+            "color": "FFFFFF",
+            "fontSize": 13,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraSiglo",
+          "type": "shape",
+          "content": "Siglo XVIII\nNace en Cañete",
+          "at": {
+            "x": -45.0,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMes",
+          "type": "shape",
+          "content": "Octubre\nMes del Señor de los Milagros",
+          "at": {
+            "x": -45.0,
+            "y": 22,
+            "w": 24,
+            "h": 24
+          },
+          "style": {
+            "fill": "8C3503",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "cifraMiel",
+          "type": "shape",
+          "content": "Miel de chancaca\nCon higo, membrillo y clavo",
+          "at": {
+            "x": -45.0,
+            "y": 26,
+            "w": 24,
+            "h": 16
+          },
+          "style": {
+            "fill": "F2E3C6",
+            "color": "4A2511",
+            "fontSize": 14,
+            "align": "center",
+            "shape": "roundRect"
           }
         }
       ]
