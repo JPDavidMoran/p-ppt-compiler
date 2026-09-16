@@ -75,6 +75,26 @@ Presentar la escena y acercarse a la cifra de la que vas a hablar.
 Solo si vas a hablar de ese dato a continuación. Un zoom que no lleva a
 ninguna parte deja al espectador esperando algo que no llega.
 
+## P4b. Revelar sin enseñar el final
+
+`Build`, `Reveal` y `BeforeAfter` parten de una escena que ya contiene el
+estado final. Si esa escena se emite, la primera diapositiva enseña justo
+lo que el mecanismo iba a revelar.
+
+**Mal** — la slide 1 muestra los tres puntos y luego los oculta:
+
+```json
+{ "scene": "lista" },
+{ "mechanism": "Build", "sequence": ["p1", "p2", "p3"] }
+```
+
+**Bien** — la escena carga el estado sin dibujarse:
+
+```json
+{ "scene": "lista", "emit": false },
+{ "mechanism": "Build", "sequence": ["p1", "p2", "p3"] }
+```
+
 ## P5. Mapa o lienzo amplio
 
 Objetos lejos del encuadre inicial, recorridos por la cámara.
@@ -90,6 +110,12 @@ objetos del tema anterior.
 
 Para un lienzo mucho mayor que la pantalla, `InfiniteCanvas` declara los
 objetos y el recorrido en una sola llamada.
+
+Declara las zonas en la **escena base**, no dentro del mecanismo. Si solo
+existen dentro, entran en la primera transición y salen en la última: sin
+objeto que emparejar, esas dos se ven como una aparición por opacidad
+mientras las intermedias se deslizan. Declaradas en la escena, todas las
+transiciones son deslizamiento continuo.
 
 ---
 

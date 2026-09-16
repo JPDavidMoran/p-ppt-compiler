@@ -111,6 +111,24 @@ Cada entrada es una referencia a escena o una llamada a mecanismo.
 Repetir `{"scene": "x"}` es válido y es la forma de volver al plano
 general tras un recorrido.
 
+### Escenas silenciosas
+
+```json
+{ "scene": "modulos", "emit": false }
+```
+
+`emit` es `true` por defecto. Con `false` la escena carga su estado pero
+no produce diapositiva: queda disponible como punto de partida de un
+mecanismo sin que el espectador vea antes lo que ese mecanismo va a ir
+revelando.
+
+Es lo que necesitan `Build`, `Reveal` y `BeforeAfter`, cuya escena fuente
+contiene el estado final. Sin `emit: false`, `Build` enseña todos los
+puntos antes de construirlos de uno en uno.
+
+Una secuencia de solo escenas silenciosas falla: no produce ninguna
+diapositiva.
+
 ## Mecanismos
 
 Solo existen estos ocho.

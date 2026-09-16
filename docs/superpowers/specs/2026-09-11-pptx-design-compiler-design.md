@@ -1,7 +1,8 @@
 # PowerPoint Design Compiler — Diseño
 
 Fecha: 2026-09-11
-Estado: aprobado para implementación
+Actualizado: 2026-09-16
+Estado: implementado; el compilador cumple los criterios de aceptación
 
 ## 1. Propósito
 
@@ -21,18 +22,24 @@ Dentro del alcance:
 - Scene IR con mundo persistente, cámara y objetos con identidad.
 - Differ que deriva transiciones comparando escenas consecutivas.
 - Generación de `.pptx` con `python-pptx` y parcheo OOXML con `lxml`.
-- Cuatro mecanismos: `CameraZoom`, `BeforeAfter`, `FocusTransition`,
-  `InfiniteCanvas`.
+- Ocho mecanismos. Los cuatro del diseño original —`CameraZoom`,
+  `BeforeAfter`, `FocusTransition`, `InfiniteCanvas`— y cuatro añadidos
+  después: `Build`, `Regroup`, `Reveal`, `Spotlight`.
 - Tipos de objeto: `text`, `shape`, `image`.
-- CLI con `compile`, `validate`, `inspect`.
+- Opacidad por objeto, que el differ trata como cambio morpheable.
+- CLI con `compile`, `validate`, `lint`, `inspect`.
 
 Fuera del alcance:
 
-- Generación de DSL por IA.
 - Render de slides a imagen y evaluación con modelos de visión.
 - Automatización COM de PowerPoint.
 - Sistema de composiciones y temas.
 - Animaciones intra-slide (`<p:timing>`). Solo transiciones entre slides.
+
+La generación de DSL por IA estaba aquí y salió: la skill
+`presentation-planner` la cubre, apoyada en `docs/design-rules.md` y en
+`pptxc lint`. Sigue sin ser parte del compilador —el compilador no sabe
+que existe— pero ya no es trabajo pendiente.
 
 ## 3. Decisiones de diseño
 
@@ -117,7 +124,7 @@ redondeo acumulado.
       "type": "text",
       "content": "Gestión de áreas verdes",
       "at": {"x": 10, "y": 20, "w": 60, "h": 8},
-      "style": {"fontSize": 44, "color": "1B4332", "bold": true}
+      "style": {"fontSize": 44, "color": "1B4332", "bold": true, "opacity": 1.0}
     }
   ]
 }
@@ -143,6 +150,12 @@ escenas significa el mismo objeto, y es lo que permite el Morph.
 `scenes` declara escenas nombradas. `sequence` es la línea de tiempo:
 entradas que son o bien una referencia a escena, o bien una invocación
 de mecanismo que expande a una o más escenas.
+
+Una referencia admite `"emit": false`: carga el estado de la escena sin
+emitir diapositiva. Existe porque `Build`, `Reveal` y `BeforeAfter` parten
+de una escena que ya contiene el estado final, y emitirla enseña de
+antemano lo que el mecanismo iba a revelar. Añadido el 2026-09-16, al
+comprobar los mecanismos en PowerPoint.
 
 ## 6. Mecanismos
 
@@ -217,6 +230,70 @@ igual que si estuvieran escritos en una escena del DSL. Es azúcar para no
 tener que declarar a mano una escena con muchos objetos dispersos; no
 introduce un contenedor distinto. Cada `at` del `tour` referencia el `id`
 de uno de esos objetos.
+
+## 6bis. Mecanismos añadidos después del diseño
+
+Los cuatro anteriores se eligieron para cubrir los ejes del modelo:
+cámara móvil, mundo móvil, composición y lienzo amplio. Estos cuatro
+salieron de usar el compilador: cada uno cubre un gesto narrativo que no
+se podía expresar.
+
+### Build
+
+Revela los objetos de uno en uno sobre la escena actual.
+
+```json
+{"mechanism": "Build", "sequence": ["punto1", "punto2", "punto3"]}
+```
+
+Emite una escena por elemento, cada una con un objeto más. Los que no
+aparecen en `sequence` permanecen visibles todo el tiempo: son el
+contexto sobre el que se construye. Ejercita: construcción progresiva.
+Es el recurso más común de una presentación y el único que permite
+dosificar la información en vez de mostrarla de golpe.
+
+### Regroup
+
+Los mismos objetos pasan a otra disposición.
+
+```json
+{"mechanism": "Regroup", "targets": ["a", "b", "c"], "layout": "grid", "gap": 3.0}
+```
+
+`layout` admite `row`, `column` y `grid`; `area` acota la zona destino y
+por defecto es el encuadre. Los objetos no listados no se tocan. Emite
+una escena. Ejercita: reorganización — es donde Morph luce más, porque
+cada objeto viaja a su nueva posición conservando su identidad, y una
+fila que se vuelve cuadrícula se lee como movimiento.
+
+### Reveal
+
+Una tapa se aparta y deja ver lo que había debajo.
+
+```json
+{"mechanism": "Reveal", "cover": "tapa", "target": "dato", "direction": "up"}
+```
+
+La tapa conserva su id, así que Morph la desplaza en lugar de
+desvanecerla. Sale fuera del encuadre, apoyándose en que un objeto puede
+vivir fuera del área visible. Ejercita: descubrimiento.
+
+### Spotlight
+
+Destaca un objeto atenuando los demás, sin mover la cámara.
+
+```json
+{"mechanism": "Spotlight", "target": "modB", "dim": 0.25, "keep": ["titulo"]}
+```
+
+Los objetos de `keep` conservan su opacidad —normalmente el título, que
+no debería atenuarse con el contenido. Ejercita: énfasis sin
+desplazamiento. Antes la única forma de enfatizar era acercarse, lo que
+obliga a perder de vista el conjunto; aquí el contexto permanece y solo
+cambia el peso visual.
+
+Este mecanismo motivó el campo `opacity` en `style`, y que el differ lo
+trate como un cambio que morphea.
 
 ### Registro
 
@@ -362,6 +439,7 @@ Comportamiento de los dos casos válidos:
 ```
 pptxc compile deck.json -o deck.pptx
 pptxc validate deck.json
+pptxc lint deck.json
 pptxc inspect deck.pptx
 ```
 
@@ -369,15 +447,20 @@ pptxc inspect deck.pptx
 existente. No es un extra: es la herramienta con la que se disecciona el
 golden file y se depura un Morph que no funciona.
 
+`lint` llegó después del diseño, con las reglas de composición de la
+sección 15. Sale con código 1 si encuentra hallazgos, para poder
+encadenarlo antes de `compile`.
+
 ## 13. Estructura del proyecto
 
 ```
 src/pptx_compiler/
   dsl/          schemas, loader
   mechanisms/   camera_zoom/ before_after/ focus_transition/ infinite_canvas/
-  ir/           scene, camera, scene_object, identity
-  compiler/     differ, slide_planner
-  render/       projection, pptx_builder, transitions
+                build/ regroup/ reveal/ spotlight/
+  ir/           scene, camera, geometry, identity
+  compiler/     expander, differ, pipeline, lint, rules_flow, rules_visual, findings
+  render/       projection, builder, shapes, transitions
   errors.py
   cli/
 tests/
@@ -387,8 +470,9 @@ examples/
 fixtures/golden/morph_reference.pptx
 ```
 
-Límites de tamaño por archivo: engine y core 150 líneas, parsers 120,
-CLI 50. Tipos y tests sin límite.
+Sin límite numérico de líneas por archivo. El criterio es la
+responsabilidad única: un archivo se divide cuando hace dos cosas, no
+cuando cruza una cifra.
 
 Dependencias: `python-pptx`, `pydantic`, `lxml`, `typer`, `pytest`.
 
@@ -408,6 +492,11 @@ cuatro mecanismos.
 Si el modelo de identidad resulta mal planteado, se descubre en el paso 4,
 antes de que existan mecanismos que corregir.
 
+El orden se siguió y funcionó: la incertidumbre del namespace `p159`
+apareció en el paso 1, donde era barata. Los cuatro mecanismos añadidos
+después (sección 6bis) no tocaron el núcleo, que es lo que el registro
+por descubrimiento pretendía demostrar.
+
 ## 15. Reglas de composición
 
 Un DSL puede compilar sin errores y narrar mal. Las reglas descubiertas
@@ -422,10 +511,18 @@ no de compilación.
 
 - Un DSL de ejemplo compila a `.pptx` que PowerPoint abre sin reparar.
 - Ese archivo morphea visiblemente al pasar de slide.
-- Los cuatro mecanismos producen escenas correctas, verificado por tests
+- Cada mecanismo produce escenas correctas, verificado por tests
   unitarios sin generar archivos.
 - El identificador OOXML de un objeto persistente es idéntico en todas
   las slides donde aparece.
 - Todos los casos extremos de la sección 11 producen el comportamiento
   especificado.
-- Ningún archivo de código supera su límite de capa.
+
+### Estado al 2026-09-16
+
+Todos cumplidos. La suite pasa con 147 tests, y el golden file de la
+sección 11 —que bloqueaba el resto de la implementación— está en
+`fixtures/golden/morph_reference.pptx`.
+
+Pendiente, y deliberadamente no hecho todavía: los `README.md` por
+mecanismo que pide la sección 6.
