@@ -28,8 +28,8 @@ Dentro del alcance:
 - Tipos de objeto: `text`, `shape`, `image`.
 - Opacidad por objeto, que el differ trata como cambio morpheable.
 - CLI con `compile`, `validate`, `lint`, `inspect`.
-- Giro continuo por objeto (`<p:timing>`), la única animación dentro de
-  una diapositiva.
+- Animaciones continuas por objeto (`<p:timing>`): `spin`, `shake`,
+  `pulse` y `sway`. Son lo único que se mueve dentro de una diapositiva.
 
 Fuera del alcance:
 
@@ -391,8 +391,13 @@ Lo que el sondeo dejó fijado:
 - El árbol de tiempos tiene una anidación obligatoria —`tmRoot`,
   `mainSeq` y tres niveles de `par`— que PowerPoint escribe siempre igual
   y rechaza si falta un nivel.
-- El giro se expresa en 1/60000 de grado: una vuelta son `21600000`, y el
-  signo decide el sentido.
+- Los ángulos van en 1/60000 de grado —una vuelta son `21600000`— y las
+  escalas en milésimas de porcentaje, donde `100000` es el tamaño
+  original.
+- `autoRev="1"` recorre la animación al revés antes de repetirla: es lo
+  que distingue un temblor de un desplazamiento que se acumula.
+- `presetID` debe ser un entero. Cualquier otra cosa hace que PowerPoint
+  declare el archivo dañado y se niegue a abrirlo.
 - `repeatCount="indefinite"` es lo que lo vuelve perpetuo, y
   `nodeType="withEffect"` con `evt="onPrev"` lo arranca sin esperar un
   clic.

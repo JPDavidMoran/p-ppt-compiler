@@ -41,20 +41,20 @@ ALIGNMENTS = {"left": PP_ALIGN.LEFT, "center": PP_ALIGN.CENTER, "right": PP_ALIG
 
 def draw_scene(
     slide, scene: Scene, identity: IdentityRegistry, world_w: float
-) -> dict[int, tuple[float, bool]]:
+) -> dict[int, tuple[str, dict]]:
     """Dibuja la escena y devuelve qué shapes piden giro continuo.
 
     El giro no se aplica aquí: vive en un bloque de tiempos aparte, al
     final del slide, así que quien dibuja solo anota quién lo pidió.
     """
-    spins: dict[int, tuple[float, bool]] = {}
+    spins: dict[int, tuple[str, dict]] = {}
     for obj in scene.objects:
         shape = _draw(slide, obj, scene.camera, world_w)
         if shape is None:
             continue
         _apply_identity(shape, obj.id, identity)
-        if obj.style.spin:
-            spins[int(shape._element.nvSpPr.cNvPr.get("id"))] = obj.style.spin
+        if obj.style.animation:
+            spins[int(shape._element.nvSpPr.cNvPr.get("id"))] = obj.style.animation
     return spins
 
 

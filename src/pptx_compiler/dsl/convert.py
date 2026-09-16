@@ -18,7 +18,7 @@ def to_style(spec: StyleSpec) -> ObjectStyle:
         fill=spec.fill,
         line=spec.line,
         line_width=spec.line_width,
-        spin=(spec.spin.seconds, spec.spin.clockwise) if spec.spin else None,
+        animation=_animation(spec),
         bold=spec.bold,
         opacity=spec.opacity,
         rotation=spec.rotation,
@@ -38,3 +38,16 @@ def to_object(spec: ObjectSpec) -> SceneObject:
         source=spec.source,
         style=to_style(spec.style),
     )
+
+
+def _animation(spec) -> tuple[str, dict] | None:
+    """La animación continua declarada, si la hay.
+
+    El schema garantiza que solo haya una, así que la primera que
+    aparezca es la definitiva.
+    """
+    for nombre in ("spin", "shake", "pulse", "sway"):
+        valor = getattr(spec, nombre, None)
+        if valor is not None:
+            return nombre, valor.model_dump()
+    return None

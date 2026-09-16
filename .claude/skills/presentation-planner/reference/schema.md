@@ -84,7 +84,10 @@ se omite: los mecanismos mueven la cámara por ti.
 | `fill` | ninguno | hex; sin relleno si se omite |
 | `line` | ninguno | hex; sin borde si se omite |
 | `lineWidth` | ninguno | grosor del borde en puntos (`line_width`) |
-| `spin` | ninguno | giro continuo: `{seconds, clockwise}` |
+| `spin` | ninguno | vuelta completa: `{seconds, clockwise}` |
+| `shake` | ninguno | temblor: `{seconds, amount}` |
+| `pulse` | ninguno | latido: `{seconds, amount}` (amount en %) |
+| `sway` | ninguno | balanceo: `{seconds, degrees}` |
 | `bold` | `false` | |
 | `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
 | `opacity` | `1.0` | entre 0 y 1 |
@@ -117,7 +120,25 @@ Las estrellas (`star4` es un shuriken de cuatro puntas) sirven de textura de fon
            "spin": { "seconds": 6, "clockwise": false } }
 ```
 
-`seconds` es lo que tarda una vuelta completa. Duraciones distintas en cada figura evitan que el patrón se mueva como un bloque. Es la única animación dentro de una diapositiva; todo lo demás ocurre en las transiciones.
+Hay cuatro animaciones continuas, y **un objeto solo admite una**: dos se
+pisarían entre sí y el schema lo rechaza.
+
+| Campo | Qué hace | Valores típicos |
+|---|---|---|
+| `spin` | da vueltas completas | `seconds` 5-20 |
+| `shake` | tiembla en el sitio | `seconds` 0.1, `amount` 0.4 |
+| `pulse` | crece y encoge | `seconds` 0.8, `amount` 12 |
+| `sway` | se inclina a un lado y al otro | `seconds` 0.5, `degrees` 12 |
+
+```json
+"style": { "shape": "star4", "line": "2E5C7A",
+           "shake": { "seconds": 0.1, "amount": 0.4 } }
+```
+
+`seconds` es lo que dura un ciclo. Duraciones distintas en cada figura
+evitan que el conjunto se mueva como un bloque. Son las únicas
+animaciones dentro de una diapositiva; todo lo demás ocurre en las
+transiciones.
 
 ### Imágenes
 

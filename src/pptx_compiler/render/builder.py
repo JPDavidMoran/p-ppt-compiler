@@ -16,7 +16,7 @@ from pptx_compiler.compiler.differ import diff
 from pptx_compiler.ir.identity import IdentityRegistry
 from pptx_compiler.ir.scene import Scene
 from pptx_compiler.render.projection import SLIDE_H_EMU, SLIDE_W_EMU
-from pptx_compiler.render.animations import apply_spins
+from pptx_compiler.render.animations import apply_animations
 from pptx_compiler.render.shapes import draw_scene
 from pptx_compiler.render.transitions import DEFAULT_DURATION_MS, apply_transition
 
@@ -48,7 +48,7 @@ def build(
     # transición, o PowerPoint declara el archivo dañado.
     _apply_transitions(slides, scenes, transition_ms)
     for slide, pedidos in zip(slides, spins):
-        apply_spins(slide, pedidos)
+        apply_animations(slide, pedidos)
 
     output.parent.mkdir(parents=True, exist_ok=True)
     presentation.save(str(output))

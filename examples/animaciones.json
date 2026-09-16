@@ -1,0 +1,255 @@
+{
+  "presentation": {
+    "title": "Animaciones continuas"
+  },
+  "scenes": [
+    {
+      "id": "muestra",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "0E1A26",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Cuatro animaciones continuas",
+          "at": {
+            "x": 10,
+            "y": 6,
+            "w": 80,
+            "h": 8
+          },
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "E8EEF4",
+            "align": "center"
+          }
+        },
+        {
+          "id": "figspin",
+          "type": "shape",
+          "at": {
+            "x": 10.5,
+            "y": 20,
+            "w": 14,
+            "h": 14
+          },
+          "style": {
+            "shape": "star4",
+            "line": "5AA9D6",
+            "lineWidth": 1.5,
+            "spin": {
+              "seconds": 6.0
+            }
+          }
+        },
+        {
+          "id": "lblspin",
+          "type": "text",
+          "content": "spin",
+          "at": {
+            "x": 8,
+            "y": 36,
+            "w": 19,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 15,
+            "bold": true,
+            "color": "E8EEF4",
+            "align": "center"
+          }
+        },
+        {
+          "id": "descspin",
+          "type": "text",
+          "content": "Vuelta completa, sin parar",
+          "at": {
+            "x": 7,
+            "y": 41,
+            "w": 21,
+            "h": 8
+          },
+          "style": {
+            "fontSize": 10,
+            "color": "5AA9D6",
+            "align": "center"
+          }
+        },
+        {
+          "id": "figshake",
+          "type": "shape",
+          "at": {
+            "x": 33.5,
+            "y": 20,
+            "w": 14,
+            "h": 14
+          },
+          "style": {
+            "shape": "star4",
+            "line": "5AA9D6",
+            "lineWidth": 1.5,
+            "shake": {
+              "seconds": 0.12,
+              "amount": 0.5
+            }
+          }
+        },
+        {
+          "id": "lblshake",
+          "type": "text",
+          "content": "shake",
+          "at": {
+            "x": 31,
+            "y": 36,
+            "w": 19,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 15,
+            "bold": true,
+            "color": "E8EEF4",
+            "align": "center"
+          }
+        },
+        {
+          "id": "descshake",
+          "type": "text",
+          "content": "Temblor en el sitio",
+          "at": {
+            "x": 30,
+            "y": 41,
+            "w": 21,
+            "h": 8
+          },
+          "style": {
+            "fontSize": 10,
+            "color": "5AA9D6",
+            "align": "center"
+          }
+        },
+        {
+          "id": "figpulse",
+          "type": "shape",
+          "at": {
+            "x": 56.5,
+            "y": 20,
+            "w": 14,
+            "h": 14
+          },
+          "style": {
+            "shape": "star4",
+            "line": "5AA9D6",
+            "lineWidth": 1.5,
+            "pulse": {
+              "seconds": 0.9,
+              "amount": 14.0
+            }
+          }
+        },
+        {
+          "id": "lblpulse",
+          "type": "text",
+          "content": "pulse",
+          "at": {
+            "x": 54,
+            "y": 36,
+            "w": 19,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 15,
+            "bold": true,
+            "color": "E8EEF4",
+            "align": "center"
+          }
+        },
+        {
+          "id": "descpulse",
+          "type": "text",
+          "content": "Crece y encoge",
+          "at": {
+            "x": 53,
+            "y": 41,
+            "w": 21,
+            "h": 8
+          },
+          "style": {
+            "fontSize": 10,
+            "color": "5AA9D6",
+            "align": "center"
+          }
+        },
+        {
+          "id": "figsway",
+          "type": "shape",
+          "at": {
+            "x": 79.5,
+            "y": 20,
+            "w": 14,
+            "h": 14
+          },
+          "style": {
+            "shape": "star4",
+            "line": "5AA9D6",
+            "lineWidth": 1.5,
+            "sway": {
+              "seconds": 0.6,
+              "degrees": 14.0
+            }
+          }
+        },
+        {
+          "id": "lblsway",
+          "type": "text",
+          "content": "sway",
+          "at": {
+            "x": 77,
+            "y": 36,
+            "w": 19,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 15,
+            "bold": true,
+            "color": "E8EEF4",
+            "align": "center"
+          }
+        },
+        {
+          "id": "descsway",
+          "type": "text",
+          "content": "Se inclina a un lado y al otro",
+          "at": {
+            "x": 76,
+            "y": 41,
+            "w": 21,
+            "h": 8
+          },
+          "style": {
+            "fontSize": 10,
+            "color": "5AA9D6",
+            "align": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "muestra"
+    }
+  ]
+}

@@ -36,6 +36,27 @@ class SpinSpec(Strict):
     clockwise: bool = True
 
 
+class ShakeSpec(Strict):
+    """Temblor: la figura se desplaza unos milímetros y vuelve."""
+
+    seconds: float = Field(default=0.1, gt=0, description="Lo que tarda una sacudida")
+    amount: float = Field(default=0.4, gt=0, description="Desplazamiento en unidades")
+
+
+class PulseSpec(Strict):
+    """Latido: la figura crece y encoge sobre su centro."""
+
+    seconds: float = Field(default=0.8, gt=0)
+    amount: float = Field(default=12.0, gt=0, description="Cuánto crece, en %")
+
+
+class SwaySpec(Strict):
+    """Balanceo: la figura gira a un lado y al otro."""
+
+    seconds: float = Field(default=0.5, gt=0)
+    degrees: float = Field(default=12.0, gt=0, description="Amplitud del giro")
+
+
 class StyleSpec(Strict):
     font_size: float = Field(default=18.0, gt=0, alias="fontSize")
     color: str = "202020"
@@ -43,6 +64,9 @@ class StyleSpec(Strict):
     line: str | None = None
     line_width: float | None = Field(default=None, gt=0, alias="lineWidth")
     spin: SpinSpec | None = None
+    shake: ShakeSpec | None = None
+    pulse: PulseSpec | None = None
+    sway: SwaySpec | None = None
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     rotation: float = Field(default=0.0, ge=-360.0, le=360.0)
@@ -53,6 +77,21 @@ class StyleSpec(Strict):
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
 
+
+    @model_validator(mode="after")
+    def _una_sola_animacion(self) -> "StyleSpec":
+        """Dos animaciones sobre la misma figura se pisarían entre sí."""
+        activas = [
+            nombre
+            for nombre in ("spin", "shake", "pulse", "sway")
+            if getattr(self, nombre) is not None
+        ]
+        if len(activas) > 1:
+            raise ValueError(
+                f"un objeto solo admite una animación continua; "
+                f"se declararon {', '.join(activas)}"
+            )
+        return self
 
     @model_validator(mode="after")
     def _sector_bien_orientado(self) -> "StyleSpec":
