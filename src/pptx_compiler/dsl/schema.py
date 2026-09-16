@@ -68,7 +68,15 @@ class SceneSpec(Strict):
 
 
 class SceneRef(Strict):
+    """Una entrada de escena en la secuencia.
+
+    `emit: false` carga el estado sin dibujar la slide: deja la escena
+    disponible como punto de partida de un mecanismo sin mostrar antes
+    lo que ese mecanismo va a ir revelando.
+    """
+
     scene: str
+    emit: bool = True
 
 
 class MechanismCall(Strict):

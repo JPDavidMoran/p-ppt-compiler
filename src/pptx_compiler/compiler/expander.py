@@ -28,7 +28,8 @@ def expand(document: Document) -> list[Scene]:
             if entry.scene not in declared:
                 raise UnknownSceneError(entry.scene, list(declared))
             current = _to_scene(declared[entry.scene], default_camera)
-            scenes.append(current)
+            if entry.emit:
+                scenes.append(current)
         else:
             produced = expand_mechanism(
                 entry.mechanism, _params(entry), current, world, index
