@@ -1,0 +1,267 @@
+{
+  "presentation": {
+    "title": "Composición — Transición de color"
+  },
+  "scenes": [
+    {
+      "id": "amanecer",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": 18,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "E8EEF4",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Amanecer",
+          "at": {
+            "x": 12,
+            "y": 21,
+            "w": 60,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "subtitulo",
+          "type": "text",
+          "content": "El día empieza en azul profundo",
+          "at": {
+            "x": 12,
+            "y": 32,
+            "w": 56,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "ficha",
+          "type": "shape",
+          "content": "1 de 3",
+          "at": {
+            "x": 76,
+            "y": 42,
+            "w": 12,
+            "h": 7
+          },
+          "style": {
+            "fill": "E8EEF4",
+            "color": "5A7A99",
+            "fontSize": 13,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mediodia",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "FFF4EC",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Mediodía",
+          "at": {
+            "x": 12,
+            "y": 23,
+            "w": 60,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "subtitulo",
+          "type": "text",
+          "content": "El color se calienta sin cortes",
+          "at": {
+            "x": 12,
+            "y": 34,
+            "w": 56,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "ficha",
+          "type": "shape",
+          "content": "2 de 3",
+          "at": {
+            "x": 76,
+            "y": 42,
+            "w": 12,
+            "h": 7
+          },
+          "style": {
+            "fill": "FFF4EC",
+            "color": "8C4436",
+            "fontSize": 13,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    },
+    {
+      "id": "atardecer",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "acento",
+          "type": "shape",
+          "at": {
+            "x": 12,
+            "y": 22,
+            "w": 16,
+            "h": 0.9
+          },
+          "style": {
+            "fill": "F3EAF3",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Atardecer",
+          "at": {
+            "x": 12,
+            "y": 25,
+            "w": 60,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 38,
+            "bold": true,
+            "color": "F3EAF3"
+          }
+        },
+        {
+          "id": "subtitulo",
+          "type": "text",
+          "content": "Y se apaga en violeta",
+          "at": {
+            "x": 12,
+            "y": 36,
+            "w": 56,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "F3EAF3"
+          }
+        },
+        {
+          "id": "ficha",
+          "type": "shape",
+          "content": "3 de 3",
+          "at": {
+            "x": 76,
+            "y": 42,
+            "w": 12,
+            "h": 7
+          },
+          "style": {
+            "fill": "F3EAF3",
+            "color": "5C3A5C",
+            "fontSize": 13,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "amanecer"
+    },
+    {
+      "scene": "mediodia"
+    },
+    {
+      "scene": "atardecer"
+    }
+  ]
+}

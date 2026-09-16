@@ -145,6 +145,62 @@ cámara 2× se verá como 80 pt.
 
 ---
 
+## R8. Para entrar con movimiento hay que existir antes fuera del marco
+
+Morph solo puede interpolar entre dos estados de un mismo objeto. Un
+objeto que no existe en la escena anterior no tiene desde dónde venir, y
+PowerPoint solo puede hacerlo aparecer por opacidad.
+
+**Síntoma:** unos elementos se deslizan y otros surgen de la nada en la
+misma transición. El corte de ritmo se nota aunque no se sepa explicar.
+
+**Mal** — los detalles solo existen en la escena de destino:
+
+```json
+{ "id": "moduloPleno",   "objects": ["modulo"] },
+{ "id": "moduloDetalle", "objects": ["modulo", "detalle1", "detalle2"] }
+```
+
+**Bien** — existen ya en la primera, aparcados fuera del encuadre:
+
+```json
+{ "id": "detalle1", "at": { "x": 112, "y": 19, "w": 54, "h": 10 } }
+
+{ "id": "detalle1", "at": { "x": 38,  "y": 19, "w": 54, "h": 10 } }
+```
+
+El mundo mide 100 de ancho por defecto, así que una `x` de 112 queda
+fuera de la pantalla. Conservar la misma `y` en ambas escenas hace que el
+objeto entre en línea recta; variarla lo hace llegar en diagonal.
+
+Lo mismo vale para `InfiniteCanvas`: sus zonas van declaradas en la
+escena base, no dentro del mecanismo. Declaradas solo dentro, entran en
+la primera transición y salen en la última, y esas dos se ven como un
+fundido mientras las intermedias se deslizan.
+
+---
+
+## R9. Que viaje más de un objeto
+
+Un solo objeto que permanece mientras todo lo demás cambia no se lee como
+continuidad, sino como un resto olvidado del tema anterior.
+
+**Síntoma:** el objeto que sobrevive parece haberse quedado ahí por
+descuido, aunque sea el protagonista de la transición.
+
+Es lo que detecta **R5** en el linter. La salida no es silenciar el
+aviso: es dar al protagonista un acompañante. Un módulo que encoge hacia
+una esquina llega mejor con su etiqueta, que además puede cambiar de
+texto para situar al espectador:
+
+```json
+{ "id": "leyenda", "content": "El primero de los tres módulos" }
+
+{ "id": "leyenda", "content": "Módulo 1 de 3" }
+```
+
+---
+
 ## Lo que el linter no puede ver
 
 Estas reglas requieren mirar el resultado:
