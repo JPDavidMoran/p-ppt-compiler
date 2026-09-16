@@ -139,3 +139,33 @@ class TestCombinaciones:
         )
         xml = xml_de(documento, tmp_path / "g.pptx")
         assert "animRot" in xml and "animMotion" in xml and "animScale" in xml
+
+
+class TestImagenAnimada:
+    """Una imagen también puede animarse.
+
+    Su `cNvPr` cuelga de `nvPicPr` y no de `nvSpPr`, así que buscarlo por
+    el envoltorio equivocado rompe la compilación.
+    """
+
+    def test_una_imagen_con_latido_compila(self, tmp_path: Path) -> None:
+        documento = Document.model_validate(
+            {
+                "scenes": [
+                    {
+                        "id": "a",
+                        "objects": [
+                            {
+                                "id": "foto",
+                                "type": "image",
+                                "source": "examples/assets/parque.png",
+                                "at": {"x": 10, "y": 10, "w": 20, "h": 20},
+                                "style": {"pulse": {"seconds": 2.0}},
+                            }
+                        ],
+                    }
+                ],
+                "sequence": [{"scene": "a"}],
+            }
+        )
+        assert "animScale" in xml_de(documento, tmp_path / "img.pptx")

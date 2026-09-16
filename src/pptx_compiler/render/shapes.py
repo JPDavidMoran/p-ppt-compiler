@@ -54,7 +54,10 @@ def draw_scene(
             continue
         _apply_identity(shape, obj.id, identity)
         if obj.style.animation:
-            spins[int(shape._element.nvSpPr.cNvPr.get("id"))] = obj.style.animation
+            # El cNvPr cuelga de envoltorios distintos según el tipo, así
+            # que se busca por nombre igual que en _apply_identity.
+            cnvpr = shape._element.find(f".//{{{P_NS}}}cNvPr")
+            spins[int(cnvpr.get("id"))] = obj.style.animation
     return spins
 
 
