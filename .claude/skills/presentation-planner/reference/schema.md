@@ -135,6 +135,11 @@ pisarían entre sí y el schema lo rechaza.
            "shake": { "seconds": 0.1, "amount": 0.4 } }
 ```
 
+**La forma decide qué animación se nota.** Un círculo es simétrico: `spin`
+y `sway` no cambian su aspecto y el efecto se pierde. Solo le sientan
+`pulse`, que lo hace crecer, y `shake`, que lo mueve de sitio. Las
+estrellas y los rectángulos admiten las cuatro.
+
 `seconds` es lo que dura un ciclo. Duraciones distintas en cada figura
 evitan que el conjunto se mueva como un bloque. Son las únicas
 animaciones dentro de una diapositiva; todo lo demás ocurre en las

@@ -52,10 +52,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 21.0,
-              "clockwise": true
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 43.3
             }
           }
         },
@@ -72,10 +72,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 2.1,
-              "degrees": 13.1
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 35.5
             }
           }
         },
@@ -92,10 +92,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.3,
-              "degrees": 7.5
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 36.5
             }
           }
         },
@@ -112,10 +112,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 21.9,
-              "clockwise": false
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 0.7,
+              "amount": 1.2
             }
           }
         },
@@ -132,10 +132,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
+            "opacity": 0.45,
             "pulse": {
               "seconds": 2.2,
-              "amount": 10.3
+              "amount": 37.9
             }
           }
         },
@@ -152,10 +152,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.5,
-              "degrees": 13.3
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 2.4,
+              "amount": 44.2
             }
           }
         },
@@ -172,10 +172,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "pulse": {
-              "seconds": 2.1,
-              "amount": 8.9
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 1.2,
+              "amount": 1.0
             }
           }
         },
@@ -192,10 +192,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 2.1,
-              "degrees": 9.6
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 23.4
             }
           }
         },
@@ -212,10 +212,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
+            "opacity": 0.45,
             "pulse": {
-              "seconds": 2.0,
-              "amount": 10.7
+              "seconds": 1.4,
+              "amount": 22.7
             }
           }
         },
@@ -232,10 +232,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.4,
-              "degrees": 9.5
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.7,
+              "amount": 41.4
             }
           }
         },
@@ -252,10 +252,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 15.5,
-              "clockwise": false
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.9,
+              "amount": 33.5
             }
           }
         },
@@ -272,10 +272,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 15.9,
-              "clockwise": true
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 1.1,
+              "amount": 1.2
             }
           }
         },
@@ -292,10 +292,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.3,
-              "degrees": 13.7
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 1.6,
+              "amount": 2.0
             }
           }
         },
@@ -312,10 +312,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 2.8,
-              "degrees": 7.0
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 0.9,
+              "amount": 1.1
             }
           }
         },
@@ -449,10 +449,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 21.0,
-              "clockwise": true
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 43.3
             }
           }
         },
@@ -469,10 +469,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 2.1,
-              "degrees": 13.1
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 35.5
             }
           }
         },
@@ -489,10 +489,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.3,
-              "degrees": 7.5
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 36.5
             }
           }
         },
@@ -509,10 +509,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 21.9,
-              "clockwise": false
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 0.7,
+              "amount": 1.2
             }
           }
         },
@@ -529,10 +529,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
+            "opacity": 0.45,
             "pulse": {
               "seconds": 2.2,
-              "amount": 10.3
+              "amount": 37.9
             }
           }
         },
@@ -549,10 +549,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.5,
-              "degrees": 13.3
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 2.4,
+              "amount": 44.2
             }
           }
         },
@@ -569,10 +569,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "pulse": {
-              "seconds": 2.1,
-              "amount": 8.9
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 1.2,
+              "amount": 1.0
             }
           }
         },
@@ -589,10 +589,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 2.1,
-              "degrees": 9.6
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.8,
+              "amount": 23.4
             }
           }
         },
@@ -609,10 +609,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
+            "opacity": 0.45,
             "pulse": {
-              "seconds": 2.0,
-              "amount": 10.7
+              "seconds": 1.4,
+              "amount": 22.7
             }
           }
         },
@@ -629,10 +629,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.4,
-              "degrees": 9.5
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.7,
+              "amount": 41.4
             }
           }
         },
@@ -649,10 +649,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 15.5,
-              "clockwise": false
+            "opacity": 0.45,
+            "pulse": {
+              "seconds": 1.9,
+              "amount": 33.5
             }
           }
         },
@@ -669,10 +669,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "spin": {
-              "seconds": 15.9,
-              "clockwise": true
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 1.1,
+              "amount": 1.2
             }
           }
         },
@@ -689,10 +689,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 1.3,
-              "degrees": 13.7
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 1.6,
+              "amount": 2.0
             }
           }
         },
@@ -709,10 +709,10 @@
             "shape": "ellipse",
             "line": "FFFFFF",
             "lineWidth": 0.75,
-            "opacity": 0.35,
-            "sway": {
-              "seconds": 2.8,
-              "degrees": 7.0
+            "opacity": 0.45,
+            "shake": {
+              "seconds": 0.9,
+              "amount": 1.1
             }
           }
         },
