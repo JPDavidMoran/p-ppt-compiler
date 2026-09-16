@@ -243,9 +243,21 @@ entre -720 y 720 para que un sector pueda avanzar sin dar la vuelta.
 
 Un sector grande anclado a un eje exterior no se percibe como un giro,
 sino como una **ola de color que invade el marco**: el borde del sector
-barre la pantalla. Varias olas de anchos y velocidades distintas se
-solapan durante el recorrido, y eso es un recurso por derecho propio
-—`examples/compositions/color_waves.json`— no un defecto.
+barre la pantalla.
+
+De ahí salen dos efectos opuestos, y la diferencia está en cuántos
+sectores se mueven y en su ancho:
+
+- **Una ola limpia** (`color_wheel.json`): sectores más anchos que el
+  marco y solo el entrante en movimiento. Llega un color sobre uno
+  estable.
+- **Un tren de olas** (`color_waves.json`): sectores más **estrechos**
+  que el marco, pegados unos a otros, y todos avanzando a la vez. Cada
+  escena muestra dos colores en reparto, y el conjunto se lee como
+  franjas cruzando en cadena.
+
+El ancho es lo que decide: más que el marco y una ola lo tapa entero;
+menos, y varias conviven en pantalla.
 
 ---
 

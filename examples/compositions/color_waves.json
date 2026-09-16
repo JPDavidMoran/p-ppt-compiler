@@ -31,10 +31,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "2D5F4C",
+            "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 270.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
           }
         },
         {
@@ -47,10 +47,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "6B3A6B",
+            "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 270.0
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
           }
         },
         {
@@ -63,10 +63,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "C05746",
+            "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 270.0
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
           }
         },
         {
@@ -79,10 +79,42 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "1B3A5C",
+            "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 320.0
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
+          }
+        },
+        {
+          "id": "ola4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 164.0,
+            "sectorEnd": 198.0
+          }
+        },
+        {
+          "id": "ola5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 198.0,
+            "sectorEnd": 232.0
           }
         },
         {
@@ -104,7 +136,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Cada color avanza a su propio ritmo",
+          "content": "Franjas de color cruzan el marco",
           "at": {
             "x": 12,
             "y": 31,
@@ -145,10 +177,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "2D5F4C",
+            "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 50.0,
-            "sectorEnd": 200.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
@@ -161,10 +193,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "6B3A6B",
+            "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 25.0,
-            "sectorEnd": 175.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
           }
         },
         {
@@ -177,10 +209,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "C05746",
+            "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 150.0
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
           }
         },
         {
@@ -193,16 +225,48 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "1B3A5C",
+            "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": -25.0,
-            "sectorEnd": 175.0
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "ola4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
+          }
+        },
+        {
+          "id": "ola5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 164.0,
+            "sectorEnd": 198.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Se solapan",
+          "content": "Se suceden",
           "at": {
             "x": 12,
             "y": 20,
@@ -218,7 +282,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "y el marco recibe más de un color a la vez",
+          "content": "y se ven dos o tres a la vez",
           "at": {
             "x": 12,
             "y": 31,
@@ -259,10 +323,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "2D5F4C",
+            "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -20.0,
-            "sectorEnd": 130.0
+            "sectorStart": -40.0,
+            "sectorEnd": -6.0
           }
         },
         {
@@ -275,10 +339,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "6B3A6B",
+            "fill": "C05746",
             "shape": "pie",
-            "sectorStart": -70.0,
-            "sectorEnd": 80.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
@@ -291,10 +355,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "C05746",
+            "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": -120.0,
-            "sectorEnd": 30.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
           }
         },
         {
@@ -307,16 +371,48 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "1B3A5C",
+            "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": -170.0,
-            "sectorEnd": 30.0
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "ola4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "ola5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Se adelantan",
+          "content": "En cadena",
           "at": {
             "x": 12,
             "y": 20,
@@ -332,7 +428,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "La más rápida alcanza a las demás",
+          "content": "cada una empuja a la siguiente",
           "at": {
             "x": 12,
             "y": 31,
@@ -373,10 +469,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "2D5F4C",
+            "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -90.0,
-            "sectorEnd": 60.0
+            "sectorStart": -74.0,
+            "sectorEnd": -40.0
           }
         },
         {
@@ -389,10 +485,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "6B3A6B",
+            "fill": "C05746",
             "shape": "pie",
-            "sectorStart": -165.0,
-            "sectorEnd": -15.0
+            "sectorStart": -40.0,
+            "sectorEnd": -6.0
           }
         },
         {
@@ -405,10 +501,10 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "C05746",
+            "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": -240.0,
-            "sectorEnd": -90.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
@@ -421,16 +517,48 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "1B3A5C",
+            "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": -315.0,
-            "sectorEnd": -115.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
+          }
+        },
+        {
+          "id": "ola4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "ola5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Y cubren",
+          "content": "Hasta pasar",
           "at": {
             "x": 12,
             "y": 20,
@@ -446,7 +574,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "hasta dejar un solo color",
+          "content": "y el marco queda despejado",
           "at": {
             "x": 12,
             "y": 31,
