@@ -83,6 +83,7 @@ se omite: los mecanismos mueven la cámara por ti.
 | `color` | `"202020"` | hex **sin** `#` |
 | `fill` | ninguno | hex; sin relleno si se omite |
 | `line` | ninguno | hex; sin borde si se omite |
+| `lineWidth` | ninguno | grosor del borde en puntos (`line_width`) |
 | `bold` | `false` | |
 | `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
 | `opacity` | `1.0` | entre 0 y 1 |
@@ -90,7 +91,7 @@ se omite: los mecanismos mueven la cámara por ti.
 | `sectorStart` | `0` | grados; solo para `pie` y `blockArc` |
 | `sectorEnd` | `90` | grados; mayor que `sectorStart` |
 | `align` | `"left"` | `left`, `center`, `right` |
-| `shape` | `"rect"` | `rect`, `ellipse`, `roundRect`, `pie`, `blockArc` |
+| `shape` | `"rect"` | `rect`, `ellipse`, `roundRect`, `pie`, `blockArc`, `star4`, `star5`, `star6`, `star8` |
 
 `fontSize` escala con el zoom: 30 pt en una cámara 2× se ve como 60 pt.
 
@@ -105,6 +106,8 @@ que haya debajo.
 
 En el DSL se escriben en camelCase (`sectorStart`, `sectorEnd`); dentro
 del compilador son `sector_start` y `sector_end`.
+
+Las estrellas (`star4` es un shuriken de cuatro puntas) sirven de textura de fondo: contorno fino con `line` y `lineWidth`, sin `fill`, y giradas con `rotation` a ángulos distintos entre escenas para que el patrón rote al cambiar de diapositiva.
 
 ### Imágenes
 

@@ -31,6 +31,10 @@ AUTO_SHAPES = {
     "roundRect": MSO_SHAPE.ROUNDED_RECTANGLE,
     "pie": MSO_SHAPE.PIE,
     "blockArc": MSO_SHAPE.BLOCK_ARC,
+    "star4": MSO_SHAPE.STAR_4_POINT,
+    "star5": MSO_SHAPE.STAR_5_POINT,
+    "star6": MSO_SHAPE.STAR_6_POINT,
+    "star8": MSO_SHAPE.STAR_8_POINT,
 }
 ALIGNMENTS = {"left": PP_ALIGN.LEFT, "center": PP_ALIGN.CENTER, "right": PP_ALIGN.RIGHT}
 
@@ -86,6 +90,8 @@ def _draw_shape(slide, obj: SceneObject, position, camera: Camera, world_w: floa
 
     if obj.style.line:
         shape.line.color.rgb = RGBColor.from_string(obj.style.line)
+        if obj.style.line_width:
+            shape.line.width = Pt(obj.style.line_width)
     else:
         shape.line.fill.background()
 

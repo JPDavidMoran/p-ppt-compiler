@@ -1,0 +1,1374 @@
+{
+  "presentation": {
+    "title": "Composición — Patrón de shurikens",
+    "transitionMs": 1600
+  },
+  "scenes": [
+    {
+      "id": "patron0",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "0E1A26",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "shuriken0",
+          "type": "shape",
+          "at": {
+            "x": 11.0,
+            "y": 31.9,
+            "w": 8.6,
+            "h": 8.6
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.79,
+            "rotation": 8.5
+          }
+        },
+        {
+          "id": "shuriken1",
+          "type": "shape",
+          "at": {
+            "x": -0.3,
+            "y": 19.4,
+            "w": 10.6,
+            "h": 10.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.37,
+            "rotation": 49.6
+          }
+        },
+        {
+          "id": "shuriken2",
+          "type": "shape",
+          "at": {
+            "x": 18.7,
+            "y": 32.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.78,
+            "rotation": 35.7
+          }
+        },
+        {
+          "id": "shuriken3",
+          "type": "shape",
+          "at": {
+            "x": 23.1,
+            "y": 3.9,
+            "w": 14.4,
+            "h": 14.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.83,
+            "rotation": 50.4
+          }
+        },
+        {
+          "id": "shuriken4",
+          "type": "shape",
+          "at": {
+            "x": 14.2,
+            "y": 2.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.26,
+            "rotation": 55.7
+          }
+        },
+        {
+          "id": "shuriken5",
+          "type": "shape",
+          "at": {
+            "x": 26.9,
+            "y": 27.8,
+            "w": 9.7,
+            "h": 9.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.27,
+            "rotation": 22.4
+          }
+        },
+        {
+          "id": "shuriken6",
+          "type": "shape",
+          "at": {
+            "x": 53.6,
+            "y": 25.7,
+            "w": 7.7,
+            "h": 7.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.84,
+            "rotation": 25.9
+          }
+        },
+        {
+          "id": "shuriken7",
+          "type": "shape",
+          "at": {
+            "x": 70.5,
+            "y": 5.0,
+            "w": 9.6,
+            "h": 9.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.32,
+            "rotation": 86.6
+          }
+        },
+        {
+          "id": "shuriken8",
+          "type": "shape",
+          "at": {
+            "x": 80.7,
+            "y": 13.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.8,
+            "rotation": 52.2
+          }
+        },
+        {
+          "id": "shuriken9",
+          "type": "shape",
+          "at": {
+            "x": 23.5,
+            "y": 36.2,
+            "w": 6.0,
+            "h": 6.0
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 63.1
+          }
+        },
+        {
+          "id": "shuriken10",
+          "type": "shape",
+          "at": {
+            "x": 22.7,
+            "y": 15.6,
+            "w": 14.0,
+            "h": 14.0
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.21,
+            "rotation": 41.6
+          }
+        },
+        {
+          "id": "shuriken11",
+          "type": "shape",
+          "at": {
+            "x": 17.3,
+            "y": 11.9,
+            "w": 10.4,
+            "h": 10.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.81,
+            "rotation": 82.5
+          }
+        },
+        {
+          "id": "shuriken12",
+          "type": "shape",
+          "at": {
+            "x": 49.9,
+            "y": 43.2,
+            "w": 9.9,
+            "h": 9.9
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 25.1
+          }
+        },
+        {
+          "id": "shuriken13",
+          "type": "shape",
+          "at": {
+            "x": 32.3,
+            "y": 8.5,
+            "w": 12.5,
+            "h": 12.5
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.76,
+            "rotation": 20.9
+          }
+        },
+        {
+          "id": "shuriken14",
+          "type": "shape",
+          "at": {
+            "x": 13.1,
+            "y": 10.6,
+            "w": 14.1,
+            "h": 14.1
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.99,
+            "rotation": 33.2
+          }
+        },
+        {
+          "id": "shuriken15",
+          "type": "shape",
+          "at": {
+            "x": 83.3,
+            "y": 50.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.04,
+            "rotation": 78.4
+          }
+        },
+        {
+          "id": "shuriken16",
+          "type": "shape",
+          "at": {
+            "x": 6.2,
+            "y": 30.5,
+            "w": 9.4,
+            "h": 9.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.87,
+            "rotation": 88.6
+          }
+        },
+        {
+          "id": "shuriken17",
+          "type": "shape",
+          "at": {
+            "x": 1.2,
+            "y": -3.0,
+            "w": 8.7,
+            "h": 8.7
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.77,
+            "rotation": 85.4
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Textura viva",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 48,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 34,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "18 shurikens de contorno fino sobre el fondo",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 46,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "5AA9D6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "patron1",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "0E1A26",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "shuriken0",
+          "type": "shape",
+          "at": {
+            "x": 11.0,
+            "y": 31.9,
+            "w": 8.6,
+            "h": 8.6
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.79,
+            "rotation": 302.4
+          }
+        },
+        {
+          "id": "shuriken1",
+          "type": "shape",
+          "at": {
+            "x": -0.3,
+            "y": 19.4,
+            "w": 10.6,
+            "h": 10.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.37,
+            "rotation": 12.6
+          }
+        },
+        {
+          "id": "shuriken2",
+          "type": "shape",
+          "at": {
+            "x": 18.7,
+            "y": 32.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.78,
+            "rotation": 341.8
+          }
+        },
+        {
+          "id": "shuriken3",
+          "type": "shape",
+          "at": {
+            "x": 23.1,
+            "y": 3.9,
+            "w": 14.4,
+            "h": 14.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.83,
+            "rotation": 356.9
+          }
+        },
+        {
+          "id": "shuriken4",
+          "type": "shape",
+          "at": {
+            "x": 14.2,
+            "y": 2.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.26,
+            "rotation": 2.5
+          }
+        },
+        {
+          "id": "shuriken5",
+          "type": "shape",
+          "at": {
+            "x": 26.9,
+            "y": 27.8,
+            "w": 9.7,
+            "h": 9.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.27,
+            "rotation": 65.4
+          }
+        },
+        {
+          "id": "shuriken6",
+          "type": "shape",
+          "at": {
+            "x": 53.6,
+            "y": 25.7,
+            "w": 7.7,
+            "h": 7.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.84,
+            "rotation": 87.4
+          }
+        },
+        {
+          "id": "shuriken7",
+          "type": "shape",
+          "at": {
+            "x": 70.5,
+            "y": 5.0,
+            "w": 9.6,
+            "h": 9.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.32,
+            "rotation": 132.7
+          }
+        },
+        {
+          "id": "shuriken8",
+          "type": "shape",
+          "at": {
+            "x": 80.7,
+            "y": 13.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.8,
+            "rotation": 106.9
+          }
+        },
+        {
+          "id": "shuriken9",
+          "type": "shape",
+          "at": {
+            "x": 23.5,
+            "y": 36.2,
+            "w": 6.0,
+            "h": 6.0
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 35.1
+          }
+        },
+        {
+          "id": "shuriken10",
+          "type": "shape",
+          "at": {
+            "x": 22.7,
+            "y": 15.6,
+            "w": 14.0,
+            "h": 14.0
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.21,
+            "rotation": 67.7
+          }
+        },
+        {
+          "id": "shuriken11",
+          "type": "shape",
+          "at": {
+            "x": 17.3,
+            "y": 11.9,
+            "w": 10.4,
+            "h": 10.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.81,
+            "rotation": 37.6
+          }
+        },
+        {
+          "id": "shuriken12",
+          "type": "shape",
+          "at": {
+            "x": 49.9,
+            "y": 43.2,
+            "w": 9.9,
+            "h": 9.9
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 93.3
+          }
+        },
+        {
+          "id": "shuriken13",
+          "type": "shape",
+          "at": {
+            "x": 32.3,
+            "y": 8.5,
+            "w": 12.5,
+            "h": 12.5
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.76,
+            "rotation": 347.1
+          }
+        },
+        {
+          "id": "shuriken14",
+          "type": "shape",
+          "at": {
+            "x": 13.1,
+            "y": 10.6,
+            "w": 14.1,
+            "h": 14.1
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.99,
+            "rotation": 347.3
+          }
+        },
+        {
+          "id": "shuriken15",
+          "type": "shape",
+          "at": {
+            "x": 83.3,
+            "y": 50.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.04,
+            "rotation": 30.6
+          }
+        },
+        {
+          "id": "shuriken16",
+          "type": "shape",
+          "at": {
+            "x": 6.2,
+            "y": 30.5,
+            "w": 9.4,
+            "h": 9.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.87,
+            "rotation": 54.1
+          }
+        },
+        {
+          "id": "shuriken17",
+          "type": "shape",
+          "at": {
+            "x": 1.2,
+            "y": -3.0,
+            "w": 8.7,
+            "h": 8.7
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.77,
+            "rotation": 33.6
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Cada uno gira",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 48,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 34,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "a su propia velocidad y en su propio sentido",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 46,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "5AA9D6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "patron2",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "0E1A26",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "shuriken0",
+          "type": "shape",
+          "at": {
+            "x": 11.0,
+            "y": 31.9,
+            "w": 8.6,
+            "h": 8.6
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.79,
+            "rotation": 236.3
+          }
+        },
+        {
+          "id": "shuriken1",
+          "type": "shape",
+          "at": {
+            "x": -0.3,
+            "y": 19.4,
+            "w": 10.6,
+            "h": 10.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.37,
+            "rotation": 335.5
+          }
+        },
+        {
+          "id": "shuriken2",
+          "type": "shape",
+          "at": {
+            "x": 18.7,
+            "y": 32.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.78,
+            "rotation": 288.0
+          }
+        },
+        {
+          "id": "shuriken3",
+          "type": "shape",
+          "at": {
+            "x": 23.1,
+            "y": 3.9,
+            "w": 14.4,
+            "h": 14.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.83,
+            "rotation": 303.3
+          }
+        },
+        {
+          "id": "shuriken4",
+          "type": "shape",
+          "at": {
+            "x": 14.2,
+            "y": 2.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.26,
+            "rotation": 309.3
+          }
+        },
+        {
+          "id": "shuriken5",
+          "type": "shape",
+          "at": {
+            "x": 26.9,
+            "y": 27.8,
+            "w": 9.7,
+            "h": 9.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.27,
+            "rotation": 108.5
+          }
+        },
+        {
+          "id": "shuriken6",
+          "type": "shape",
+          "at": {
+            "x": 53.6,
+            "y": 25.7,
+            "w": 7.7,
+            "h": 7.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.84,
+            "rotation": 148.9
+          }
+        },
+        {
+          "id": "shuriken7",
+          "type": "shape",
+          "at": {
+            "x": 70.5,
+            "y": 5.0,
+            "w": 9.6,
+            "h": 9.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.32,
+            "rotation": 178.8
+          }
+        },
+        {
+          "id": "shuriken8",
+          "type": "shape",
+          "at": {
+            "x": 80.7,
+            "y": 13.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.8,
+            "rotation": 161.6
+          }
+        },
+        {
+          "id": "shuriken9",
+          "type": "shape",
+          "at": {
+            "x": 23.5,
+            "y": 36.2,
+            "w": 6.0,
+            "h": 6.0
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 7.1
+          }
+        },
+        {
+          "id": "shuriken10",
+          "type": "shape",
+          "at": {
+            "x": 22.7,
+            "y": 15.6,
+            "w": 14.0,
+            "h": 14.0
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.21,
+            "rotation": 93.8
+          }
+        },
+        {
+          "id": "shuriken11",
+          "type": "shape",
+          "at": {
+            "x": 17.3,
+            "y": 11.9,
+            "w": 10.4,
+            "h": 10.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.81,
+            "rotation": 352.7
+          }
+        },
+        {
+          "id": "shuriken12",
+          "type": "shape",
+          "at": {
+            "x": 49.9,
+            "y": 43.2,
+            "w": 9.9,
+            "h": 9.9
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 161.5
+          }
+        },
+        {
+          "id": "shuriken13",
+          "type": "shape",
+          "at": {
+            "x": 32.3,
+            "y": 8.5,
+            "w": 12.5,
+            "h": 12.5
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.76,
+            "rotation": 313.3
+          }
+        },
+        {
+          "id": "shuriken14",
+          "type": "shape",
+          "at": {
+            "x": 13.1,
+            "y": 10.6,
+            "w": 14.1,
+            "h": 14.1
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.99,
+            "rotation": 301.3
+          }
+        },
+        {
+          "id": "shuriken15",
+          "type": "shape",
+          "at": {
+            "x": 83.3,
+            "y": 50.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.04,
+            "rotation": 342.7
+          }
+        },
+        {
+          "id": "shuriken16",
+          "type": "shape",
+          "at": {
+            "x": 6.2,
+            "y": 30.5,
+            "w": 9.4,
+            "h": 9.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.87,
+            "rotation": 19.6
+          }
+        },
+        {
+          "id": "shuriken17",
+          "type": "shape",
+          "at": {
+            "x": 1.2,
+            "y": -3.0,
+            "w": 8.7,
+            "h": 8.7
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.77,
+            "rotation": 341.7
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Sin bloque",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 48,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 34,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "El patrón se mueve, pero no como una sola pieza",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 46,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "5AA9D6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "patron3",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "0E1A26",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "shuriken0",
+          "type": "shape",
+          "at": {
+            "x": 11.0,
+            "y": 31.9,
+            "w": 8.6,
+            "h": 8.6
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.79,
+            "rotation": 170.3
+          }
+        },
+        {
+          "id": "shuriken1",
+          "type": "shape",
+          "at": {
+            "x": -0.3,
+            "y": 19.4,
+            "w": 10.6,
+            "h": 10.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.37,
+            "rotation": 298.5
+          }
+        },
+        {
+          "id": "shuriken2",
+          "type": "shape",
+          "at": {
+            "x": 18.7,
+            "y": 32.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.78,
+            "rotation": 234.1
+          }
+        },
+        {
+          "id": "shuriken3",
+          "type": "shape",
+          "at": {
+            "x": 23.1,
+            "y": 3.9,
+            "w": 14.4,
+            "h": 14.4
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.83,
+            "rotation": 249.8
+          }
+        },
+        {
+          "id": "shuriken4",
+          "type": "shape",
+          "at": {
+            "x": 14.2,
+            "y": 2.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.26,
+            "rotation": 256.1
+          }
+        },
+        {
+          "id": "shuriken5",
+          "type": "shape",
+          "at": {
+            "x": 26.9,
+            "y": 27.8,
+            "w": 9.7,
+            "h": 9.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.27,
+            "rotation": 151.6
+          }
+        },
+        {
+          "id": "shuriken6",
+          "type": "shape",
+          "at": {
+            "x": 53.6,
+            "y": 25.7,
+            "w": 7.7,
+            "h": 7.7
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.84,
+            "rotation": 210.3
+          }
+        },
+        {
+          "id": "shuriken7",
+          "type": "shape",
+          "at": {
+            "x": 70.5,
+            "y": 5.0,
+            "w": 9.6,
+            "h": 9.6
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.32,
+            "rotation": 224.8
+          }
+        },
+        {
+          "id": "shuriken8",
+          "type": "shape",
+          "at": {
+            "x": 80.7,
+            "y": 13.0,
+            "w": 11.3,
+            "h": 11.3
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.8,
+            "rotation": 216.3
+          }
+        },
+        {
+          "id": "shuriken9",
+          "type": "shape",
+          "at": {
+            "x": 23.5,
+            "y": 36.2,
+            "w": 6.0,
+            "h": 6.0
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 339.0
+          }
+        },
+        {
+          "id": "shuriken10",
+          "type": "shape",
+          "at": {
+            "x": 22.7,
+            "y": 15.6,
+            "w": 14.0,
+            "h": 14.0
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 1.21,
+            "rotation": 119.9
+          }
+        },
+        {
+          "id": "shuriken11",
+          "type": "shape",
+          "at": {
+            "x": 17.3,
+            "y": 11.9,
+            "w": 10.4,
+            "h": 10.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.81,
+            "rotation": 307.8
+          }
+        },
+        {
+          "id": "shuriken12",
+          "type": "shape",
+          "at": {
+            "x": 49.9,
+            "y": 43.2,
+            "w": 9.9,
+            "h": 9.9
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 1.49,
+            "rotation": 229.7
+          }
+        },
+        {
+          "id": "shuriken13",
+          "type": "shape",
+          "at": {
+            "x": 32.3,
+            "y": 8.5,
+            "w": 12.5,
+            "h": 12.5
+          },
+          "style": {
+            "shape": "star4",
+            "line": "2E5C7A",
+            "lineWidth": 0.76,
+            "rotation": 279.4
+          }
+        },
+        {
+          "id": "shuriken14",
+          "type": "shape",
+          "at": {
+            "x": 13.1,
+            "y": 10.6,
+            "w": 14.1,
+            "h": 14.1
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.99,
+            "rotation": 255.4
+          }
+        },
+        {
+          "id": "shuriken15",
+          "type": "shape",
+          "at": {
+            "x": 83.3,
+            "y": 50.1,
+            "w": 6.4,
+            "h": 6.4
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 1.04,
+            "rotation": 294.9
+          }
+        },
+        {
+          "id": "shuriken16",
+          "type": "shape",
+          "at": {
+            "x": 6.2,
+            "y": 30.5,
+            "w": 9.4,
+            "h": 9.4
+          },
+          "style": {
+            "shape": "star6",
+            "line": "2E5C7A",
+            "lineWidth": 0.87,
+            "rotation": 345.0
+          }
+        },
+        {
+          "id": "shuriken17",
+          "type": "shape",
+          "at": {
+            "x": 1.2,
+            "y": -3.0,
+            "w": 8.7,
+            "h": 8.7
+          },
+          "style": {
+            "shape": "star8",
+            "line": "2E5C7A",
+            "lineWidth": 0.77,
+            "rotation": 289.9
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Y no compite",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 48,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 34,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "El trazo es fino y el color, apagado",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 46,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "5AA9D6"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "patron0"
+    },
+    {
+      "scene": "patron1"
+    },
+    {
+      "scene": "patron2"
+    },
+    {
+      "scene": "patron3"
+    }
+  ]
+}

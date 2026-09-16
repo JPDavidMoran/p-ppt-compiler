@@ -34,13 +34,14 @@ class StyleSpec(Strict):
     color: str = "202020"
     fill: str | None = None
     line: str | None = None
+    line_width: float | None = Field(default=None, gt=0, alias="lineWidth")
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     rotation: float = Field(default=0.0, ge=-360.0, le=360.0)
     sector_start: float = Field(default=0.0, ge=-720.0, le=720.0, alias="sectorStart")
     sector_end: float = Field(default=90.0, ge=-720.0, le=720.0, alias="sectorEnd")
     align: Literal["left", "center", "right"] = "left"
-    shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc"] = "rect"
+    shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc", "star4", "star5", "star6", "star8"] = "rect"
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
 

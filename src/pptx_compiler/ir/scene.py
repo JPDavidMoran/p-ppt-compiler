@@ -22,13 +22,14 @@ class ObjectStyle:
     color: str = "202020"
     fill: str | None = None
     line: str | None = None
+    line_width: float | None = None
     bold: bool = False
     opacity: float = 1.0
     rotation: float = 0.0
     sector_start: float = 0.0
     sector_end: float = 90.0
     align: Literal["left", "center", "right"] = "left"
-    shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc"] = "rect"
+    shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc", "star4", "star5", "star6", "star8"] = "rect"
 
 
 @dataclass(frozen=True)
