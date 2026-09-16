@@ -266,6 +266,13 @@ cruzar el marco **por debajo** de los que se declararon después, y se
 asoma entre ellos en vez de taparlos. Es la misma rueda recorrida al
 revés (`color_layers.json`).
 
+**Un objeto puede vivir solo en la transición.** Si está fuera del marco
+en las dos escenas pero su recorrido lo cruza, no se ve en ninguna
+diapositiva y sin embargo aparece mientras Morph lo interpola. Dos
+diapositivas idénticas separadas por un destello de color
+(`color_between.json`). La duración manda aquí más que en ningún otro
+sitio: con 900 ms el destello se escapa, y conviene subir a 1400.
+
 ---
 
 ## Lo que el linter no puede ver

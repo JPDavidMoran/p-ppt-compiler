@@ -1,11 +1,11 @@
 {
   "presentation": {
-    "title": "Composición — El azul entre dos capas",
-    "transitionMs": 900
+    "title": "Composición — Destello entre capas",
+    "transitionMs": 1400
   },
   "scenes": [
     {
-      "id": "entre0",
+      "id": "quieto0",
       "objects": [
         {
           "id": "fondo",
@@ -72,7 +72,7 @@
         {
           "id": "titulo",
           "type": "text",
-          "content": "Entre dos capas",
+          "content": "Naranja y violeta",
           "at": {
             "x": 12,
             "y": 20,
@@ -88,7 +88,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Naranja detrás, violeta delante",
+          "content": "Dos capas quietas. Nada más a la vista.",
           "at": {
             "x": 12,
             "y": 31,
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "entre1",
+      "id": "quieto1",
       "objects": [
         {
           "id": "fondo",
@@ -147,8 +147,8 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -12.0,
-            "sectorEnd": 22.0
+            "sectorStart": 70.0,
+            "sectorEnd": 104.0
           }
         },
         {
@@ -170,7 +170,7 @@
         {
           "id": "titulo",
           "type": "text",
-          "content": "El azul asoma",
+          "content": "Igual que antes",
           "at": {
             "x": 12,
             "y": 20,
@@ -186,301 +186,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "por el borde izquierdo del marco",
-          "at": {
-            "x": 12,
-            "y": 31,
-            "w": 44,
-            "h": 6
-          },
-          "style": {
-            "fontSize": 14,
-            "color": "FFFFFF"
-          }
-        }
-      ]
-    },
-    {
-      "id": "entre2",
-      "objects": [
-        {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "radio1",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
-          }
-        },
-        {
-          "id": "radio0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": 4.0,
-            "sectorEnd": 38.0
-          }
-        },
-        {
-          "id": "radio2",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "6B3A6B",
-            "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
-          }
-        },
-        {
-          "id": "titulo",
-          "type": "text",
-          "content": "Lo cubre",
-          "at": {
-            "x": 12,
-            "y": 20,
-            "w": 46,
-            "h": 10
-          },
-          "style": {
-            "fontSize": 32,
-            "bold": true,
-            "color": "FFFFFF"
-          }
-        },
-        {
-          "id": "sub",
-          "type": "text",
-          "content": "tapando al naranja que tiene debajo",
-          "at": {
-            "x": 12,
-            "y": 31,
-            "w": 44,
-            "h": 6
-          },
-          "style": {
-            "fontSize": 14,
-            "color": "FFFFFF"
-          }
-        }
-      ]
-    },
-    {
-      "id": "entre3",
-      "objects": [
-        {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "radio1",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
-          }
-        },
-        {
-          "id": "radio0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": 22.0,
-            "sectorEnd": 56.0
-          }
-        },
-        {
-          "id": "radio2",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "6B3A6B",
-            "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
-          }
-        },
-        {
-          "id": "titulo",
-          "type": "text",
-          "content": "Se repliega",
-          "at": {
-            "x": 12,
-            "y": 20,
-            "w": 46,
-            "h": 10
-          },
-          "style": {
-            "fontSize": 32,
-            "bold": true,
-            "color": "FFFFFF"
-          }
-        },
-        {
-          "id": "sub",
-          "type": "text",
-          "content": "al entrar bajo el violeta",
-          "at": {
-            "x": 12,
-            "y": 31,
-            "w": 44,
-            "h": 6
-          },
-          "style": {
-            "fontSize": 14,
-            "color": "FFFFFF"
-          }
-        }
-      ]
-    },
-    {
-      "id": "entre4",
-      "objects": [
-        {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "radio1",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
-          }
-        },
-        {
-          "id": "radio0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": 45.0,
-            "sectorEnd": 79.0
-          }
-        },
-        {
-          "id": "radio2",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "6B3A6B",
-            "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
-          }
-        },
-        {
-          "id": "titulo",
-          "type": "text",
-          "content": "Y desaparece",
-          "at": {
-            "x": 12,
-            "y": 20,
-            "w": 46,
-            "h": 10
-          },
-          "style": {
-            "fontSize": 32,
-            "bold": true,
-            "color": "FFFFFF"
-          }
-        },
-        {
-          "id": "sub",
-          "type": "text",
-          "content": "sin que las otras dos se hayan movido",
+          "content": "Pero algo azul cruzó por en medio.",
           "at": {
             "x": 12,
             "y": 31,
@@ -497,19 +203,10 @@
   ],
   "sequence": [
     {
-      "scene": "entre0"
+      "scene": "quieto0"
     },
     {
-      "scene": "entre1"
-    },
-    {
-      "scene": "entre2"
-    },
-    {
-      "scene": "entre3"
-    },
-    {
-      "scene": "entre4"
+      "scene": "quieto1"
     }
   ]
 }
