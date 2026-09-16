@@ -35,8 +35,8 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 90.0,
-            "sectorEnd": 180.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
@@ -51,8 +51,8 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 180.0,
-            "sectorEnd": 270.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
@@ -67,8 +67,8 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 270.0,
-            "sectorEnd": 360.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
@@ -119,8 +119,8 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -90.0,
-            "sectorEnd": 0.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
@@ -151,8 +151,8 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 90.0,
-            "sectorEnd": 180.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
@@ -167,8 +167,8 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 180.0,
-            "sectorEnd": 270.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
@@ -190,7 +190,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Cada color llega desde el eje",
+          "content": "Solo el color entrante se mueve",
           "at": {
             "x": 12,
             "y": 31,
@@ -219,8 +219,8 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -180.0,
-            "sectorEnd": -90.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
@@ -235,8 +235,8 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": -90.0,
-            "sectorEnd": 0.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
@@ -267,8 +267,8 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 90.0,
-            "sectorEnd": 180.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
@@ -290,7 +290,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "y empuja al anterior fuera",
+          "content": "El anterior se queda debajo",
           "at": {
             "x": 12,
             "y": 31,
@@ -319,8 +319,8 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -270.0,
-            "sectorEnd": -180.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
@@ -335,8 +335,8 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": -180.0,
-            "sectorEnd": -90.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
@@ -351,8 +351,8 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": -90.0,
-            "sectorEnd": 0.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {

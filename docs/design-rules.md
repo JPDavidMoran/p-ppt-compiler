@@ -231,12 +231,15 @@ Coloca además el eje de modo que el marco **no cruce el origen de
 pieza. Con el eje arriba a la izquierda (`-40, -20`) el marco ocupa
 8°..62°, y cada cuarto cabe entero.
 
-**Los ángulos deben avanzar en un solo sentido, sin normalizar.** Si un
-sector pasa de 0° a 270° porque se le aplicó el módulo, recorre la
-pantalla entera de vuelta y se ve una segunda ola de color cruzando en
-sentido contrario. Dejar los ángulos crecer o decrecer libremente
-—incluso a negativos— hace que cada sector entre y salga por el lado
-corto. El schema los admite entre -720 y 720 por eso.
+**En cada transición debe moverse un solo sector: el que entra.** Si el
+saliente también cambia de ángulo, su borde barre la pantalla al retirarse
+y se ven dos olas cruzando a la vez. El sector que ya cubrió el marco se
+queda quieto y la capa siguiente lo tapa: al espectador le llega un color
+nuevo sobre uno estable, que es como se lee una ola.
+
+Los que aún no han entrado esperan todos en el mismo ángulo, fuera del
+marco. Los ángulos no se normalizan con módulo: el schema los admite
+entre -720 y 720 para que un sector pueda avanzar sin dar la vuelta.
 
 Un sector grande anclado a un eje exterior no se percibe como un giro,
 sino como una **ola de color que invade el marco**: el borde del sector
