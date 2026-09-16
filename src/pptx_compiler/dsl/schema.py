@@ -37,8 +37,8 @@ class StyleSpec(Strict):
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     rotation: float = Field(default=0.0, ge=-360.0, le=360.0)
-    sector_start: float = Field(default=0.0, ge=0.0, le=360.0, alias="sectorStart")
-    sector_end: float = Field(default=90.0, ge=0.0, le=360.0, alias="sectorEnd")
+    sector_start: float = Field(default=0.0, ge=-720.0, le=720.0, alias="sectorStart")
+    sector_end: float = Field(default=90.0, ge=-720.0, le=720.0, alias="sectorEnd")
     align: Literal["left", "center", "right"] = "left"
     shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc"] = "rect"
 

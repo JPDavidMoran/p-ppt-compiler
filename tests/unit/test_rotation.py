@@ -118,3 +118,24 @@ class TestSector:
     def test_un_sector_invertido_falla(self) -> None:
         with pytest.raises(ValidationError):
             self._doc(180.0, 90.0)
+
+
+class TestSectorContinuo:
+    """Los ángulos de un sector pueden salirse de 0..360.
+
+    Una rueda que avanza siempre en el mismo sentido necesita ángulos
+    monótonos: si al pasar de 0 se vuelve a 270, el sector recorre la
+    pantalla entera en sentido contrario y se ve una segunda ola.
+    """
+
+    def test_un_sector_en_angulos_negativos_es_valido(self) -> None:
+        from pptx_compiler.dsl.schema import StyleSpec
+
+        style = StyleSpec.model_validate({"sectorStart": -270.0, "sectorEnd": -180.0})
+        assert (style.sector_start, style.sector_end) == (-270.0, -180.0)
+
+    def test_sigue_exigiendo_que_el_final_sea_mayor(self) -> None:
+        from pptx_compiler.dsl.schema import StyleSpec
+
+        with pytest.raises(ValidationError):
+            StyleSpec.model_validate({"sectorStart": -90.0, "sectorEnd": -180.0})

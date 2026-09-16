@@ -1,30 +1,28 @@
 {
   "presentation": {
-    "title": "Composición — Ola de color",
-    "transitionMs": 900
+    "title": "Composición — Olas superpuestas",
+    "transitionMs": 1100
   },
   "scenes": [
     {
-      "id": "giro0",
+      "id": "ola0",
       "objects": [
         {
-          "id": "cuarto0",
+          "id": "fondo",
           "type": "shape",
           "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
           },
           "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "fill": "14202B",
+            "shape": "rect"
           }
         },
         {
-          "id": "cuarto1",
+          "id": "ola0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -33,114 +31,14 @@
             "h": 344.3426345952532
           },
           "style": {
-            "fill": "C05746",
+            "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 90.0,
-            "sectorEnd": 180.0
-          }
-        },
-        {
-          "id": "cuarto2",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "6B3A6B",
-            "shape": "pie",
-            "sectorStart": 180.0,
+            "sectorStart": 120.0,
             "sectorEnd": 270.0
           }
         },
         {
-          "id": "cuarto3",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "2D5F4C",
-            "shape": "pie",
-            "sectorStart": 270.0,
-            "sectorEnd": 360.0
-          }
-        },
-        {
-          "id": "titulo",
-          "type": "text",
-          "content": "Amanecer",
-          "at": {
-            "x": 12,
-            "y": 20,
-            "w": 46,
-            "h": 10
-          },
-          "style": {
-            "fontSize": 36,
-            "bold": true,
-            "color": "E8EEF4"
-          }
-        },
-        {
-          "id": "sub",
-          "type": "text",
-          "content": "Una ola de color invade el marco",
-          "at": {
-            "x": 12,
-            "y": 31,
-            "w": 44,
-            "h": 6
-          },
-          "style": {
-            "fontSize": 15,
-            "color": "E8EEF4"
-          }
-        }
-      ]
-    },
-    {
-      "id": "giro1",
-      "objects": [
-        {
-          "id": "cuarto0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": -90.0,
-            "sectorEnd": 0.0
-          }
-        },
-        {
-          "id": "cuarto1",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
-          }
-        },
-        {
-          "id": "cuarto2",
+          "id": "ola1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -151,80 +49,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 90.0,
-            "sectorEnd": 180.0
-          }
-        },
-        {
-          "id": "cuarto3",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "2D5F4C",
-            "shape": "pie",
-            "sectorStart": 180.0,
+            "sectorStart": 120.0,
             "sectorEnd": 270.0
           }
         },
         {
-          "id": "titulo",
-          "type": "text",
-          "content": "Mediodía",
-          "at": {
-            "x": 12,
-            "y": 20,
-            "w": 46,
-            "h": 10
-          },
-          "style": {
-            "fontSize": 36,
-            "bold": true,
-            "color": "FFF4EC"
-          }
-        },
-        {
-          "id": "sub",
-          "type": "text",
-          "content": "Cada color llega desde el eje",
-          "at": {
-            "x": 12,
-            "y": 31,
-            "w": 44,
-            "h": 6
-          },
-          "style": {
-            "fontSize": 15,
-            "color": "FFF4EC"
-          }
-        }
-      ]
-    },
-    {
-      "id": "giro2",
-      "objects": [
-        {
-          "id": "cuarto0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": -180.0,
-            "sectorEnd": -90.0
-          }
-        },
-        {
-          "id": "cuarto1",
+          "id": "ola2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -235,80 +65,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": -90.0,
-            "sectorEnd": 0.0
+            "sectorStart": 120.0,
+            "sectorEnd": 270.0
           }
         },
         {
-          "id": "cuarto2",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "6B3A6B",
-            "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
-          }
-        },
-        {
-          "id": "cuarto3",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "2D5F4C",
-            "shape": "pie",
-            "sectorStart": 90.0,
-            "sectorEnd": 180.0
-          }
-        },
-        {
-          "id": "titulo",
-          "type": "text",
-          "content": "Atardecer",
-          "at": {
-            "x": 12,
-            "y": 20,
-            "w": 46,
-            "h": 10
-          },
-          "style": {
-            "fontSize": 36,
-            "bold": true,
-            "color": "F3EAF3"
-          }
-        },
-        {
-          "id": "sub",
-          "type": "text",
-          "content": "y empuja al anterior fuera",
-          "at": {
-            "x": 12,
-            "y": 31,
-            "w": 44,
-            "h": 6
-          },
-          "style": {
-            "fontSize": 15,
-            "color": "F3EAF3"
-          }
-        }
-      ]
-    },
-    {
-      "id": "giro3",
-      "objects": [
-        {
-          "id": "cuarto0",
+          "id": "ola3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -319,44 +81,62 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -270.0,
-            "sectorEnd": -180.0
+            "sectorStart": 120.0,
+            "sectorEnd": 320.0
           }
         },
         {
-          "id": "cuarto1",
-          "type": "shape",
+          "id": "titulo",
+          "type": "text",
+          "content": "Varias olas",
           "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
           },
           "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": -180.0,
-            "sectorEnd": -90.0
+            "fontSize": 34,
+            "bold": true,
+            "color": "FFFFFF"
           }
         },
         {
-          "id": "cuarto2",
-          "type": "shape",
+          "id": "sub",
+          "type": "text",
+          "content": "Cada color avanza a su propio ritmo",
           "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
           },
           "style": {
-            "fill": "6B3A6B",
-            "shape": "pie",
-            "sectorStart": -90.0,
-            "sectorEnd": 0.0
+            "fontSize": 15,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ola1",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
           }
         },
         {
-          "id": "cuarto3",
+          "id": "ola0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -367,14 +147,62 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
+            "sectorStart": 50.0,
+            "sectorEnd": 200.0
+          }
+        },
+        {
+          "id": "ola1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": 25.0,
+            "sectorEnd": 175.0
+          }
+        },
+        {
+          "id": "ola2",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
             "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorEnd": 150.0
+          }
+        },
+        {
+          "id": "ola3",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": -25.0,
+            "sectorEnd": 175.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Noche",
+          "content": "Se solapan",
           "at": {
             "x": 12,
             "y": 20,
@@ -382,15 +210,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 36,
+            "fontSize": 34,
             "bold": true,
-            "color": "E6F0EA"
+            "color": "FFFFFF"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "hasta cerrar el ciclo",
+          "content": "y el marco recibe más de un color a la vez",
           "at": {
             "x": 12,
             "y": 31,
@@ -399,7 +227,235 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "E6F0EA"
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ola2",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "ola0",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "sectorStart": -20.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "ola1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": -70.0,
+            "sectorEnd": 80.0
+          }
+        },
+        {
+          "id": "ola2",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": -120.0,
+            "sectorEnd": 30.0
+          }
+        },
+        {
+          "id": "ola3",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": -170.0,
+            "sectorEnd": 30.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Se adelantan",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 34,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "La más rápida alcanza a las demás",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ola3",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "ola0",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "sectorStart": -90.0,
+            "sectorEnd": 60.0
+          }
+        },
+        {
+          "id": "ola1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": -165.0,
+            "sectorEnd": -15.0
+          }
+        },
+        {
+          "id": "ola2",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": -240.0,
+            "sectorEnd": -90.0
+          }
+        },
+        {
+          "id": "ola3",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": -315.0,
+            "sectorEnd": -115.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Y cubren",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 34,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "hasta dejar un solo color",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "FFFFFF"
           }
         }
       ]
@@ -407,16 +463,16 @@
   ],
   "sequence": [
     {
-      "scene": "giro0"
+      "scene": "ola0"
     },
     {
-      "scene": "giro1"
+      "scene": "ola1"
     },
     {
-      "scene": "giro2"
+      "scene": "ola2"
     },
     {
-      "scene": "giro3"
+      "scene": "ola3"
     }
   ]
 }

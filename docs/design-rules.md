@@ -231,6 +231,19 @@ Coloca además el eje de modo que el marco **no cruce el origen de
 pieza. Con el eje arriba a la izquierda (`-40, -20`) el marco ocupa
 8°..62°, y cada cuarto cabe entero.
 
+**Los ángulos deben avanzar en un solo sentido, sin normalizar.** Si un
+sector pasa de 0° a 270° porque se le aplicó el módulo, recorre la
+pantalla entera de vuelta y se ve una segunda ola de color cruzando en
+sentido contrario. Dejar los ángulos crecer o decrecer libremente
+—incluso a negativos— hace que cada sector entre y salga por el lado
+corto. El schema los admite entre -720 y 720 por eso.
+
+Un sector grande anclado a un eje exterior no se percibe como un giro,
+sino como una **ola de color que invade el marco**: el borde del sector
+barre la pantalla. Varias olas de anchos y velocidades distintas se
+solapan durante el recorrido, y eso es un recurso por derecho propio
+—`examples/compositions/color_waves.json`— no un defecto.
+
 ---
 
 ## Lo que el linter no puede ver
