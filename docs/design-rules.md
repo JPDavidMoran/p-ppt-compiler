@@ -220,6 +220,17 @@ lo cubre con holgura.
 Y los sectores necesitan `sectorStart`/`sectorEnd` explícitos: por
 defecto, `pie` dibuja de 0 a 162 grados.
 
+**Sitúa cada sector por sus ángulos, no rotándolo.** PowerPoint normaliza
+la rotación —un `-45` se escribe como `315`—, y combinada con los ángulos
+del sector el resultado deja de ser el previsto: asoman colores de
+cuartos que deberían quedar fuera. Con `sectorStart`/`sectorEnd` la
+posición es absoluta y no hay ambigüedad de signo.
+
+Coloca además el eje de modo que el marco **no cruce el origen de
+ángulos**: un sector que iría de 315° a 405° no se puede expresar de una
+pieza. Con el eje arriba a la izquierda (`-40, -20`) el marco ocupa
+8°..62°, y cada cuarto cabe entero.
+
 ---
 
 ## Lo que el linter no puede ver
