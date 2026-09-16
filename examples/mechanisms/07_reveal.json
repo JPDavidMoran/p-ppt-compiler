@@ -1,0 +1,94 @@
+{
+  "presentation": {
+    "title": "Mecanismo 7 — Reveal"
+  },
+  "scenes": [
+    {
+      "id": "tapado",
+      "objects": [
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Reveal",
+          "at": {
+            "x": 12,
+            "y": 6,
+            "w": 76,
+            "h": 7
+          },
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "1B3A5C",
+            "align": "center"
+          }
+        },
+        {
+          "id": "pista",
+          "type": "text",
+          "content": "La tapa se aparta hacia arriba y sale del marco. Debajo estaba el dato.",
+          "at": {
+            "x": 12,
+            "y": 14,
+            "w": 76,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 13,
+            "color": "5A7A99",
+            "align": "center"
+          }
+        },
+        {
+          "id": "dato",
+          "type": "shape",
+          "content": "S/ 128 millones\nen exportaciones",
+          "at": {
+            "x": 28,
+            "y": 24,
+            "w": 44,
+            "h": 22
+          },
+          "style": {
+            "fill": "1B6FA8",
+            "color": "FFFFFF",
+            "fontSize": 20,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "tapa",
+          "type": "shape",
+          "content": "¿Cuánto crees?",
+          "at": {
+            "x": 28,
+            "y": 24,
+            "w": 44,
+            "h": 22
+          },
+          "style": {
+            "fill": "3D4A57",
+            "color": "FFFFFF",
+            "fontSize": 18,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "tapado",
+      "emit": false
+    },
+    {
+      "mechanism": "Reveal",
+      "cover": "tapa",
+      "target": "dato",
+      "direction": "up"
+    }
+  ]
+}

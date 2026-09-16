@@ -1,0 +1,183 @@
+{
+  "presentation": {
+    "title": "Mecanismo 6 — Regroup"
+  },
+  "scenes": [
+    {
+      "id": "fila",
+      "objects": [
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Regroup",
+          "at": {
+            "x": 12,
+            "y": 5,
+            "w": 76,
+            "h": 7
+          },
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "1B3A5C",
+            "align": "center"
+          }
+        },
+        {
+          "id": "pista",
+          "type": "text",
+          "content": "Seis piezas en fila pasan a cuadrícula. Cada una viaja a su celda.",
+          "at": {
+            "x": 12,
+            "y": 13,
+            "w": 76,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 13,
+            "color": "5A7A99",
+            "align": "center"
+          }
+        },
+        {
+          "id": "pieza1",
+          "type": "shape",
+          "content": "1",
+          "at": {
+            "x": 8.0,
+            "y": 30,
+            "w": 12,
+            "h": 12
+          },
+          "style": {
+            "fill": "1B6FA8",
+            "color": "FFFFFF",
+            "fontSize": 18,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "pieza2",
+          "type": "shape",
+          "content": "2",
+          "at": {
+            "x": 22.5,
+            "y": 30,
+            "w": 12,
+            "h": 12
+          },
+          "style": {
+            "fill": "2E8BC0",
+            "color": "FFFFFF",
+            "fontSize": 18,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "pieza3",
+          "type": "shape",
+          "content": "3",
+          "at": {
+            "x": 37.0,
+            "y": 30,
+            "w": 12,
+            "h": 12
+          },
+          "style": {
+            "fill": "5AA9D6",
+            "color": "FFFFFF",
+            "fontSize": 18,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "pieza4",
+          "type": "shape",
+          "content": "4",
+          "at": {
+            "x": 51.5,
+            "y": 30,
+            "w": 12,
+            "h": 12
+          },
+          "style": {
+            "fill": "E07A3F",
+            "color": "FFFFFF",
+            "fontSize": 18,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "pieza5",
+          "type": "shape",
+          "content": "5",
+          "at": {
+            "x": 66.0,
+            "y": 30,
+            "w": 12,
+            "h": 12
+          },
+          "style": {
+            "fill": "E8A87C",
+            "color": "FFFFFF",
+            "fontSize": 18,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "pieza6",
+          "type": "shape",
+          "content": "6",
+          "at": {
+            "x": 80.5,
+            "y": 30,
+            "w": 12,
+            "h": 12
+          },
+          "style": {
+            "fill": "C05746",
+            "color": "FFFFFF",
+            "fontSize": 18,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "fila"
+    },
+    {
+      "mechanism": "Regroup",
+      "targets": [
+        "pieza1",
+        "pieza2",
+        "pieza3",
+        "pieza4",
+        "pieza5",
+        "pieza6"
+      ],
+      "layout": "grid",
+      "gap": 3.0,
+      "area": {
+        "x": 14,
+        "y": 22,
+        "w": 72,
+        "h": 30
+      }
+    }
+  ]
+}

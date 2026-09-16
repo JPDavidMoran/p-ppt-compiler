@@ -1,0 +1,113 @@
+{
+  "presentation": {
+    "title": "Mecanismo 5 — Build"
+  },
+  "scenes": [
+    {
+      "id": "listaCompleta",
+      "objects": [
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Build",
+          "at": {
+            "x": 12,
+            "y": 6,
+            "w": 76,
+            "h": 7
+          },
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "1B3A5C",
+            "align": "center"
+          }
+        },
+        {
+          "id": "pista",
+          "type": "text",
+          "content": "Los puntos aparecen de uno en uno. El título y esta línea permanecen.",
+          "at": {
+            "x": 12,
+            "y": 14,
+            "w": 76,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 13,
+            "color": "5A7A99",
+            "align": "center"
+          }
+        },
+        {
+          "id": "punto1",
+          "type": "shape",
+          "content": "Primero aparece este",
+          "at": {
+            "x": 22,
+            "y": 24,
+            "w": 56,
+            "h": 8
+          },
+          "style": {
+            "fill": "1B6FA8",
+            "color": "FFFFFF",
+            "fontSize": 15,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "punto2",
+          "type": "shape",
+          "content": "Después este",
+          "at": {
+            "x": 22,
+            "y": 34,
+            "w": 56,
+            "h": 8
+          },
+          "style": {
+            "fill": "2E8BC0",
+            "color": "FFFFFF",
+            "fontSize": 15,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "punto3",
+          "type": "shape",
+          "content": "Y por último este",
+          "at": {
+            "x": 22,
+            "y": 44,
+            "w": 56,
+            "h": 8
+          },
+          "style": {
+            "fill": "5AA9D6",
+            "color": "FFFFFF",
+            "fontSize": 15,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "listaCompleta",
+      "emit": false
+    },
+    {
+      "mechanism": "Build",
+      "sequence": [
+        "punto1",
+        "punto2",
+        "punto3"
+      ]
+    }
+  ]
+}

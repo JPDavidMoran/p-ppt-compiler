@@ -1,0 +1,101 @@
+{
+  "presentation": {
+    "title": "Mecanismo 2 — BeforeAfter"
+  },
+  "scenes": [
+    {
+      "id": "mecanismo",
+      "objects": [
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "BeforeAfter",
+          "at": {
+            "x": 12,
+            "y": 6,
+            "w": 76,
+            "h": 7
+          },
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "1B3A5C",
+            "align": "center"
+          }
+        },
+        {
+          "id": "pista",
+          "type": "text",
+          "content": "La 1.ª slide ya es el estado 'antes'. El gris sale, el naranja entra.",
+          "at": {
+            "x": 12,
+            "y": 14,
+            "w": 76,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 13,
+            "color": "5A7A99",
+            "align": "center"
+          }
+        },
+        {
+          "id": "viejo",
+          "type": "shape",
+          "content": "Sale\nel gris",
+          "at": {
+            "x": 16,
+            "y": 27,
+            "w": 30,
+            "h": 17
+          },
+          "style": {
+            "fill": "9AA5B1",
+            "color": "FFFFFF",
+            "fontSize": 15,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "nuevo",
+          "type": "shape",
+          "content": "Entra\nel naranja",
+          "at": {
+            "x": 54,
+            "y": 24,
+            "w": 32,
+            "h": 21
+          },
+          "style": {
+            "fill": "E07A3F",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "mecanismo",
+      "emit": false
+    },
+    {
+      "mechanism": "BeforeAfter",
+      "before": [
+        "viejo"
+      ],
+      "after": [
+        "nuevo"
+      ],
+      "keep": [
+        "titulo",
+        "pista"
+      ]
+    }
+  ]
+}

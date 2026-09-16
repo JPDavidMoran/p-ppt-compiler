@@ -1,0 +1,124 @@
+{
+  "presentation": {
+    "title": "Mecanismo 4 — InfiniteCanvas"
+  },
+  "scenes": [
+    {
+      "id": "lienzo",
+      "objects": [
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "InfiniteCanvas",
+          "at": {
+            "x": 12,
+            "y": 6,
+            "w": 76,
+            "h": 7
+          },
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "1B3A5C",
+            "align": "center"
+          }
+        },
+        {
+          "id": "pista",
+          "type": "text",
+          "content": "Las zonas existen desde la 1.ª slide, lejos del encuadre. Solo viaja la cámara.",
+          "at": {
+            "x": 12,
+            "y": 22,
+            "w": 76,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 13,
+            "color": "5A7A99",
+            "align": "center"
+          }
+        },
+        {
+          "id": "zonaNorte",
+          "type": "shape",
+          "content": "Norte\nfuera del marco",
+          "at": {
+            "x": 130,
+            "y": 8,
+            "w": 34,
+            "h": 22
+          },
+          "style": {
+            "fill": "1B6FA8",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "zonaEste",
+          "type": "shape",
+          "content": "Este\nmás lejos aún",
+          "at": {
+            "x": 190,
+            "y": 40,
+            "w": 34,
+            "h": 22
+          },
+          "style": {
+            "fill": "2E8BC0",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "zonaSur",
+          "type": "shape",
+          "content": "Sur\nal final del viaje",
+          "at": {
+            "x": 140,
+            "y": 78,
+            "w": 34,
+            "h": 22
+          },
+          "style": {
+            "fill": "5AA9D6",
+            "color": "FFFFFF",
+            "fontSize": 16,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "lienzo"
+    },
+    {
+      "mechanism": "InfiniteCanvas",
+      "tour": [
+        {
+          "at": "zonaNorte",
+          "scale": 1.6
+        },
+        {
+          "at": "zonaEste",
+          "scale": 1.6
+        },
+        {
+          "at": "zonaSur",
+          "scale": 1.6
+        }
+      ]
+    },
+    {
+      "scene": "lienzo"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "presentation": { "title": "Mecanismo 1 — CameraZoom" },
+  "scenes": [
+    {
+      "id": "tablero",
+      "objects": [
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "CameraZoom",
+          "at": { "x": 12, "y": 6, "w": 76, "h": 7 },
+          "style": { "fontSize": 28, "bold": true, "color": "1B3A5C", "align": "center" }
+        },
+        {
+          "id": "pista",
+          "type": "text",
+          "content": "La cámara se acerca al cuadro naranja. Ningún objeto se mueve.",
+          "at": { "x": 12, "y": 14, "w": 76, "h": 5 },
+          "style": { "fontSize": 13, "color": "5A7A99", "align": "center" }
+        },
+        {
+          "id": "izquierda",
+          "type": "shape",
+          "content": "A",
+          "at": { "x": 14, "y": 25, "w": 20, "h": 20 },
+          "style": { "fill": "C9D6E3", "color": "1B3A5C", "fontSize": 20, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "objetivo",
+          "type": "shape",
+          "content": "Objetivo",
+          "at": { "x": 40, "y": 25, "w": 20, "h": 20 },
+          "style": { "fill": "E07A3F", "color": "FFFFFF", "fontSize": 18, "bold": true, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "derecha",
+          "type": "shape",
+          "content": "C",
+          "at": { "x": 66, "y": 25, "w": 20, "h": 20 },
+          "style": { "fill": "C9D6E3", "color": "1B3A5C", "fontSize": 20, "align": "center", "shape": "roundRect" }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    { "scene": "tablero" },
+    { "mechanism": "CameraZoom", "target": "objetivo", "scale": 2.4 },
+    { "scene": "tablero" }
+  ]
+}

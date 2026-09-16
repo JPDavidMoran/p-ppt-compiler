@@ -1,0 +1,50 @@
+{
+  "presentation": { "title": "Mecanismo 8 — Spotlight" },
+  "scenes": [
+    {
+      "id": "conjunto",
+      "objects": [
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Spotlight",
+          "at": { "x": 12, "y": 6, "w": 76, "h": 7 },
+          "style": { "fontSize": 28, "bold": true, "color": "1B3A5C", "align": "center" }
+        },
+        {
+          "id": "pista",
+          "type": "text",
+          "content": "El resto se atenúa y el título no. La cámara no se mueve.",
+          "at": { "x": 12, "y": 14, "w": 76, "h": 5 },
+          "style": { "fontSize": 13, "color": "5A7A99", "align": "center" }
+        },
+        {
+          "id": "opcionA",
+          "type": "shape",
+          "content": "Opción A",
+          "at": { "x": 12, "y": 26, "w": 22, "h": 18 },
+          "style": { "fill": "1B6FA8", "color": "FFFFFF", "fontSize": 16, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "opcionB",
+          "type": "shape",
+          "content": "Opción B\nla elegida",
+          "at": { "x": 39, "y": 26, "w": 22, "h": 18 },
+          "style": { "fill": "E07A3F", "color": "FFFFFF", "fontSize": 16, "bold": true, "align": "center", "shape": "roundRect" }
+        },
+        {
+          "id": "opcionC",
+          "type": "shape",
+          "content": "Opción C",
+          "at": { "x": 66, "y": 26, "w": 22, "h": 18 },
+          "style": { "fill": "1B6FA8", "color": "FFFFFF", "fontSize": 16, "align": "center", "shape": "roundRect" }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    { "scene": "conjunto" },
+    { "mechanism": "Spotlight", "target": "opcionB", "dim": 0.2, "keep": ["titulo", "pista"] },
+    { "scene": "conjunto" }
+  ]
+}

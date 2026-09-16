@@ -1,0 +1,235 @@
+{
+  "presentation": {
+    "title": "Composición — Product Walkthrough"
+  },
+  "scenes": [
+    {
+      "id": "moduloPleno",
+      "objects": [
+        {
+          "id": "modulo",
+          "type": "shape",
+          "content": "Inventario",
+          "at": {
+            "x": 30,
+            "y": 16,
+            "w": 40,
+            "h": 26
+          },
+          "style": {
+            "fill": "1B6FA8",
+            "color": "FFFFFF",
+            "fontSize": 26,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "leyenda",
+          "type": "text",
+          "content": "El primero de los tres módulos",
+          "at": {
+            "x": 30,
+            "y": 44,
+            "w": 40,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "5A7A99",
+            "align": "center"
+          }
+        },
+        {
+          "id": "detalleTitulo",
+          "type": "text",
+          "content": "Qué resuelve",
+          "at": {
+            "x": 112.0,
+            "y": 9,
+            "w": 30,
+            "h": 7
+          },
+          "style": {
+            "fontSize": 24,
+            "bold": true,
+            "color": "1B3A5C"
+          }
+        },
+        {
+          "id": "detalle1",
+          "type": "shape",
+          "content": "Catálogo único\nUna ficha por activo, sin duplicados",
+          "at": {
+            "x": 112.0,
+            "y": 19,
+            "w": 54,
+            "h": 10
+          },
+          "style": {
+            "fill": "EDF3F8",
+            "color": "1B3A5C",
+            "fontSize": 13,
+            "align": "left",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "detalle2",
+          "type": "shape",
+          "content": "Estado en vivo\nAltas y bajas visibles al instante",
+          "at": {
+            "x": 112.0,
+            "y": 31,
+            "w": 54,
+            "h": 10
+          },
+          "style": {
+            "fill": "EDF3F8",
+            "color": "1B3A5C",
+            "fontSize": 13,
+            "align": "left",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "detalle3",
+          "type": "shape",
+          "content": "Historial completo\nQuién tocó qué y cuándo",
+          "at": {
+            "x": 112.0,
+            "y": 43,
+            "w": 54,
+            "h": 10
+          },
+          "style": {
+            "fill": "EDF3F8",
+            "color": "1B3A5C",
+            "fontSize": 13,
+            "align": "left",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    },
+    {
+      "id": "moduloDetalle",
+      "objects": [
+        {
+          "id": "modulo",
+          "type": "shape",
+          "content": "Inventario",
+          "at": {
+            "x": 9,
+            "y": 8,
+            "w": 22,
+            "h": 11
+          },
+          "style": {
+            "fill": "1B6FA8",
+            "color": "FFFFFF",
+            "fontSize": 15,
+            "bold": true,
+            "align": "center",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "leyenda",
+          "type": "text",
+          "content": "Módulo 1 de 3",
+          "at": {
+            "x": 9,
+            "y": 20,
+            "w": 22,
+            "h": 4
+          },
+          "style": {
+            "fontSize": 11,
+            "color": "5A7A99",
+            "align": "center"
+          }
+        },
+        {
+          "id": "detalleTitulo",
+          "type": "text",
+          "content": "Qué resuelve",
+          "at": {
+            "x": 38,
+            "y": 9,
+            "w": 30,
+            "h": 7
+          },
+          "style": {
+            "fontSize": 24,
+            "bold": true,
+            "color": "1B3A5C"
+          }
+        },
+        {
+          "id": "detalle1",
+          "type": "shape",
+          "content": "Catálogo único\nUna ficha por activo, sin duplicados",
+          "at": {
+            "x": 38,
+            "y": 19,
+            "w": 54,
+            "h": 10
+          },
+          "style": {
+            "fill": "EDF3F8",
+            "color": "1B3A5C",
+            "fontSize": 13,
+            "align": "left",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "detalle2",
+          "type": "shape",
+          "content": "Estado en vivo\nAltas y bajas visibles al instante",
+          "at": {
+            "x": 38,
+            "y": 31,
+            "w": 54,
+            "h": 10
+          },
+          "style": {
+            "fill": "EDF3F8",
+            "color": "1B3A5C",
+            "fontSize": 13,
+            "align": "left",
+            "shape": "roundRect"
+          }
+        },
+        {
+          "id": "detalle3",
+          "type": "shape",
+          "content": "Historial completo\nQuién tocó qué y cuándo",
+          "at": {
+            "x": 38,
+            "y": 43,
+            "w": 54,
+            "h": 10
+          },
+          "style": {
+            "fill": "EDF3F8",
+            "color": "1B3A5C",
+            "fontSize": 13,
+            "align": "left",
+            "shape": "roundRect"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "moduloPleno"
+    },
+    {
+      "scene": "moduloDetalle"
+    }
+  ]
+}
