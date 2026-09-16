@@ -1,11 +1,11 @@
 {
   "presentation": {
-    "title": "Composición — Solo el azul, oculto",
-    "transitionMs": 1000
+    "title": "Composición — El azul entre dos capas",
+    "transitionMs": 900
   },
   "scenes": [
     {
-      "id": "solo0",
+      "id": "entre0",
       "objects": [
         {
           "id": "fondo",
@@ -19,6 +19,22 @@
           "style": {
             "fill": "14202B",
             "shape": "rect"
+          }
+        },
+        {
+          "id": "radio1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
@@ -38,22 +54,6 @@
           }
         },
         {
-          "id": "radio1",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "C05746",
-            "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
-          }
-        },
-        {
           "id": "radio2",
           "type": "shape",
           "at": {
@@ -70,57 +70,9 @@
           }
         },
         {
-          "id": "radio3",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "2D5F4C",
-            "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
-          }
-        },
-        {
-          "id": "radio4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
-          }
-        },
-        {
-          "id": "radio5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 130.0,
-            "sectorEnd": 164.0
-          }
-        },
-        {
           "id": "titulo",
           "type": "text",
-          "content": "Solo el azul se mueve",
+          "content": "Entre dos capas",
           "at": {
             "x": 12,
             "y": 20,
@@ -136,7 +88,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Los demás quedan congelados",
+          "content": "Naranja detrás, violeta delante",
           "at": {
             "x": 12,
             "y": 31,
@@ -151,7 +103,7 @@
       ]
     },
     {
-      "id": "solo1",
+      "id": "entre1",
       "objects": [
         {
           "id": "fondo",
@@ -168,22 +120,6 @@
           }
         },
         {
-          "id": "radio0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
-          }
-        },
-        {
           "id": "radio1",
           "type": "shape",
           "at": {
@@ -197,6 +133,22 @@
             "shape": "pie",
             "sectorStart": -6.0,
             "sectorEnd": 28.0
+          }
+        },
+        {
+          "id": "radio0",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": -12.0,
+            "sectorEnd": 22.0
           }
         },
         {
@@ -216,57 +168,9 @@
           }
         },
         {
-          "id": "radio3",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "2D5F4C",
-            "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
-          }
-        },
-        {
-          "id": "radio4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
-          }
-        },
-        {
-          "id": "radio5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 130.0,
-            "sectorEnd": 164.0
-          }
-        },
-        {
           "id": "titulo",
           "type": "text",
-          "content": "Pasa por debajo",
+          "content": "El azul asoma",
           "at": {
             "x": 12,
             "y": 20,
@@ -282,7 +186,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "del naranja, declarado después",
+          "content": "por el borde izquierdo del marco",
           "at": {
             "x": 12,
             "y": 31,
@@ -297,7 +201,7 @@
       ]
     },
     {
-      "id": "solo2",
+      "id": "entre2",
       "objects": [
         {
           "id": "fondo",
@@ -314,22 +218,6 @@
           }
         },
         {
-          "id": "radio0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
-          }
-        },
-        {
           "id": "radio1",
           "type": "shape",
           "at": {
@@ -343,6 +231,22 @@
             "shape": "pie",
             "sectorStart": -6.0,
             "sectorEnd": 28.0
+          }
+        },
+        {
+          "id": "radio0",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": 4.0,
+            "sectorEnd": 38.0
           }
         },
         {
@@ -362,57 +266,9 @@
           }
         },
         {
-          "id": "radio3",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "2D5F4C",
-            "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
-          }
-        },
-        {
-          "id": "radio4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
-          }
-        },
-        {
-          "id": "radio5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 130.0,
-            "sectorEnd": 164.0
-          }
-        },
-        {
           "id": "titulo",
           "type": "text",
-          "content": "Y por debajo",
+          "content": "Lo cubre",
           "at": {
             "x": 12,
             "y": 20,
@@ -428,7 +284,7 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "del violeta, que también lo tapa",
+          "content": "tapando al naranja que tiene debajo",
           "at": {
             "x": 12,
             "y": 31,
@@ -443,7 +299,7 @@
       ]
     },
     {
-      "id": "solo3",
+      "id": "entre3",
       "objects": [
         {
           "id": "fondo",
@@ -460,22 +316,6 @@
           }
         },
         {
-          "id": "radio0",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "1B3A5C",
-            "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
-          }
-        },
-        {
           "id": "radio1",
           "type": "shape",
           "at": {
@@ -489,6 +329,22 @@
             "shape": "pie",
             "sectorStart": -6.0,
             "sectorEnd": 28.0
+          }
+        },
+        {
+          "id": "radio0",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": 22.0,
+            "sectorEnd": 56.0
           }
         },
         {
@@ -508,57 +364,9 @@
           }
         },
         {
-          "id": "radio3",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "2D5F4C",
-            "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
-          }
-        },
-        {
-          "id": "radio4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
-          }
-        },
-        {
-          "id": "radio5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 130.0,
-            "sectorEnd": 164.0
-          }
-        },
-        {
           "id": "titulo",
           "type": "text",
-          "content": "Sin verse",
+          "content": "Se repliega",
           "at": {
             "x": 12,
             "y": 20,
@@ -574,7 +382,105 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Las cuatro escenas se ven iguales",
+          "content": "al entrar bajo el violeta",
+          "at": {
+            "x": 12,
+            "y": 31,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 14,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "entre4",
+      "objects": [
+        {
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "radio1",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
+          }
+        },
+        {
+          "id": "radio0",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "sectorStart": 45.0,
+            "sectorEnd": 79.0
+          }
+        },
+        {
+          "id": "radio2",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Y desaparece",
+          "at": {
+            "x": 12,
+            "y": 20,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 32,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "sin que las otras dos se hayan movido",
           "at": {
             "x": 12,
             "y": 31,
@@ -591,16 +497,19 @@
   ],
   "sequence": [
     {
-      "scene": "solo0"
+      "scene": "entre0"
     },
     {
-      "scene": "solo1"
+      "scene": "entre1"
     },
     {
-      "scene": "solo2"
+      "scene": "entre2"
     },
     {
-      "scene": "solo3"
+      "scene": "entre3"
+    },
+    {
+      "scene": "entre4"
     }
   ]
 }
