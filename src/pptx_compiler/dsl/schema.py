@@ -80,6 +80,7 @@ class StyleSpec(Strict):
     pulse: PulseSpec | None = None
     sway: SwaySpec | None = None
     veil: VeilSpec | None = None
+    blur: float | None = Field(default=None, ge=0, description="Desenfoque en puntos")
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     rotation: float = Field(default=0.0, ge=-360.0, le=360.0)

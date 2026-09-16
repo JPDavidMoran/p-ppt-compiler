@@ -130,3 +130,54 @@ class TestVeloCompilado:
         )
         assert 'val="000000"' in claro
         assert 'val="FFFFFF"' in oscuro
+
+
+class TestDesenfoqueDeForma:
+    """El desenfoque no es exclusivo del velo automático.
+
+    Un panel de legibilidad que cubre varios textos se declara como una
+    forma más, y necesita el mismo borde difuminado para no leerse como
+    una caja pegada sobre el fondo.
+    """
+
+    def _doc(self, style: dict):
+        from pptx_compiler.dsl.schema import Document
+
+        return Document.model_validate(
+            {
+                "scenes": [
+                    {
+                        "id": "a",
+                        "objects": [
+                            {
+                                "id": "panel",
+                                "type": "shape",
+                                "at": {"x": 0, "y": 8, "w": 60, "h": 40},
+                                "style": style,
+                            }
+                        ],
+                    }
+                ],
+                "sequence": [{"scene": "a"}],
+            }
+        )
+
+    def test_por_defecto_una_forma_no_se_desenfoca(self) -> None:
+        assert StyleSpec().blur is None
+
+    def test_el_desenfoque_llega_al_pptx(self, tmp_path: Path) -> None:
+        import zipfile
+
+        from pptx_compiler.compiler.pipeline import compile_document
+
+        out = compile_document(
+            self._doc({"fill": "000000", "opacity": 0.4, "blur": 18.0}),
+            tmp_path / "p.pptx",
+        )
+        with zipfile.ZipFile(out) as archive:
+            xml = archive.read("ppt/slides/slide1.xml").decode()
+        assert '<a:blur rad="228600"' in xml   # 18 pt x 12700
+
+    def test_un_desenfoque_negativo_falla(self) -> None:
+        with pytest.raises(ValidationError):
+            StyleSpec.model_validate({"blur": -1.0})

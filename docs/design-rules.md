@@ -401,6 +401,28 @@ Se aplica cuando el texto **no** está dentro de un módulo con relleno
 propio —ese ya hace de velo— y el fondo tiene algo más que un color
 plano.
 
+### Un panel, no un velo por línea
+
+Un velo por cada bloque de texto produce tres cajas superpuestas que se
+notan como tres cajas. Lo que se busca es **una zona de lectura**: un
+solo panel que cubra el conjunto.
+
+Como referencia, un tercio del ancho del marco basta para una columna de
+texto, y deja el resto para la imagen:
+
+```json
+{ "id": "panelTexto", "type": "shape",
+  "at": { "x": -6, "y": 11, "w": 39, "h": 34 },
+  "style": { "shape": "roundRect", "fill": "000000",
+             "opacity": 0.42, "blur": 18 } }
+```
+
+Arrancarlo fuera del borde (`x: -6`) evita que se vea el canto izquierdo,
+y el texto se ciñe a él en lugar de desbordarlo.
+
+El campo `veil` de un texto sigue sirviendo para un rótulo suelto, donde
+una sola línea necesita fondo propio.
+
 ```json
 "style": { "color": "FFFFFF", "veil": { "opacity": 0.45, "blur": 10 } }
 ```

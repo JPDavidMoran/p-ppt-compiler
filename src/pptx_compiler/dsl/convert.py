@@ -20,6 +20,7 @@ def to_style(spec: StyleSpec) -> ObjectStyle:
         line_width=spec.line_width,
         animation=_animation(spec),
         veil=spec.veil.model_dump() if spec.veil else None,
+        blur=spec.blur,
         bold=spec.bold,
         opacity=spec.opacity,
         rotation=spec.rotation,

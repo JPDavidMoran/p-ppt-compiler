@@ -89,6 +89,7 @@ se omite: los mecanismos mueven la cámara por ti.
 | `pulse` | ninguno | latido: `{seconds, amount}` (amount en %) |
 | `sway` | ninguno | balanceo: `{seconds, degrees}` |
 | `veil` | ninguno | capa de legibilidad: `{opacity, blur, padding, color}` |
+| `blur` | ninguno | desenfoque del borde, en puntos |
 | `bold` | `false` | |
 | `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
 | `opacity` | `1.0` | entre 0 y 1 |
@@ -145,7 +146,11 @@ separe de lo que hay detrás:
 "style": { "color": "FFFFFF", "veil": { "opacity": 0.45, "blur": 10 } }
 ```
 
-Se dibuja justo detrás del objeto, sobresaliendo lo que diga `padding`, y
+Para un bloque de varias líneas, en vez de un `veil` por texto conviene
+**un solo panel**: una forma con `fill`, `opacity` y `blur` que las cubra
+todas. Tres velos superpuestos se leen como tres cajas.
+
+`veil` se dibuja justo detrás del objeto, sobresaliendo lo que diga `padding`, y
 el desenfoque suaviza su borde para que no parezca una caja pegada.
 
 **El color no se elige a ojo.** Si se omite, sale del contraste con el

@@ -110,6 +110,9 @@ def _draw_shape(slide, obj: SceneObject, position, camera: Camera, world_w: floa
     if obj.style.shape in SECTOR_SHAPES:
         _apply_sector(shape, obj.style.sector_start, obj.style.sector_end)
 
+    if obj.style.blur:
+        _apply_blur(shape, obj.style.blur)
+
     if obj.style.line:
         shape.line.color.rgb = RGBColor.from_string(obj.style.line)
         if obj.style.line_width:
