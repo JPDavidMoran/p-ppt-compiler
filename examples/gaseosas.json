@@ -55,7 +55,7 @@
           "type": "image",
           "source": "examples/assets/coca-cola.png",
           "at": {
-            "x": 118.0,
+            "x": 112.0,
             "y": 17.125,
             "w": 22.0,
             "h": 22.0
@@ -149,7 +149,7 @@
           "type": "image",
           "source": "examples/assets/pepsi.png",
           "at": {
-            "x": -22.0,
+            "x": -62.0,
             "y": 15.125,
             "w": 15.08,
             "h": 26.0

@@ -114,6 +114,11 @@ izquierda en las posteriores, para que el recorrido sea coherente.
 
 Los textos son la excepción: pueden fundirse sin más.
 
+**La salida más rápida que la entrada.** La duración es única para toda
+la transición, así que la velocidad la marca la distancia: aparca el
+objeto saliente dos o tres veces más lejos que el entrante, y lo que se
+va se irá deprisa mientras lo que llega entra con calma.
+
 ## P5. Mapa o lienzo amplio
 
 Objetos lejos del encuadre inicial, recorridos por la cámara.

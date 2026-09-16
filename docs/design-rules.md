@@ -306,6 +306,22 @@ Morph la desplaza en lugar de fundirla.
 Un objeto que **persiste** entre escenas ya morphea por su cuenta: la
 regla habla de los que entran o salen.
 
+### La salida, más rápida que la entrada
+
+`transitionMs` vale para la transición entera: PowerPoint no da una
+velocidad por objeto sin animaciones intra-slide, que quedan fuera del
+compilador. Lo que sí se controla es la **distancia**, y en el mismo
+tiempo quien recorre más camino se ve más rápido.
+
+Por defecto, el objeto que sale se aparca **más lejos** que el que entra,
+en torno al doble o el triple de recorrido. Lo que se va conviene que se
+vaya pronto, para que la atención quede en lo que llega:
+
+```json
+"logoPepsi": 68 -> -62    (recorre 130: sale deprisa)
+"logoCoca":  112 -> 66    (recorre  46: entra con calma)
+```
+
 ---
 
 ## Lo que el linter no puede ver
