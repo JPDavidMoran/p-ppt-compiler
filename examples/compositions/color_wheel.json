@@ -8,63 +8,71 @@
       "id": "giro0",
       "objects": [
         {
-          "id": "sector0",
+          "id": "cuarto0",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "rotation": 0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -45.0
           }
         },
         {
-          "id": "sector1",
+          "id": "cuarto1",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "rotation": 90
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": 45.0
           }
         },
         {
-          "id": "sector2",
+          "id": "cuarto2",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "rotation": 180
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": 135.0
           }
         },
         {
-          "id": "sector3",
+          "id": "cuarto3",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "rotation": 270
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": 225.0
           }
         },
         {
@@ -73,7 +81,7 @@
           "content": "Amanecer",
           "at": {
             "x": 12,
-            "y": 18,
+            "y": 20,
             "w": 46,
             "h": 10
           },
@@ -86,10 +94,10 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "La rueda gira y trae su color",
+          "content": "El disco gira sobre un eje a la izquierda",
           "at": {
             "x": 12,
-            "y": 29,
+            "y": 31,
             "w": 44,
             "h": 6
           },
@@ -104,63 +112,71 @@
       "id": "giro1",
       "objects": [
         {
-          "id": "sector0",
+          "id": "cuarto0",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "rotation": -90
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -135.0
           }
         },
         {
-          "id": "sector1",
+          "id": "cuarto1",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "rotation": 0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -45.0
           }
         },
         {
-          "id": "sector2",
+          "id": "cuarto2",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "rotation": 90
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": 45.0
           }
         },
         {
-          "id": "sector3",
+          "id": "cuarto3",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "rotation": 180
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": 135.0
           }
         },
         {
@@ -169,7 +185,7 @@
           "content": "Mediodía",
           "at": {
             "x": 12,
-            "y": 18,
+            "y": 20,
             "w": 46,
             "h": 10
           },
@@ -182,10 +198,10 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Cada sector es un momento",
+          "content": "Cada cuarto entra girando",
           "at": {
             "x": 12,
-            "y": 29,
+            "y": 31,
             "w": 44,
             "h": 6
           },
@@ -200,63 +216,71 @@
       "id": "giro2",
       "objects": [
         {
-          "id": "sector0",
+          "id": "cuarto0",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "rotation": -180
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -225.0
           }
         },
         {
-          "id": "sector1",
+          "id": "cuarto1",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "rotation": -90
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -135.0
           }
         },
         {
-          "id": "sector2",
+          "id": "cuarto2",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "rotation": 0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -45.0
           }
         },
         {
-          "id": "sector3",
+          "id": "cuarto3",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "rotation": 90
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": 45.0
           }
         },
         {
@@ -265,7 +289,7 @@
           "content": "Atardecer",
           "at": {
             "x": 12,
-            "y": 18,
+            "y": 20,
             "w": 46,
             "h": 10
           },
@@ -278,10 +302,10 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "El giro sustituye al barrido",
+          "content": "Solo se ve un color a la vez",
           "at": {
             "x": 12,
-            "y": 29,
+            "y": 31,
             "w": 44,
             "h": 6
           },
@@ -296,63 +320,71 @@
       "id": "giro3",
       "objects": [
         {
-          "id": "sector0",
+          "id": "cuarto0",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "rotation": -270
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -315.0
           }
         },
         {
-          "id": "sector1",
+          "id": "cuarto1",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "rotation": -180
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -225.0
           }
         },
         {
-          "id": "sector2",
+          "id": "cuarto2",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "rotation": -90
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -135.0
           }
         },
         {
-          "id": "sector3",
+          "id": "cuarto3",
           "type": "shape",
           "at": {
-            "x": -25.0,
-            "y": 42.25,
-            "w": 150,
-            "h": 150
+            "x": -194.22088258403917,
+            "y": -126.09588258403917,
+            "w": 308.44176516807835,
+            "h": 308.44176516807835
           },
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "rotation": 0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0,
+            "rotation": -45.0
           }
         },
         {
@@ -361,7 +393,7 @@
           "content": "Noche",
           "at": {
             "x": 12,
-            "y": 18,
+            "y": 20,
             "w": 46,
             "h": 10
           },
@@ -374,10 +406,10 @@
         {
           "id": "sub",
           "type": "text",
-          "content": "Y cierra el ciclo",
+          "content": "y el ciclo se cierra",
           "at": {
             "x": 12,
-            "y": 29,
+            "y": 31,
             "w": 44,
             "h": 6
           },

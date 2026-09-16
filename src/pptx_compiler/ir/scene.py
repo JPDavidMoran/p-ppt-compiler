@@ -25,6 +25,8 @@ class ObjectStyle:
     bold: bool = False
     opacity: float = 1.0
     rotation: float = 0.0
+    sector_start: float = 0.0
+    sector_end: float = 90.0
     align: Literal["left", "center", "right"] = "left"
     shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc"] = "rect"
 

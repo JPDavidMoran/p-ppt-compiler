@@ -87,6 +87,8 @@ se omite: los mecanismos mueven la cámara por ti.
 | `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
 | `opacity` | `1.0` | entre 0 y 1 |
 | `rotation` | `0` | grados, de -360 a 360 |
+| `sectorStart` | `0` | grados; solo para `pie` y `blockArc` |
+| `sectorEnd` | `90` | grados; mayor que `sectorStart` |
 | `align` | `"left"` | `left`, `center`, `right` |
 | `shape` | `"rect"` | `rect`, `ellipse`, `roundRect`, `pie`, `blockArc` |
 
@@ -94,9 +96,15 @@ se omite: los mecanismos mueven la cámara por ti.
 
 `rotation` gira el objeto sobre su centro. Un mismo id con dos ángulos
 distintos morphea, así que una rueda que cambia de sector es un solo
-objeto girando. `pie` dibuja un sector de círculo y `blockArc` un anillo:
-ambos ocupan su caja `at` completa, y su porción visible se controla
-girándolos.
+objeto girando. `pie` dibuja un sector de círculo y `blockArc` un anillo. Ambos ocupan su
+caja `at` completa, y `sectorStart`/`sectorEnd` delimitan qué porción se
+dibuja: `0` a `90` es un cuarto, `0` a `180` una mitad. Sin declararlos,
+PowerPoint usa su sector por defecto —de 0 a 162 grados—, que no es ni un
+cuarto ni una mitad y deja al descubierto una porción impredecible de lo
+que haya debajo.
+
+En el DSL se escriben en camelCase (`sectorStart`, `sectorEnd`); dentro
+del compilador son `sector_start` y `sector_end`.
 
 ### Imágenes
 

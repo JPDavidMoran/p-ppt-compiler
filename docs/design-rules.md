@@ -201,6 +201,27 @@ texto para situar al espectador:
 
 ---
 
+## R10. Una rueda gira sobre el centro de su caja
+
+PowerPoint rota cada forma sobre el centro de su propia caja, no sobre un
+punto que se pueda elegir. Para que un sector orbite un eje concreto, su
+caja tiene que estar **centrada en ese eje**, por grande que resulte.
+
+**Síntoma:** los sectores se esparcen por la pantalla en vez de girar
+juntos, o asoman colores que deberían quedar fuera del marco.
+
+Para que solo se vea un sector, el eje va fuera del marco y lo bastante
+lejos: desde él, el marco abarca un ángulo que debe ser **menor** que el
+del sector. Con el eje pegado al borde izquierdo (`x: -18`) el marco
+abarca casi 115°, así que un cuarto de 90° no llega y los vecinos asoman
+por las esquinas. Alejándolo a `x: -40` el marco baja a 70° y el cuarto
+lo cubre con holgura.
+
+Y los sectores necesitan `sectorStart`/`sectorEnd` explícitos: por
+defecto, `pie` dibuja de 0 a 162 grados.
+
+---
+
 ## Lo que el linter no puede ver
 
 Estas reglas requieren mirar el resultado:

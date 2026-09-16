@@ -37,10 +37,23 @@ class StyleSpec(Strict):
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     rotation: float = Field(default=0.0, ge=-360.0, le=360.0)
+    sector_start: float = Field(default=0.0, ge=0.0, le=360.0, alias="sectorStart")
+    sector_end: float = Field(default=90.0, ge=0.0, le=360.0, alias="sectorEnd")
     align: Literal["left", "center", "right"] = "left"
     shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc"] = "rect"
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
+
+
+    @model_validator(mode="after")
+    def _sector_bien_orientado(self) -> "StyleSpec":
+        """Un sector que acaba antes de empezar no dibuja nada visible."""
+        if self.sector_end <= self.sector_start:
+            raise ValueError(
+                f"sectorEnd ({self.sector_end}) debe ser mayor que "
+                f"sectorStart ({self.sector_start})"
+            )
+        return self
 
 
 class ObjectSpec(Strict):

@@ -65,3 +65,56 @@ class TestRotacion:
     def test_un_angulo_fuera_de_rango_falla(self) -> None:
         with pytest.raises(ValidationError):
             doc((0.0, 400.0))
+
+
+class TestSector:
+    """Un `pie` sin ángulos declarados dibuja el sector por defecto de
+    PowerPoint (0 a 162 grados), que no es un cuarto ni una mitad. Para
+    una rueda por sectores hay que poder decir dónde empieza y acaba."""
+
+    def _doc(self, start: float, end: float) -> Document:
+        return Document.model_validate(
+            {
+                "scenes": [
+                    {
+                        "id": "a",
+                        "objects": [
+                            {
+                                "id": "sector",
+                                "type": "shape",
+                                "at": {"x": 0, "y": 0, "w": 40, "h": 40},
+                                "style": {
+                                    "shape": "pie",
+                                    "sectorStart": start,
+                                    "sectorEnd": end,
+                                },
+                            }
+                        ],
+                    }
+                ],
+                "sequence": [{"scene": "a"}],
+            }
+        )
+
+    def test_por_defecto_es_un_cuarto(self) -> None:
+        from pptx_compiler.dsl.schema import StyleSpec
+
+        style = StyleSpec()
+        assert (style.sector_start, style.sector_end) == (0.0, 90.0)
+
+    def test_los_angulos_llegan_al_pptx(self, tmp_path: Path) -> None:
+        import re
+        import zipfile
+
+        from pptx_compiler.compiler.pipeline import compile_document
+
+        out = compile_document(self._doc(0.0, 90.0), tmp_path / "sector.pptx")
+        with zipfile.ZipFile(out) as archive:
+            xml = archive.read("ppt/slides/slide1.xml").decode()
+        # python-pptx escala este ajuste a 100000 por grado.
+        assert re.search(r'name="adj1" fmla="val 0"', xml)
+        assert re.search(r'name="adj2" fmla="val 9000000"', xml)
+
+    def test_un_sector_invertido_falla(self) -> None:
+        with pytest.raises(ValidationError):
+            self._doc(180.0, 90.0)

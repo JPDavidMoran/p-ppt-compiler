@@ -23,6 +23,8 @@ from pptx_compiler.render.projection import project, project_font_size
 P_NS = "http://schemas.openxmlformats.org/presentationml/2006/main"
 A_NS = "http://schemas.openxmlformats.org/drawingml/2006/main"
 ALPHA_FULL = 100000  # OOXML expresa el alpha en milésimas de porcentaje
+SECTOR_SHAPES = {"pie", "blockArc"}
+
 AUTO_SHAPES = {
     "rect": MSO_SHAPE.RECTANGLE,
     "ellipse": MSO_SHAPE.OVAL,
@@ -79,6 +81,9 @@ def _draw_shape(slide, obj: SceneObject, position, camera: Camera, world_w: floa
     if obj.style.rotation:
         shape.rotation = obj.style.rotation
 
+    if obj.style.shape in SECTOR_SHAPES:
+        _apply_sector(shape, obj.style.sector_start, obj.style.sector_end)
+
     if obj.style.line:
         shape.line.color.rgb = RGBColor.from_string(obj.style.line)
     else:
@@ -132,3 +137,14 @@ def _apply_identity(shape, dsl_id: str, identity: IdentityRegistry) -> None:
         )
     element.set("id", str(identity.ooxml_id_for(dsl_id)))
     element.set("name", identity.shape_name_for(dsl_id))
+
+
+def _apply_sector(shape, start: float, end: float) -> None:
+    """Fija los ángulos de un sector.
+
+    Sin esto, `pie` usa el sector por defecto de PowerPoint —de 0 a 162
+    grados—, que no es ni un cuarto ni una mitad y deja al descubierto una
+    porción impredecible de lo que hay debajo.
+    """
+    shape.adjustments[0] = start
+    shape.adjustments[1] = end
