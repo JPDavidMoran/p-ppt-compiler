@@ -28,13 +28,14 @@ Dentro del alcance:
 - Tipos de objeto: `text`, `shape`, `image`.
 - Opacidad por objeto, que el differ trata como cambio morpheable.
 - CLI con `compile`, `validate`, `lint`, `inspect`.
+- Giro continuo por objeto (`<p:timing>`), la única animación dentro de
+  una diapositiva.
 
 Fuera del alcance:
 
 - Render de slides a imagen y evaluación con modelos de visión.
 - Automatización COM de PowerPoint.
 - Sistema de composiciones y temas.
-- Animaciones intra-slide (`<p:timing>`). Solo transiciones entre slides.
 
 La generación de DSL por IA estaba aquí y salió: la skill
 `presentation-planner` la cubre, apoyada en `docs/design-rules.md` y en
@@ -81,7 +82,7 @@ esa lógica vive en un solo módulo y los mecanismos solo emiten datos.
 | `mechanisms/` | Macros: parámetros -> escenas | Puro |
 | `ir/` | Scene, Camera, SceneObject, identidad | Puro |
 | `compiler/` | Differ, planner de slides | Puro |
-| `render/` | Proyección, python-pptx, OOXML | I/O |
+| `render/` | Proyección, python-pptx, OOXML, animaciones | I/O |
 | `cli/` | Entrada de línea de comandos | I/O |
 
 Las capas puras no importan `pptx` ni tocan disco. Reciben datos y
@@ -377,6 +378,28 @@ El orden de los hijos importa en OOXML: un elemento en el sitio
 equivocado hace que PowerPoint declare el archivo dañado. La plantilla
 XML exacta se extrae del golden file, no se escribe de memoria.
 
+### Animación continua
+
+`render/animations.py` emite el bloque `<p:timing>` que hace girar una
+figura indefinidamente. Es la única animación dentro de una diapositiva
+que el compilador produce, y se añadió el 2026-09-16 tras comprobar en
+PowerPoint real que se reproduce: hasta entonces el diseño la daba por
+fuera de alcance.
+
+Lo que el sondeo dejó fijado:
+
+- El árbol de tiempos tiene una anidación obligatoria —`tmRoot`,
+  `mainSeq` y tres niveles de `par`— que PowerPoint escribe siempre igual
+  y rechaza si falta un nivel.
+- El giro se expresa en 1/60000 de grado: una vuelta son `21600000`, y el
+  signo decide el sentido.
+- `repeatCount="indefinite"` es lo que lo vuelve perpetuo, y
+  `nodeType="withEffect"` con `evt="onPrev"` lo arranca sin esperar un
+  clic.
+- En `<p:sld>` el bloque va **después** de la transición. Por eso el
+  builder aplica primero las transiciones y luego los giros, y hay un
+  test que lo comprueba.
+
 ## 10. Errores
 
 Jerarquía con raíz `PresentationCompilerError`:
@@ -460,7 +483,7 @@ src/pptx_compiler/
                 build/ regroup/ reveal/ spotlight/
   ir/           scene, camera, geometry, identity
   compiler/     expander, differ, pipeline, lint, rules_flow, rules_visual, findings
-  render/       projection, builder, shapes, transitions
+  render/       projection, builder, shapes, transitions, animations
   errors.py
   cli/
 tests/
