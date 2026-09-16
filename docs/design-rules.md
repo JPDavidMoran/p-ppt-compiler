@@ -401,24 +401,32 @@ Se aplica cuando el texto **no** está dentro de un módulo con relleno
 propio —ese ya hace de velo— y el fondo tiene algo más que un color
 plano.
 
-### Un panel, no un velo por línea
+### Una banda, no un velo por línea
 
-Un velo por cada bloque de texto produce tres cajas superpuestas que se
-notan como tres cajas. Lo que se busca es **una zona de lectura**: un
-solo panel que cubra el conjunto.
-
-Como referencia, un tercio del ancho del marco basta para una columna de
-texto, y deja el resto para la imagen:
+Un velo por cada bloque de texto produce cajas superpuestas que se notan
+como cajas. Lo que se busca es **una zona de lectura**: una sola banda
+que cruce el marco de lado a lado.
 
 ```json
 { "id": "panelTexto", "type": "shape",
-  "at": { "x": -6, "y": 11, "w": 39, "h": 34 },
-  "style": { "shape": "roundRect", "fill": "000000",
-             "opacity": 0.42, "blur": 18 } }
+  "at": { "x": -8, "y": 6, "w": 116, "h": 45 },
+  "style": { "shape": "rect", "fill": "000000",
+             "opacity": 0.5, "blur": 45 } }
 ```
 
-Arrancarlo fuera del borde (`x: -6`) evita que se vea el canto izquierdo,
-y el texto se ciñe a él en lugar de desbordarlo.
+Tres detalles que deciden si se ve bien:
+
+- **Desborda el marco** por los lados que toca (`x: -8`, ancho 116). Un
+  borde difuminado dentro del encuadre se ve como el canto de una caja;
+  fuera, la banda parece parte del fondo.
+- **Generosa de alto.** Ceñirla al texto la delata. Que respire por
+  encima y por debajo del bloque.
+- **Va detrás de las imágenes**, no delante. Su trabajo es atenuar el
+  fondo animado; si se dibuja después, apaga también el logo.
+
+El desenfoque necesita ser alto para que el degradado se aprecie: **40 a
+50 puntos** en una banda de este tamaño. Con 10 o 15 el borde sigue
+leyéndose como una línea.
 
 El campo `veil` de un texto sigue sirviendo para un rótulo suelto, donde
 una sola línea necesita fondo propio.
