@@ -248,13 +248,13 @@ barre la pantalla.
 De ahí salen dos efectos opuestos, y la diferencia está en cuántos
 sectores se mueven y en su ancho:
 
-- **Una ola limpia** (`color_wheel.json`): sectores más anchos que el
-  marco y solo el entrante en movimiento. Llega un color sobre uno
-  estable.
-- **Un tren de olas** (`color_waves.json`): sectores más **estrechos**
-  que el marco, pegados unos a otros, y todos avanzando a la vez. Cada
-  escena muestra dos colores en reparto, y el conjunto se lee como
-  franjas cruzando en cadena.
+- **Una ola** (`color_waves.json`): sectores más anchos que el marco y
+  solo el entrante en movimiento. Llega un color sobre uno estable, como
+  una marea que invade el marco.
+- **Una rueda** (`color_wheel.json`): sectores más **estrechos** que el
+  marco, pegados unos a otros como radios, y todos avanzando a la vez.
+  Cada escena reparte el marco entre dos colores, y el conjunto se lee
+  como un disco que gira.
 
 El ancho es lo que decide: más que el marco y una ola lo tapa entero;
 menos, y varias conviven en pantalla.

@@ -1,14 +1,28 @@
 {
   "presentation": {
-    "title": "Composición — Ola de color",
-    "transitionMs": 900
+    "title": "Composición — Rueda de color",
+    "transitionMs": 1100
   },
   "scenes": [
     {
       "id": "giro0",
       "objects": [
         {
-          "id": "cuarto0",
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -19,12 +33,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
           }
         },
         {
-          "id": "cuarto1",
+          "id": "radio1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -35,12 +49,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 210.0
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
           }
         },
         {
-          "id": "cuarto2",
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -51,12 +65,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 210.0
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
           }
         },
         {
-          "id": "cuarto3",
+          "id": "radio3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -67,14 +81,46 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 210.0
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 164.0,
+            "sectorEnd": 198.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 198.0,
+            "sectorEnd": 232.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Amanecer",
+          "content": "La rueda gira",
           "at": {
             "x": 12,
             "y": 20,
@@ -82,15 +128,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 36,
+            "fontSize": 34,
             "bold": true,
-            "color": "E8EEF4"
+            "color": "FFFFFF"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "Una ola de color invade el marco",
+          "content": "Sectores estrechos barren el marco",
           "at": {
             "x": 12,
             "y": 31,
@@ -99,7 +145,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "E8EEF4"
+            "color": "FFFFFF"
           }
         }
       ]
@@ -108,7 +154,21 @@
       "id": "giro1",
       "objects": [
         {
-          "id": "cuarto0",
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -119,12 +179,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
-          "id": "cuarto1",
+          "id": "radio1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -135,12 +195,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
           }
         },
         {
-          "id": "cuarto2",
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -151,12 +211,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 210.0
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
           }
         },
         {
-          "id": "cuarto3",
+          "id": "radio3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -167,14 +227,46 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 210.0
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 164.0,
+            "sectorEnd": 198.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Mediodía",
+          "content": "Todos a la vez",
           "at": {
             "x": 12,
             "y": 20,
@@ -182,15 +274,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 36,
+            "fontSize": 34,
             "bold": true,
-            "color": "FFF4EC"
+            "color": "FFFFFF"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "Solo el color entrante se mueve",
+          "content": "El disco entero avanza una franja",
           "at": {
             "x": 12,
             "y": 31,
@@ -199,7 +291,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "FFF4EC"
+            "color": "FFFFFF"
           }
         }
       ]
@@ -208,7 +300,21 @@
       "id": "giro2",
       "objects": [
         {
-          "id": "cuarto0",
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -219,12 +325,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": -40.0,
+            "sectorEnd": -6.0
           }
         },
         {
-          "id": "cuarto1",
+          "id": "radio1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -235,12 +341,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
-          "id": "cuarto2",
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -251,12 +357,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
           }
         },
         {
-          "id": "cuarto3",
+          "id": "radio3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -267,14 +373,46 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 120.0,
-            "sectorEnd": 210.0
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 130.0,
+            "sectorEnd": 164.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Atardecer",
+          "content": "En cadena",
           "at": {
             "x": 12,
             "y": 20,
@@ -282,15 +420,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 36,
+            "fontSize": 34,
             "bold": true,
-            "color": "F3EAF3"
+            "color": "FFFFFF"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "El anterior se queda debajo",
+          "content": "y se ven dos colores en reparto",
           "at": {
             "x": 12,
             "y": 31,
@@ -299,7 +437,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "F3EAF3"
+            "color": "FFFFFF"
           }
         }
       ]
@@ -308,7 +446,21 @@
       "id": "giro3",
       "objects": [
         {
-          "id": "cuarto0",
+          "id": "fondo",
+          "type": "shape",
+          "at": {
+            "x": 0,
+            "y": 0,
+            "w": 100,
+            "h": 56.25
+          },
+          "style": {
+            "fill": "14202B",
+            "shape": "rect"
+          }
+        },
+        {
+          "id": "radio0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -319,12 +471,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": -74.0,
+            "sectorEnd": -40.0
           }
         },
         {
-          "id": "cuarto1",
+          "id": "radio1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -335,12 +487,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": -40.0,
+            "sectorEnd": -6.0
           }
         },
         {
-          "id": "cuarto2",
+          "id": "radio2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -351,12 +503,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": -6.0,
+            "sectorEnd": 28.0
           }
         },
         {
-          "id": "cuarto3",
+          "id": "radio3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -367,14 +519,46 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 0.0,
-            "sectorEnd": 90.0
+            "sectorStart": 28.0,
+            "sectorEnd": 62.0
+          }
+        },
+        {
+          "id": "radio4",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "B8863B",
+            "shape": "pie",
+            "sectorStart": 62.0,
+            "sectorEnd": 96.0
+          }
+        },
+        {
+          "id": "radio5",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "3E7C8C",
+            "shape": "pie",
+            "sectorStart": 96.0,
+            "sectorEnd": 130.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Noche",
+          "content": "Sin fin",
           "at": {
             "x": 12,
             "y": 20,
@@ -382,15 +566,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 36,
+            "fontSize": 34,
             "bold": true,
-            "color": "E6F0EA"
+            "color": "FFFFFF"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "hasta cerrar el ciclo",
+          "content": "El giro podría continuar",
           "at": {
             "x": 12,
             "y": 31,
@@ -399,7 +583,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "E6F0EA"
+            "color": "FFFFFF"
           }
         }
       ]

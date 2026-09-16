@@ -1,28 +1,14 @@
 {
   "presentation": {
-    "title": "Composición — Olas superpuestas",
-    "transitionMs": 1100
+    "title": "Composición — Ola de color",
+    "transitionMs": 900
   },
   "scenes": [
     {
       "id": "ola0",
       "objects": [
         {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "ola0",
+          "id": "frente0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -33,12 +19,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola1",
+          "id": "frente1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -49,12 +35,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
-          "id": "ola2",
+          "id": "frente2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -65,12 +51,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
-          "id": "ola3",
+          "id": "frente3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -81,46 +67,14 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 130.0,
-            "sectorEnd": 164.0
-          }
-        },
-        {
-          "id": "ola4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 164.0,
-            "sectorEnd": 198.0
-          }
-        },
-        {
-          "id": "ola5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 198.0,
-            "sectorEnd": 232.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Varias olas",
+          "content": "Una ola",
           "at": {
             "x": 12,
             "y": 20,
@@ -128,15 +82,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 34,
+            "fontSize": 36,
             "bold": true,
-            "color": "FFFFFF"
+            "color": "E8EEF4"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "Franjas de color cruzan el marco",
+          "content": "Un color invade el marco desde el eje",
           "at": {
             "x": 12,
             "y": 31,
@@ -145,7 +99,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "FFFFFF"
+            "color": "E8EEF4"
           }
         }
       ]
@@ -154,21 +108,7 @@
       "id": "ola1",
       "objects": [
         {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "ola0",
+          "id": "frente0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -179,12 +119,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola1",
+          "id": "frente1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -195,12 +135,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola2",
+          "id": "frente2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -211,12 +151,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
-          "id": "ola3",
+          "id": "frente3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -227,46 +167,14 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
-          }
-        },
-        {
-          "id": "ola4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 130.0,
-            "sectorEnd": 164.0
-          }
-        },
-        {
-          "id": "ola5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 164.0,
-            "sectorEnd": 198.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Se suceden",
+          "content": "Sin retirada",
           "at": {
             "x": 12,
             "y": 20,
@@ -274,15 +182,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 34,
+            "fontSize": 36,
             "bold": true,
-            "color": "FFFFFF"
+            "color": "FFF4EC"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "y se ven dos o tres a la vez",
+          "content": "El anterior se queda debajo, quieto",
           "at": {
             "x": 12,
             "y": 31,
@@ -291,7 +199,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "FFFFFF"
+            "color": "FFF4EC"
           }
         }
       ]
@@ -300,21 +208,7 @@
       "id": "ola2",
       "objects": [
         {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "ola0",
+          "id": "frente0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -325,12 +219,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -40.0,
-            "sectorEnd": -6.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola1",
+          "id": "frente1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -341,12 +235,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola2",
+          "id": "frente2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -357,12 +251,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola3",
+          "id": "frente3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -373,46 +267,14 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
-          }
-        },
-        {
-          "id": "ola4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
-          }
-        },
-        {
-          "id": "ola5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 130.0,
-            "sectorEnd": 164.0
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "En cadena",
+          "content": "Una por vez",
           "at": {
             "x": 12,
             "y": 20,
@@ -420,15 +282,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 34,
+            "fontSize": 36,
             "bold": true,
-            "color": "FFFFFF"
+            "color": "F3EAF3"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "cada una empuja a la siguiente",
+          "content": "Solo el color entrante se mueve",
           "at": {
             "x": 12,
             "y": 31,
@@ -437,7 +299,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "FFFFFF"
+            "color": "F3EAF3"
           }
         }
       ]
@@ -446,21 +308,7 @@
       "id": "ola3",
       "objects": [
         {
-          "id": "fondo",
-          "type": "shape",
-          "at": {
-            "x": 0,
-            "y": 0,
-            "w": 100,
-            "h": 56.25
-          },
-          "style": {
-            "fill": "14202B",
-            "shape": "rect"
-          }
-        },
-        {
-          "id": "ola0",
+          "id": "frente0",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -471,12 +319,12 @@
           "style": {
             "fill": "1B3A5C",
             "shape": "pie",
-            "sectorStart": -74.0,
-            "sectorEnd": -40.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola1",
+          "id": "frente1",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -487,12 +335,12 @@
           "style": {
             "fill": "C05746",
             "shape": "pie",
-            "sectorStart": -40.0,
-            "sectorEnd": -6.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola2",
+          "id": "frente2",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -503,12 +351,12 @@
           "style": {
             "fill": "6B3A6B",
             "shape": "pie",
-            "sectorStart": -6.0,
-            "sectorEnd": 28.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
-          "id": "ola3",
+          "id": "frente3",
           "type": "shape",
           "at": {
             "x": -212.1713172976266,
@@ -519,46 +367,14 @@
           "style": {
             "fill": "2D5F4C",
             "shape": "pie",
-            "sectorStart": 28.0,
-            "sectorEnd": 62.0
-          }
-        },
-        {
-          "id": "ola4",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "B8863B",
-            "shape": "pie",
-            "sectorStart": 62.0,
-            "sectorEnd": 96.0
-          }
-        },
-        {
-          "id": "ola5",
-          "type": "shape",
-          "at": {
-            "x": -212.1713172976266,
-            "y": -192.1713172976266,
-            "w": 344.3426345952532,
-            "h": 344.3426345952532
-          },
-          "style": {
-            "fill": "3E7C8C",
-            "shape": "pie",
-            "sectorStart": 96.0,
-            "sectorEnd": 130.0
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
           }
         },
         {
           "id": "titulo",
           "type": "text",
-          "content": "Hasta pasar",
+          "content": "Hasta el último",
           "at": {
             "x": 12,
             "y": 20,
@@ -566,15 +382,15 @@
             "h": 10
           },
           "style": {
-            "fontSize": 34,
+            "fontSize": 36,
             "bold": true,
-            "color": "FFFFFF"
+            "color": "E6F0EA"
           }
         },
         {
           "id": "sub",
           "type": "text",
-          "content": "y el marco queda despejado",
+          "content": "que cubre el marco entero",
           "at": {
             "x": 12,
             "y": 31,
@@ -583,7 +399,7 @@
           },
           "style": {
             "fontSize": 15,
-            "color": "FFFFFF"
+            "color": "E6F0EA"
           }
         }
       ]
