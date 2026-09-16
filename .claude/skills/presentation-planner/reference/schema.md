@@ -84,6 +84,7 @@ se omite: los mecanismos mueven la cámara por ti.
 | `fill` | ninguno | hex; sin relleno si se omite |
 | `line` | ninguno | hex; sin borde si se omite |
 | `lineWidth` | ninguno | grosor del borde en puntos (`line_width`) |
+| `spin` | ninguno | giro continuo: `{seconds, clockwise}` |
 | `bold` | `false` | |
 | `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
 | `opacity` | `1.0` | entre 0 y 1 |
@@ -107,7 +108,16 @@ que haya debajo.
 En el DSL se escriben en camelCase (`sectorStart`, `sectorEnd`); dentro
 del compilador son `sector_start` y `sector_end`.
 
-Las estrellas (`star4` es un shuriken de cuatro puntas) sirven de textura de fondo: contorno fino con `line` y `lineWidth`, sin `fill`, y giradas con `rotation` a ángulos distintos entre escenas para que el patrón rote al cambiar de diapositiva.
+Las estrellas (`star4` es un shuriken de cuatro puntas) sirven de textura de fondo: contorno fino con `line` y `lineWidth`, y sin `fill`.
+
+`spin` las hace girar **sin parar** mientras la diapositiva está a la vista, al margen de las transiciones:
+
+```json
+"style": { "shape": "star4", "line": "2E5C7A", "lineWidth": 1,
+           "spin": { "seconds": 6, "clockwise": false } }
+```
+
+`seconds` es lo que tarda una vuelta completa. Duraciones distintas en cada figura evitan que el patrón se mueva como un bloque. Es la única animación dentro de una diapositiva; todo lo demás ocurre en las transiciones.
 
 ### Imágenes
 

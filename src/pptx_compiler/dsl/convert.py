@@ -18,6 +18,7 @@ def to_style(spec: StyleSpec) -> ObjectStyle:
         fill=spec.fill,
         line=spec.line,
         line_width=spec.line_width,
+        spin=(spec.spin.seconds, spec.spin.clockwise) if spec.spin else None,
         bold=spec.bold,
         opacity=spec.opacity,
         rotation=spec.rotation,

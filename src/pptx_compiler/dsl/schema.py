@@ -29,12 +29,20 @@ class CameraSpec(Strict):
     h: float = Field(gt=0)
 
 
+class SpinSpec(Strict):
+    """Giro continuo: la figura no deja de rotar mientras se ve la slide."""
+
+    seconds: float = Field(default=6.0, gt=0, description="Lo que tarda una vuelta")
+    clockwise: bool = True
+
+
 class StyleSpec(Strict):
     font_size: float = Field(default=18.0, gt=0, alias="fontSize")
     color: str = "202020"
     fill: str | None = None
     line: str | None = None
     line_width: float | None = Field(default=None, gt=0, alias="lineWidth")
+    spin: SpinSpec | None = None
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     rotation: float = Field(default=0.0, ge=-360.0, le=360.0)

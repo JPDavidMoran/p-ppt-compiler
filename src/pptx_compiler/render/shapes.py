@@ -39,11 +39,23 @@ AUTO_SHAPES = {
 ALIGNMENTS = {"left": PP_ALIGN.LEFT, "center": PP_ALIGN.CENTER, "right": PP_ALIGN.RIGHT}
 
 
-def draw_scene(slide, scene: Scene, identity: IdentityRegistry, world_w: float) -> None:
+def draw_scene(
+    slide, scene: Scene, identity: IdentityRegistry, world_w: float
+) -> dict[int, tuple[float, bool]]:
+    """Dibuja la escena y devuelve qué shapes piden giro continuo.
+
+    El giro no se aplica aquí: vive en un bloque de tiempos aparte, al
+    final del slide, así que quien dibuja solo anota quién lo pidió.
+    """
+    spins: dict[int, tuple[float, bool]] = {}
     for obj in scene.objects:
         shape = _draw(slide, obj, scene.camera, world_w)
-        if shape is not None:
-            _apply_identity(shape, obj.id, identity)
+        if shape is None:
+            continue
+        _apply_identity(shape, obj.id, identity)
+        if obj.style.spin:
+            spins[int(shape._element.nvSpPr.cNvPr.get("id"))] = obj.style.spin
+    return spins
 
 
 def _draw(slide, obj: SceneObject, camera: Camera, world_w: float):

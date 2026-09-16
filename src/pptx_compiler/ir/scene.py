@@ -23,6 +23,7 @@ class ObjectStyle:
     fill: str | None = None
     line: str | None = None
     line_width: float | None = None
+    spin: tuple[float, bool] | None = None
     bold: bool = False
     opacity: float = 1.0
     rotation: float = 0.0
