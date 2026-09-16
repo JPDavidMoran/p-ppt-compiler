@@ -19,6 +19,7 @@ def to_style(spec: StyleSpec) -> ObjectStyle:
         line=spec.line,
         bold=spec.bold,
         opacity=spec.opacity,
+        rotation=spec.rotation,
         align=spec.align,
         shape=spec.shape,
     )

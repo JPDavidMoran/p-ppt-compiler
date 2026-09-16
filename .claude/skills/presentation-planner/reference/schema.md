@@ -85,10 +85,18 @@ se omite: los mecanismos mueven la cámara por ti.
 | `line` | ninguno | hex; sin borde si se omite |
 | `bold` | `false` | |
 | `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
+| `opacity` | `1.0` | entre 0 y 1 |
+| `rotation` | `0` | grados, de -360 a 360 |
 | `align` | `"left"` | `left`, `center`, `right` |
-| `shape` | `"rect"` | `rect`, `ellipse`, `roundRect` |
+| `shape` | `"rect"` | `rect`, `ellipse`, `roundRect`, `pie`, `blockArc` |
 
 `fontSize` escala con el zoom: 30 pt en una cámara 2× se ve como 60 pt.
+
+`rotation` gira el objeto sobre su centro. Un mismo id con dos ángulos
+distintos morphea, así que una rueda que cambia de sector es un solo
+objeto girando. `pie` dibuja un sector de círculo y `blockArc` un anillo:
+ambos ocupan su caja `at` completa, y su porción visible se controla
+girándolos.
 
 ### Imágenes
 

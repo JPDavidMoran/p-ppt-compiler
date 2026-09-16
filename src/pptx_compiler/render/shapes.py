@@ -27,6 +27,8 @@ AUTO_SHAPES = {
     "rect": MSO_SHAPE.RECTANGLE,
     "ellipse": MSO_SHAPE.OVAL,
     "roundRect": MSO_SHAPE.ROUNDED_RECTANGLE,
+    "pie": MSO_SHAPE.PIE,
+    "blockArc": MSO_SHAPE.BLOCK_ARC,
 }
 ALIGNMENTS = {"left": PP_ALIGN.LEFT, "center": PP_ALIGN.CENTER, "right": PP_ALIGN.RIGHT}
 
@@ -73,6 +75,9 @@ def _draw_shape(slide, obj: SceneObject, position, camera: Camera, world_w: floa
         _apply_opacity(shape, obj.style.opacity)
     else:
         shape.fill.background()
+
+    if obj.style.rotation:
+        shape.rotation = obj.style.rotation
 
     if obj.style.line:
         shape.line.color.rgb = RGBColor.from_string(obj.style.line)

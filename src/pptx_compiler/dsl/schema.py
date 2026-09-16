@@ -36,8 +36,9 @@ class StyleSpec(Strict):
     line: str | None = None
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
+    rotation: float = Field(default=0.0, ge=-360.0, le=360.0)
     align: Literal["left", "center", "right"] = "left"
-    shape: Literal["rect", "ellipse", "roundRect"] = "rect"
+    shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc"] = "rect"
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
 

@@ -1,0 +1,406 @@
+{
+  "presentation": {
+    "title": "Composición — Rueda de color",
+    "transitionMs": 900
+  },
+  "scenes": [
+    {
+      "id": "giro0",
+      "objects": [
+        {
+          "id": "sector0",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "rotation": 0
+          }
+        },
+        {
+          "id": "sector1",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "rotation": 90
+          }
+        },
+        {
+          "id": "sector2",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "rotation": 180
+          }
+        },
+        {
+          "id": "sector3",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "rotation": 270
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Amanecer",
+          "at": {
+            "x": 12,
+            "y": 18,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 36,
+            "bold": true,
+            "color": "E8EEF4"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "La rueda gira y trae su color",
+          "at": {
+            "x": 12,
+            "y": 29,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "E8EEF4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "giro1",
+      "objects": [
+        {
+          "id": "sector0",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "rotation": -90
+          }
+        },
+        {
+          "id": "sector1",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "rotation": 0
+          }
+        },
+        {
+          "id": "sector2",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "rotation": 90
+          }
+        },
+        {
+          "id": "sector3",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "rotation": 180
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Mediodía",
+          "at": {
+            "x": 12,
+            "y": 18,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 36,
+            "bold": true,
+            "color": "FFF4EC"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "Cada sector es un momento",
+          "at": {
+            "x": 12,
+            "y": 29,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "FFF4EC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "giro2",
+      "objects": [
+        {
+          "id": "sector0",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "rotation": -180
+          }
+        },
+        {
+          "id": "sector1",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "rotation": -90
+          }
+        },
+        {
+          "id": "sector2",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "rotation": 0
+          }
+        },
+        {
+          "id": "sector3",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "rotation": 90
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Atardecer",
+          "at": {
+            "x": 12,
+            "y": 18,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 36,
+            "bold": true,
+            "color": "F3EAF3"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "El giro sustituye al barrido",
+          "at": {
+            "x": 12,
+            "y": 29,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "F3EAF3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "giro3",
+      "objects": [
+        {
+          "id": "sector0",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "1B3A5C",
+            "shape": "pie",
+            "rotation": -270
+          }
+        },
+        {
+          "id": "sector1",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "C05746",
+            "shape": "pie",
+            "rotation": -180
+          }
+        },
+        {
+          "id": "sector2",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "6B3A6B",
+            "shape": "pie",
+            "rotation": -90
+          }
+        },
+        {
+          "id": "sector3",
+          "type": "shape",
+          "at": {
+            "x": -25.0,
+            "y": 42.25,
+            "w": 150,
+            "h": 150
+          },
+          "style": {
+            "fill": "2D5F4C",
+            "shape": "pie",
+            "rotation": 0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Noche",
+          "at": {
+            "x": 12,
+            "y": 18,
+            "w": 46,
+            "h": 10
+          },
+          "style": {
+            "fontSize": 36,
+            "bold": true,
+            "color": "E6F0EA"
+          }
+        },
+        {
+          "id": "sub",
+          "type": "text",
+          "content": "Y cierra el ciclo",
+          "at": {
+            "x": 12,
+            "y": 29,
+            "w": 44,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 15,
+            "color": "E6F0EA"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "giro0"
+    },
+    {
+      "scene": "giro1"
+    },
+    {
+      "scene": "giro2"
+    },
+    {
+      "scene": "giro3"
+    }
+  ]
+}

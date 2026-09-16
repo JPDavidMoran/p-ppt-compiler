@@ -24,8 +24,9 @@ class ObjectStyle:
     line: str | None = None
     bold: bool = False
     opacity: float = 1.0
+    rotation: float = 0.0
     align: Literal["left", "center", "right"] = "left"
-    shape: Literal["rect", "ellipse", "roundRect"] = "rect"
+    shape: Literal["rect", "ellipse", "roundRect", "pie", "blockArc"] = "rect"
 
 
 @dataclass(frozen=True)
