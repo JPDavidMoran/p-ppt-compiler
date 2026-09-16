@@ -401,32 +401,40 @@ Se aplica cuando el texto **no** está dentro de un módulo con relleno
 propio —ese ya hace de velo— y el fondo tiene algo más que un color
 plano.
 
-### Una banda, no un velo por línea
+### Un panel en la columna de texto
 
-Un velo por cada bloque de texto produce cajas superpuestas que se notan
-como cajas. Lo que se busca es **una zona de lectura**: una sola banda
-que cruce el marco de lado a lado.
+Un velo por cada bloque produce cajas superpuestas que se notan como
+cajas. Lo que se busca es **una zona de lectura**: un solo panel que
+ocupe la columna donde vive el texto.
 
 ```json
 { "id": "panelTexto", "type": "shape",
-  "at": { "x": -8, "y": 6, "w": 116, "h": 45 },
+  "at": { "x": -10, "y": -8, "w": 52, "h": 72.25 },
   "style": { "shape": "rect", "fill": "000000",
-             "opacity": 0.5, "blur": 45 } }
+             "opacity": 0.42, "blur": 55 } }
 ```
 
-Tres detalles que deciden si se ve bien:
+Con el mundo por defecto (100 × 56.25) ese panel se ve de `x: 0` a
+`x: 42` y de arriba abajo del marco.
 
-- **Desborda el marco** por los lados que toca (`x: -8`, ancho 116). Un
-  borde difuminado dentro del encuadre se ve como el canto de una caja;
-  fuera, la banda parece parte del fondo.
-- **Generosa de alto.** Ceñirla al texto la delata. Que respire por
-  encima y por debajo del bloque.
+Cuatro detalles que deciden si se ve bien:
+
+- **Vertical, no horizontal.** Cubre el alto entero del marco pero solo
+  el ancho de la columna de texto —en torno a un 40%—, y deja libre la
+  zona de la imagen. Una banda que cruza de lado a lado atenúa también lo
+  que no debía.
+- **Desborda por arriba, abajo y el lado exterior** (`x: -10`, `y: -8`).
+  Un borde difuminado dentro del encuadre se ve como el canto de una
+  caja; fuera, el panel parece parte del fondo. Solo el borde interior
+  queda dentro, y ahí el desenfoque lo funde con la escena.
 - **Va detrás de las imágenes**, no delante. Su trabajo es atenuar el
-  fondo animado; si se dibuja después, apaga también el logo.
+  fondo; si se dibuja después, apaga también el logo.
+- **El texto se ciñe al panel.** Si lo desborda, el panel deja de
+  cumplir su función justo donde hacía falta.
 
-El desenfoque necesita ser alto para que el degradado se aprecie: **40 a
-50 puntos** en una banda de este tamaño. Con 10 o 15 el borde sigue
-leyéndose como una línea.
+El desenfoque necesita ser alto para que el degradado se aprecie: **50 a
+60 puntos** en un panel de este tamaño. Con 10 o 15 el borde sigue
+leyéndose como una línea recta.
 
 El campo `veil` de un texto sigue sirviendo para un rótulo suelto, donde
 una sola línea necesita fondo propio.
