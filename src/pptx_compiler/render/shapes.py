@@ -16,12 +16,15 @@ from pptx.util import Emu, Pt
 
 from pptx_compiler.errors import IdentityError
 from pptx_compiler.ir.camera import Camera
+from pptx_compiler.ir.geometry import Rect
 from pptx_compiler.ir.identity import IdentityRegistry
 from pptx_compiler.ir.scene import Scene, SceneObject
+from pptx_compiler.render.contrast import veil_color_for
 from pptx_compiler.render.projection import project, project_font_size
 
 P_NS = "http://schemas.openxmlformats.org/presentationml/2006/main"
 A_NS = "http://schemas.openxmlformats.org/drawingml/2006/main"
+EMU_POR_PUNTO = 12700
 ALPHA_FULL = 100000  # OOXML expresa el alpha en milésimas de porcentaje
 SECTOR_SHAPES = {"pie", "blockArc"}
 
@@ -46,9 +49,13 @@ def draw_scene(
 
     El giro no se aplica aquí: vive en un bloque de tiempos aparte, al
     final del slide, así que quien dibuja solo anota quién lo pidió.
+
+    El velo de un objeto se dibuja justo antes que él, para quedar detrás.
     """
     spins: dict[int, tuple[str, dict]] = {}
     for obj in scene.objects:
+        if obj.style.veil:
+            _draw_veil(slide, obj, scene.camera, world_w)
         shape = _draw(slide, obj, scene.camera, world_w)
         if shape is None:
             continue
@@ -169,3 +176,40 @@ def _apply_sector(shape, start: float, end: float) -> None:
     """
     shape.adjustments[0] = start
     shape.adjustments[1] = end
+
+
+def _draw_veil(slide, obj: SceneObject, camera: Camera, world_w: float) -> None:
+    """Capa semitransparente y desenfocada bajo un objeto.
+
+    Separa el texto del fondo sin ocultarlo: el desenfoque suaviza el
+    borde del velo para que no se lea como una caja pegada encima.
+
+    El color, si no se declara, sale del contraste con el propio texto.
+    """
+    veil = obj.style.veil
+    margen = veil["padding"]
+    caja = Rect(
+        obj.at.x - margen,
+        obj.at.y - margen,
+        obj.at.w + margen * 2,
+        obj.at.h + margen * 2,
+    )
+    box = project(caja, camera)
+    shape = slide.shapes.add_shape(
+        AUTO_SHAPES["roundRect"], Emu(box.x), Emu(box.y), Emu(box.w), Emu(box.h)
+    )
+    color = veil["color"] or veil_color_for(obj.style.color)
+    shape.fill.solid()
+    shape.fill.fore_color.rgb = RGBColor.from_string(color)
+    _apply_opacity(shape, veil["opacity"])
+    shape.line.fill.background()
+    if veil["blur"]:
+        _apply_blur(shape, veil["blur"])
+
+
+def _apply_blur(shape, points: float) -> None:
+    """El desenfoque va en una lista de efectos, al final de spPr."""
+    efectos = etree.SubElement(shape._element.spPr, f"{{{A_NS}}}effectLst")
+    blur = etree.SubElement(efectos, f"{{{A_NS}}}blur")
+    blur.set("rad", str(round(points * EMU_POR_PUNTO)))
+    blur.set("grow", "1")

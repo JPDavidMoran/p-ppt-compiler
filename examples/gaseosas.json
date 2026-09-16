@@ -366,7 +366,12 @@
           "style": {
             "fontSize": 40,
             "bold": true,
-            "color": "FFFFFF"
+            "color": "FFFFFF",
+            "veil": {
+              "opacity": 0.4,
+              "blur": 14.0,
+              "padding": 2.0
+            }
           }
         },
         {
@@ -381,7 +386,12 @@
           },
           "style": {
             "fontSize": 17,
-            "color": "FFFFFF"
+            "color": "FFFFFF",
+            "veil": {
+              "opacity": 0.4,
+              "blur": 14.0,
+              "padding": 2.0
+            }
           }
         },
         {
@@ -396,7 +406,12 @@
           },
           "style": {
             "fontSize": 13,
-            "color": "FFFFFF"
+            "color": "FFFFFF",
+            "veil": {
+              "opacity": 0.4,
+              "blur": 14.0,
+              "padding": 2.0
+            }
           }
         }
       ]
@@ -763,7 +778,12 @@
           "style": {
             "fontSize": 40,
             "bold": true,
-            "color": "FFFFFF"
+            "color": "FFFFFF",
+            "veil": {
+              "opacity": 0.4,
+              "blur": 14.0,
+              "padding": 2.0
+            }
           }
         },
         {
@@ -778,7 +798,12 @@
           },
           "style": {
             "fontSize": 17,
-            "color": "FFFFFF"
+            "color": "FFFFFF",
+            "veil": {
+              "opacity": 0.4,
+              "blur": 14.0,
+              "padding": 2.0
+            }
           }
         },
         {
@@ -793,7 +818,12 @@
           },
           "style": {
             "fontSize": 13,
-            "color": "FFFFFF"
+            "color": "FFFFFF",
+            "veil": {
+              "opacity": 0.4,
+              "blur": 14.0,
+              "padding": 2.0
+            }
           }
         }
       ]

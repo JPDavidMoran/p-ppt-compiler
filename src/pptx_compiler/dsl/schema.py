@@ -57,6 +57,18 @@ class SwaySpec(Strict):
     degrees: float = Field(default=12.0, gt=0, description="Amplitud del giro")
 
 
+class VeilSpec(Strict):
+    """Capa entre el fondo y el texto, para que el texto se lea.
+
+    Sin `color`, se deduce del texto: oscuro bajo texto claro y al revés.
+    """
+
+    opacity: float = Field(default=0.45, ge=0.0, le=1.0)
+    blur: float = Field(default=10.0, ge=0.0, description="Desenfoque en puntos")
+    padding: float = Field(default=1.5, ge=0.0, description="Cuánto sobresale")
+    color: str | None = None
+
+
 class StyleSpec(Strict):
     font_size: float = Field(default=18.0, gt=0, alias="fontSize")
     color: str = "202020"
@@ -67,6 +79,7 @@ class StyleSpec(Strict):
     shake: ShakeSpec | None = None
     pulse: PulseSpec | None = None
     sway: SwaySpec | None = None
+    veil: VeilSpec | None = None
     bold: bool = False
     opacity: float = Field(default=1.0, ge=0.0, le=1.0)
     rotation: float = Field(default=0.0, ge=-360.0, le=360.0)

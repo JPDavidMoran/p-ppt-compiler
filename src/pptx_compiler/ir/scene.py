@@ -24,6 +24,7 @@ class ObjectStyle:
     line: str | None = None
     line_width: float | None = None
     animation: tuple[str, dict] | None = None
+    veil: dict | None = None
     bold: bool = False
     opacity: float = 1.0
     rotation: float = 0.0

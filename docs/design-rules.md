@@ -387,6 +387,55 @@ nota blanda en pantalla grande.
 
 ---
 
+## R13. Un texto sobre fondo movido necesita un velo
+
+Cuando el texto cae sobre figuras, una imagen o una textura animada, no
+basta con que el color contraste: el fondo cambia bajo cada letra y la
+lectura se vuelve incómoda. Una capa semitransparente y desenfocada entre
+ambos lo resuelve sin ocultar la escena.
+
+**Síntoma:** hay que entornar los ojos para leer un titular, o el texto se
+pierde justo donde pasa una figura clara.
+
+Se aplica cuando el texto **no** está dentro de un módulo con relleno
+propio —ese ya hace de velo— y el fondo tiene algo más que un color
+plano.
+
+```json
+"style": { "color": "FFFFFF", "veil": { "opacity": 0.45, "blur": 10 } }
+```
+
+### Qué color de velo
+
+Lo decide la luminancia del texto, no el gusto:
+
+| Texto | Velo |
+|---|---|
+| claro (luminancia ≥ 0.5) | **oscuro** |
+| oscuro (luminancia < 0.5) | **claro** |
+
+Es el contraste que sobrevive a cualquier fondo: oscurecer bajo un texto
+blanco aumenta la diferencia justo donde hacía falta. La luminancia se
+calcula con los coeficientes ITU-R BT.601, que pesan el verde mucho más
+que el azul, así que un amarillo cuenta como claro y un azul saturado
+como oscuro.
+
+El velo se deduce solo si no se declara `color`. Fijarlo a mano vale para
+un velo de marca —un azul corporativo muy oscuro en lugar de negro—, no
+para invertir la regla.
+
+### Opacidad y desenfoque
+
+Entre **0.35 y 0.55** de opacidad el fondo sigue viéndose y el texto se
+lee. Por debajo de 0.3 el velo no hace su trabajo; por encima de 0.6
+tapa la escena y más valdría un módulo con relleno.
+
+El desenfoque no difumina el fondo —PowerPoint no tiene *frosted glass*—
+sino el borde del propio velo, y eso es justo lo que evita que se lea
+como una caja recortada sobre la imagen.
+
+---
+
 ## Lo que el linter no puede ver
 
 Estas reglas requieren mirar el resultado:

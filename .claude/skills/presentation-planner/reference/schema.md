@@ -88,6 +88,7 @@ se omite: los mecanismos mueven la cámara por ti.
 | `shake` | ninguno | temblor: `{seconds, amount}` |
 | `pulse` | ninguno | latido: `{seconds, amount}` (amount en %) |
 | `sway` | ninguno | balanceo: `{seconds, degrees}` |
+| `veil` | ninguno | capa de legibilidad: `{opacity, blur, padding, color}` |
 | `bold` | `false` | |
 | `opacity` | `1.0` | de `0.0` a `1.0`; solo afecta al relleno |
 | `opacity` | `1.0` | entre 0 y 1 |
@@ -134,6 +135,27 @@ pisarían entre sí y el schema lo rechaza.
 "style": { "shape": "star4", "line": "2E5C7A",
            "shake": { "seconds": 0.1, "amount": 0.4 } }
 ```
+
+### Velo de legibilidad
+
+Un texto sobre un fondo con figuras o imágenes necesita una capa que lo
+separe de lo que hay detrás:
+
+```json
+"style": { "color": "FFFFFF", "veil": { "opacity": 0.45, "blur": 10 } }
+```
+
+Se dibuja justo detrás del objeto, sobresaliendo lo que diga `padding`, y
+el desenfoque suaviza su borde para que no parezca una caja pegada.
+
+**El color no se elige a ojo.** Si se omite, sale del contraste con el
+texto: velo **oscuro** bajo texto claro, velo **claro** bajo texto
+oscuro. El corte está en la luminancia media, calculada con los
+coeficientes ITU-R BT.601, que pesan el verde mucho más que el azul.
+
+Declarar `color` a mano solo tiene sentido para un velo de marca —un
+azul corporativo muy oscuro en vez de negro puro—, nunca para invertir la
+regla.
 
 **La forma decide qué animación se nota.** Un círculo es simétrico: `spin`
 y `sway` no cambian su aspecto y el efecto se pierde. Solo le sientan
