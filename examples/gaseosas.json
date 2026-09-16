@@ -1,0 +1,204 @@
+{
+  "presentation": {
+    "title": "Pepsi y Coca-Cola",
+    "transitionMs": 1100
+  },
+  "scenes": [
+    {
+      "id": "pepsi",
+      "objects": [
+        {
+          "id": "olaPepsi",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "004B93",
+            "shape": "pie",
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
+          }
+        },
+        {
+          "id": "olaCoca",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "F40009",
+            "shape": "pie",
+            "sectorStart": 120.0,
+            "sectorEnd": 210.0
+          }
+        },
+        {
+          "id": "logo",
+          "type": "image",
+          "source": "examples/assets/pepsi.png",
+          "at": {
+            "x": 68,
+            "y": 15.125,
+            "w": 15.079999999999998,
+            "h": 26.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Pepsi",
+          "at": {
+            "x": 10,
+            "y": 15,
+            "w": 50,
+            "h": 11
+          },
+          "style": {
+            "fontSize": 40,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "lema",
+          "type": "text",
+          "content": "The choice of a new generation",
+          "at": {
+            "x": 10,
+            "y": 27,
+            "w": 46,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 17,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "dato",
+          "type": "text",
+          "content": "Fundada en 1893 · New Bern, Carolina del Norte",
+          "at": {
+            "x": 10,
+            "y": 36,
+            "w": 46,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 13,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "coca",
+      "objects": [
+        {
+          "id": "olaPepsi",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "004B93",
+            "shape": "pie",
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
+          }
+        },
+        {
+          "id": "olaCoca",
+          "type": "shape",
+          "at": {
+            "x": -212.1713172976266,
+            "y": -192.1713172976266,
+            "w": 344.3426345952532,
+            "h": 344.3426345952532
+          },
+          "style": {
+            "fill": "F40009",
+            "shape": "pie",
+            "sectorStart": 0.0,
+            "sectorEnd": 90.0
+          }
+        },
+        {
+          "id": "logo",
+          "type": "image",
+          "source": "examples/assets/coca-cola.png",
+          "at": {
+            "x": 68,
+            "y": 17.125,
+            "w": 22.0,
+            "h": 22.0
+          }
+        },
+        {
+          "id": "titulo",
+          "type": "text",
+          "content": "Coca-Cola",
+          "at": {
+            "x": 10,
+            "y": 15,
+            "w": 50,
+            "h": 11
+          },
+          "style": {
+            "fontSize": 40,
+            "bold": true,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "lema",
+          "type": "text",
+          "content": "Taste the feeling",
+          "at": {
+            "x": 10,
+            "y": 27,
+            "w": 46,
+            "h": 6
+          },
+          "style": {
+            "fontSize": 17,
+            "color": "FFFFFF"
+          }
+        },
+        {
+          "id": "dato",
+          "type": "text",
+          "content": "Fundada en 1886 · Atlanta, Georgia",
+          "at": {
+            "x": 10,
+            "y": 36,
+            "w": 46,
+            "h": 5
+          },
+          "style": {
+            "fontSize": 13,
+            "color": "FFFFFF"
+          }
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    {
+      "scene": "pepsi"
+    },
+    {
+      "scene": "coca"
+    }
+  ]
+}
