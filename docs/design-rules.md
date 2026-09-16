@@ -436,6 +436,26 @@ El desenfoque necesita ser alto para que el degradado se aprecie: **50 a
 60 puntos** en un panel de este tamaño. Con 10 o 15 el borde sigue
 leyéndose como una línea recta.
 
+### El fondo no se difumina a través del panel
+
+PowerPoint no tiene *backdrop-filter*: una capa no puede desenfocar lo
+que hay debajo. `blur` afecta siempre al objeto que lo declara, así que
+un panel difuminado sigue dejando ver nítido lo que tiene detrás.
+
+Para que el fondo se vea borroso hay que **difuminar las figuras**, no la
+capa. Dos condiciones:
+
+- **Relleno, no contorno.** Una línea de 1 pt no tiene tinta que
+  difuminar: por mucho blur que reciba, se desvanece antes de verse
+  borrosa. Un círculo relleno y semitransparente sí produce la mancha
+  suave que se lee como fondo desenfocado.
+- **Sin `p:style`.** Cada forma trae un `effectRef` del tema que gana al
+  `effectLst` propio, y PowerPoint aplica el del tema descartando el
+  desenfoque en silencio. El compilador lo retira al aplicar blur.
+
+La alternativa, cuando el efecto no compensa, es dejar la zona del panel
+sin figuras.
+
 El campo `veil` de un texto sigue sirviendo para un rótulo suelto, donde
 una sola línea necesita fondo propio.
 

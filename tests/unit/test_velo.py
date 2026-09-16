@@ -181,3 +181,53 @@ class TestDesenfoqueDeForma:
     def test_un_desenfoque_negativo_falla(self) -> None:
         with pytest.raises(ValidationError):
             StyleSpec.model_validate({"blur": -1.0})
+
+
+class TestEfectoDelTema:
+    """El `p:style` que python-pptx añade a cada forma trae un
+    `effectRef` del tema que gana al `effectLst` propio: PowerPoint
+    aplica el del tema y descarta el desenfoque sin avisar.
+
+    Es el mismo fallo silencioso que el namespace de Morph: el XML es
+    válido, el archivo abre, y el efecto no está.
+    """
+
+    def _doc(self, style: dict):
+        from pptx_compiler.dsl.schema import Document
+
+        return Document.model_validate(
+            {
+                "scenes": [
+                    {
+                        "id": "a",
+                        "objects": [
+                            {
+                                "id": "figura",
+                                "type": "shape",
+                                "at": {"x": 10, "y": 10, "w": 20, "h": 20},
+                                "style": style,
+                            }
+                        ],
+                    }
+                ],
+                "sequence": [{"scene": "a"}],
+            }
+        )
+
+    def _xml(self, style: dict, destino: Path) -> str:
+        import zipfile
+
+        from pptx_compiler.compiler.pipeline import compile_document
+
+        out = compile_document(self._doc(style), destino)
+        with zipfile.ZipFile(out) as archive:
+            return archive.read("ppt/slides/slide1.xml").decode()
+
+    def test_una_forma_con_blur_no_lleva_style(self, tmp_path: Path) -> None:
+        xml = self._xml({"fill": "1B3A5C", "blur": 30.0}, tmp_path / "a.pptx")
+        assert "<a:blur" in xml
+        assert "<p:style>" not in xml
+
+    def test_una_forma_sin_blur_conserva_su_style(self, tmp_path: Path) -> None:
+        """Quitarlo sin motivo cambiaría el aspecto de todo lo demás."""
+        assert "<p:style>" in self._xml({"fill": "1B3A5C"}, tmp_path / "b.pptx")

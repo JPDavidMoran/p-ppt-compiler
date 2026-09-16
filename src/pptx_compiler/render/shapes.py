@@ -211,7 +211,18 @@ def _draw_veil(slide, obj: SceneObject, camera: Camera, world_w: float) -> None:
 
 
 def _apply_blur(shape, points: float) -> None:
-    """El desenfoque va en una lista de efectos, al final de spPr."""
+    """El desenfoque va en una lista de efectos, al final de spPr.
+
+    Antes hay que quitar el `p:style` que python-pptx añade a cada forma:
+    trae un `effectRef` del tema que gana al `effectLst` propio, así que
+    PowerPoint aplica el del tema y descarta el desenfoque sin avisar.
+    Solo se retira cuando hay blur, porque ese bloque también define el
+    aspecto por defecto del resto de las formas.
+    """
+    estilo = shape._element.find(f"{{{P_NS}}}style")
+    if estilo is not None:
+        shape._element.remove(estilo)
+
     efectos = etree.SubElement(shape._element.spPr, f"{{{A_NS}}}effectLst")
     blur = etree.SubElement(efectos, f"{{{A_NS}}}blur")
     blur.set("rad", str(round(points * EMU_POR_PUNTO)))

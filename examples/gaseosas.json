@@ -50,13 +50,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.8,
               "amount": 43.3
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -90,13 +90,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.8,
               "amount": 36.5
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -150,13 +150,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 2.4,
               "amount": 44.2
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -170,13 +170,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "shake": {
               "seconds": 1.2,
               "amount": 1.0
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -210,13 +210,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.4,
               "amount": 22.7
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -230,13 +230,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.7,
               "amount": 41.4
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -250,13 +250,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.9,
               "amount": 33.5
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -290,13 +290,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "shake": {
               "seconds": 1.6,
               "amount": 2.0
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -310,13 +310,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "shake": {
               "seconds": 0.9,
               "amount": 1.1
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -325,14 +325,14 @@
           "at": {
             "x": -10.0,
             "y": -8.0,
-            "w": 52.0,
+            "w": 58.0,
             "h": 72.25
           },
           "style": {
             "shape": "rect",
             "fill": "000000",
             "opacity": 0.42,
-            "blur": 55.0
+            "blur": 95.0
           }
         },
         {
@@ -463,13 +463,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.8,
               "amount": 43.3
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -503,13 +503,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.8,
               "amount": 36.5
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -563,13 +563,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 2.4,
               "amount": 44.2
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -583,13 +583,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "shake": {
               "seconds": 1.2,
               "amount": 1.0
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -623,13 +623,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.4,
               "amount": 22.7
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -643,13 +643,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.7,
               "amount": 41.4
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -663,13 +663,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "pulse": {
               "seconds": 1.9,
               "amount": 33.5
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -703,13 +703,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "shake": {
               "seconds": 1.6,
               "amount": 2.0
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -723,13 +723,13 @@
           },
           "style": {
             "shape": "ellipse",
-            "line": "FFFFFF",
-            "lineWidth": 0.75,
-            "opacity": 0.45,
+            "opacity": 0.22,
             "shake": {
               "seconds": 0.9,
               "amount": 1.1
-            }
+            },
+            "fill": "FFFFFF",
+            "blur": 26.0
           }
         },
         {
@@ -738,14 +738,14 @@
           "at": {
             "x": -10.0,
             "y": -8.0,
-            "w": 52.0,
+            "w": 58.0,
             "h": 72.25
           },
           "style": {
             "shape": "rect",
             "fill": "000000",
             "opacity": 0.42,
-            "blur": 55.0
+            "blur": 95.0
           }
         },
         {
